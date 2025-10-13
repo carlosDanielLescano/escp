@@ -11,6 +11,46 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp2/control-numerico-performativo.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/control-numerico-performativo.html",
+            "title": "Control numérico performativo",
+            "summary": "Improvisación electromecánica y robótica con impresoras intervenidas que obedecen órdenes numéricas traducidas en movimientos, sonidos y registros visuales. Cámaras montadas en los cabezales capturan papeles ilegibles, generando una sonoridad por capas: zumbidos, repeticiones, errores y síntesis de voz en tiempo real. Desde la lógica del&hellip;",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1w6WxPw6c9k?si=c5kBimXdt_aMRunh\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div><br>Improvisación electromecánica y robótica con impresoras intervenidas que obedecen órdenes numéricas traducidas en movimientos, sonidos y registros visuales.</p>\n<p>Cámaras montadas en los cabezales capturan papeles ilegibles, generando una sonoridad por capas: zumbidos, repeticiones, errores y síntesis de voz en tiempo real.</p>\n<p>Desde la lógica del control, emerge una voz maquínica que tensiona el límite entre lo legible y lo sensible.</p>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T00:16:59-03:00",
+            "date_modified": "2025-10-13T00:16:59-03:00"
+        },
+        {
+            "id": "https://carlosdaniellescano.github.io/escp2/instalado.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/instalado.html",
+            "title": "Instalado",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7VNMNWl34BU?si=6mZRhDZJPyxmGEXz\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T00:12:15-03:00",
+            "date_modified": "2025-10-13T00:12:15-03:00"
+        },
+        {
+            "id": "https://carlosdaniellescano.github.io/escp2/monocanal.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/monocanal.html",
+            "title": "Monocanal",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1juUM4xd-hg?si=FkDe63Im--G5UEvU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T00:11:02-03:00",
+            "date_modified": "2025-10-13T00:11:02-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp2/duo.html",
             "url": "https://carlosdaniellescano.github.io/escp2/duo.html",
             "title": "Duo",

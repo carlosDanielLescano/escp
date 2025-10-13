@@ -3,12 +3,66 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-12T23:52:05-03:00</updated>
+    <updated>2025-10-13T00:16:59-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
+    <entry>
+        <title>Control numérico performativo</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/control-numerico-performativo.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/control-numerico-performativo.html</id>
+
+        <updated>2025-10-13T00:16:59-03:00</updated>
+            <summary>
+                <![CDATA[
+                    Improvisación electromecánica y robótica con impresoras intervenidas que obedecen órdenes numéricas traducidas en movimientos, sonidos y registros visuales. Cámaras montadas en los cabezales capturan papeles ilegibles, generando una sonoridad por capas: zumbidos, repeticiones, errores y síntesis de voz en tiempo real. Desde la lógica del&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1w6WxPw6c9k?si=c5kBimXdt_aMRunh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div><br>Improvisación electromecánica y robótica con impresoras intervenidas que obedecen órdenes numéricas traducidas en movimientos, sonidos y registros visuales.</p>
+<p>Cámaras montadas en los cabezales capturan papeles ilegibles, generando una sonoridad por capas: zumbidos, repeticiones, errores y síntesis de voz en tiempo real.</p>
+<p>Desde la lógica del control, emerge una voz maquínica que tensiona el límite entre lo legible y lo sensible.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Instalado</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/instalado.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/instalado.html</id>
+
+        <updated>2025-10-13T00:12:15-03:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/7VNMNWl34BU?si=6mZRhDZJPyxmGEXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Monocanal</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/monocanal.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/monocanal.html</id>
+
+        <updated>2025-10-13T00:11:02-03:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1juUM4xd-hg?si=FkDe63Im--G5UEvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Duo</title>
         <author>
