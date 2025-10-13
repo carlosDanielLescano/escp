@@ -3,28 +3,48 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-12T21:36:52-03:00</updated>
+    <updated>2025-10-12T23:52:05-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
     <entry>
-        <title>Acá empieza la cosa.</title>
+        <title>Duo</title>
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/aca-empieza-la-cosa.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/aca-empieza-la-cosa.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp2/duo.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/duo.html</id>
 
-        <updated>2025-10-12T21:36:52-03:00</updated>
+        <updated>2025-10-12T23:51:41-03:00</updated>
+            <summary>
+                <![CDATA[
+                    Tecnológica 08 junio 2024
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__image" ><img loading="lazy" src="https://carlosdaniellescano.github.io/escp2/media/posts/5/IMG_1739.JPG" alt="" width="5184" height="3456" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-xs.JPG 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-sm.JPG 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-md.JPG 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-lg.JPG 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-xl.JPG 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/5/responsive/IMG_1739-2xl.JPG 1920w">
+<figcaption >Tecnológica 08 junio 2024</figcaption>
+</figure>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Antecedente</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/antecedente.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/antecedente.html</id>
+
+        <updated>2025-10-12T23:48:41-03:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
-                
-  <p>
-    
-  </p>
+                <figure class="post__image"><img loading="lazy"  src="https://carlosdaniellescano.github.io/escp2/media/posts/4/SKM_C45825012915001_0002.png" alt="" width="4214" height="3085" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-2xl.png 1920w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://carlosdaniellescano.github.io/escp2/media/posts/4/SKM_C45825022122360.png" alt="" width="5465" height="5010" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-2xl.png 1920w"></figure>
             ]]>
         </content>
     </entry>
