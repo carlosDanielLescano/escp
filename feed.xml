@@ -3,12 +3,33 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-13T00:38:28-03:00</updated>
+    <updated>2025-10-13T00:47:32-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
+    <entry>
+        <title>Interludio</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/interludio.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/interludio.html</id>
+
+        <updated>2025-10-13T00:43:44-03:00</updated>
+            <summary>
+                <![CDATA[
+                    por Leopoldo Estol
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__image"><a href="https://flasherito.com.ar/locomotora-sonante/"  target="_blank" rel="noopener noreferrer"></a><a href="https://flasherito.com.ar/locomotora-sonante/" class="post__image" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="post__image" src="https://carlosdaniellescano.github.io/escp2/media/posts/10/ELEFANTE-scaled.jpg" alt="" width="2560" height="1870" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-2xl.jpg 1920w"></figure></a></p>
+<p class="align-right">por <strong><a href="#INTERNAL_LINK#/tag/NaN"></a><a href="https://flasherito.com.ar/tag/leopoldo-estol/">Leopoldo Estol</a></strong></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>ESC/P</title>
         <author>
