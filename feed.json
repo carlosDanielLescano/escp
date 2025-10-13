@@ -11,6 +11,19 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp2/whatsapp-video-2025-10-13-at-12655-am.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/whatsapp-video-2025-10-13-at-12655-am.html",
+            "title": "WhatsApp Video 2025-10-13 at 1.26.55 AM",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"803\" height=\"602\" style=\"width: 803px; height: 602px;\" src=\"https://drive.google.com/file/d/1bo9BW7hW-T8LQ7ZBXwMaKFuHgNKlcS-i/preview\" allow=\"autoplay\"></iframe></div>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T01:51:19-03:00",
+            "date_modified": "2025-10-13T01:51:19-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp2/esto-te-hace-sentido.html",
             "url": "https://carlosdaniellescano.github.io/escp2/esto-te-hace-sentido.html",
             "title": "¿Esto te hace sentido?",
@@ -133,19 +146,6 @@
             ],
             "date_published": "2025-10-12T23:51:41-03:00",
             "date_modified": "2025-10-13T00:38:15-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp2/antecedente.html",
-            "url": "https://carlosdaniellescano.github.io/escp2/antecedente.html",
-            "title": "Antecedente",
-            "content_html": "<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp2/media/posts/4/SKM_C45825012915001_0002.png\" alt=\"\" width=\"4214\" height=\"3085\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825012915001_0002-2xl.png 1920w\"></figure>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp2/media/posts/4/SKM_C45825022122360.png\" alt=\"\" width=\"5465\" height=\"5010\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/4/responsive/SKM_C45825022122360-2xl.png 1920w\"></figure>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-12T23:48:41-03:00",
-            "date_modified": "2025-10-13T00:38:28-03:00"
         }
     ]
 }
