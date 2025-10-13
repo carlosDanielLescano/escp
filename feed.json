@@ -11,6 +11,33 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp2/apropiacion-y-raigambre.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/apropiacion-y-raigambre.html",
+            "title": "Apropiación y raigambre",
+            "summary": "Toda manifestación artística valiosa, es decir eficaz como parte viva de un proceso, es necesariamente original. Cuando digo original me estoy refiriendo a origen y raigambre. El tiempo presente no repite el pasado, lo contiene, y la cultura se define por su contenido, no por&hellip;",
+            "content_html": "<blockquote>\n<p>Toda manifestación artística valiosa,<br>es decir eficaz como parte viva de un proceso,<br>es necesariamente original.<br><br>Cuando digo original me estoy refiriendo a origen y raigambre.<br>El tiempo presente no repite el pasado,<br>lo contiene,<br>y la cultura se define por su contenido,<br>no por el origen de sus partes.</p>\n</blockquote>\n<p> </p>\n<div>\n<div class=\"PZPZlf mdLi2\" data-attrid=\"EntryHeader\" data-psd=\"headword~:&amp;raigambre~;&amp;tts_country~:&amp;~;&amp;homograph_index~:&amp;\">\n<div class=\"M8kD5b\">\n<div class=\"kVF6d\">\n<div><address class=\"RES9jf xWMiCc pb3iw BJ0kwe\"><code><span data-dobid=\"hdw\">Raigambre</span><span style=\"font-size: inherit;\">.</span></code></address></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"vmod\">\n<div class=\"vmod\" data-topic=\"\"><address class=\"vmod\">\n<div class=\"thODed\">\n<div class=\"wHYlTd sY7ric\" data-topic=\"\">\n<div>\n<div>\n<div>\n<div class=\"PZPZlf\" data-attrid=\"SenseDefinition\" data-psd=\"sense_definition~:&amp;Conjunto de raíces de los vegetales, unidas y trabadas entre sí.\">\n<ol>\n<li class=\"RES9jf tNxQIb RiJqbb\" data-dobid=\"dfn\"><code>Conjunto de raíces de los vegetales, unidas y trabadas entre sí.</code></li>\n<li class=\"RES9jf tNxQIb RiJqbb\" data-dobid=\"dfn\"><span style=\"font-size: inherit;\"><code>Conjunto de antecedentes, intereses, hábitos o afectos que hacen firme y estable algo o que ligan a alguien a un sitio</code>.</span></li>\n</ol>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</address><br>\n<div class=\"vmod\">\n<div class=\"thODed\">\n<div class=\"wHYlTd sY7ric\" data-topic=\"\">\n<div>\n<div class=\"PZPZlf\" data-attrid=\"SenseDefinition\" data-psd=\"sense_definition~:&amp;Conjunto de antecedentes, intereses, hábitos o afectos que hacen firme y estable algo o que ligan a alguien a un sitio.\">\n<div data-dobid=\"dfn\"> </div>\n<div data-dobid=\"dfn\"> </div>\n<div data-dobid=\"dfn\"> </div>\n<div data-dobid=\"dfn\"> </div>\n<div data-dobid=\"dfn\"> </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T13:16:53-03:00",
+            "date_modified": "2025-10-13T13:16:53-03:00"
+        },
+        {
+            "id": "https://carlosdaniellescano.github.io/escp2/feed-back.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/feed-back.html",
+            "title": "FEED-BACK",
+            "content_html": "<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp2/media/posts/16//SKM_C45825012915001_0001.png\" alt=\"\" width=\"1807\" height=\"2289\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w\"></figure>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T13:06:12-03:00",
+            "date_modified": "2025-10-13T13:07:59-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp2/audiovisual.html",
             "url": "https://carlosdaniellescano.github.io/escp2/audiovisual.html",
             "title": "Audiovisual",
@@ -91,7 +118,7 @@
             "tags": [
             ],
             "date_published": "2025-10-13T00:43:44-03:00",
-            "date_modified": "2025-10-13T00:49:59-03:00"
+            "date_modified": "2025-10-13T14:43:03-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp2/escp.html",
@@ -120,32 +147,6 @@
             ],
             "date_published": "2025-10-13T00:16:59-03:00",
             "date_modified": "2025-10-13T00:16:59-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp2/instalado.html",
-            "url": "https://carlosdaniellescano.github.io/escp2/instalado.html",
-            "title": "Instalado",
-            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7VNMNWl34BU?si=6mZRhDZJPyxmGEXz\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-13T00:12:15-03:00",
-            "date_modified": "2025-10-13T00:12:15-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp2/monocanal.html",
-            "url": "https://carlosdaniellescano.github.io/escp2/monocanal.html",
-            "title": "Monocanal",
-            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1juUM4xd-hg?si=FkDe63Im--G5UEvU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-13T00:11:02-03:00",
-            "date_modified": "2025-10-13T00:11:02-03:00"
         }
     ]
 }
