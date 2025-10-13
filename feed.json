@@ -11,6 +11,20 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp2/gcode-10.html",
+            "url": "https://carlosdaniellescano.github.io/escp2/gcode-10.html",
+            "title": "Gcode 1.0",
+            "summary": "Esta obra es un primer intento de acercarme al lenguaje del GCODE, un sistema de control utilizado en máquinas CNC que más adelante volvería a emplear en otras experimentaciones y que me conduciría hacia las prácticas con impresoras intervenidas. Busco en la materialidad del desarrollo&hellip;",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"725\" height=\"408\" style=\"width: 725px; height: 408px;\" src=\"https://www.youtube.com/embed/WH7YTvhVKQQ?si=WtzeLpT8EQ1ubSgU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>\n<blockquote>\n<p data-start=\"157\" data-end=\"606\">Esta obra es un primer intento de acercarme al lenguaje del <strong data-start=\"217\" data-end=\"226\">GCODE</strong>, un sistema de control utilizado en máquinas <strong data-start=\"272\" data-end=\"279\">CNC</strong> que más adelante volvería a emplear en otras experimentaciones y que me conduciría hacia las prácticas con <strong data-start=\"387\" data-end=\"414\">impresoras intervenidas</strong>. Busco en la materialidad del desarrollo del control numérico una forma sensible de habitar la composición espacial, entendiendo el código no solo como instrucción, sino como gesto y trazo.</p>\n<p data-start=\"608\" data-end=\"903\">La pieza se presenta como un cuaderno que reúne una serie de dibujos generativos realizados en <strong data-start=\"703\" data-end=\"717\">Processing</strong> e impresos con un <strong data-start=\"736\" data-end=\"755\">pen-plotter DIY</strong> (de construcción casera). Para su desarrollo investigué el concepto de los <strong data-start=\"831\" data-end=\"856\">campos de variaciones</strong> y los <strong data-start=\"863\" data-end=\"900\">sistemas de programación genética</strong>.</p>\n<p data-start=\"905\" data-end=\"1400\"><strong data-start=\"905\" data-end=\"915\">Glebas</strong> significa <em data-start=\"926\" data-end=\"940\">campo arable</em>; utilizo este título para dar cuenta de que no solo me interesa observar las transformaciones de las formas como un terreno en constante mutación, sino también <strong data-start=\"1101\" data-end=\"1113\">cosechar</strong> y <strong data-start=\"1116\" data-end=\"1131\">seleccionar</strong> ciertos elementos particulares. En otras palabras, busco explorar tanto la diversidad de posibles resultados que emergen de cada sistema como los rasgos singulares de los elementos individuales y el diálogo que puede establecerse entre un conjunto reducido de ellos.</p>\n</blockquote>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-13T19:32:45-03:00",
+            "date_modified": "2025-10-13T19:32:45-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp2/text-to-speech.html",
             "url": "https://carlosdaniellescano.github.io/escp2/text-to-speech.html",
             "title": "Text to Speech",
@@ -133,20 +147,6 @@
             ],
             "date_published": "2025-10-13T00:53:20-03:00",
             "date_modified": "2025-10-13T00:53:20-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp2/interludio.html",
-            "url": "https://carlosdaniellescano.github.io/escp2/interludio.html",
-            "title": "Interludio",
-            "summary": "Entre el texto de Estol y la interfaz MIDI monumental se abre un campo: una traducción excesiva, casi inentendible, como el gesto mismo de apropiarse. por Leopoldo Estol",
-            "content_html": "<p><a href=\"https://flasherito.com.ar/locomotora-sonante/\" class=\"post__image\" target=\"_blank\" rel=\"noopener noreferrer\"></a><code><a href=\"https://flasherito.com.ar/locomotora-sonante/\" class=\"post__image\" target=\"null\">Entre el texto de Estol y la interfaz MIDI monumental se abre un campo: una traducción excesiva, casi inentendible, como el gesto mismo de apropiarse.<figure class=\"post__image\"><img decoding=\"auto\" loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp2/media/posts/10/ELEFANTE-scaled.jpg\" alt=\"\" width=\"2560\" height=\"1870\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/10/responsive/ELEFANTE-scaled-2xl.jpg 1920w\"></figure></a></code></p>\n<p class=\"align-right\">por <strong><a href=\"#INTERNAL_LINK#/tag/NaN\"></a><a href=\"https://flasherito.com.ar/tag/leopoldo-estol/\">Leopoldo Estol</a></strong></p>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-13T00:43:44-03:00",
-            "date_modified": "2025-10-13T16:05:06-03:00"
         }
     ]
 }
