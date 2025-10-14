@@ -20,7 +20,7 @@ Orquesta de la Frontera nace como una iniciativa de @territorio_org que plantea 
   .line {
     line-height: 1em;
   }</style></head><body><div id="container"></div><script>const chars = "-7:_,^=+!rc*/zsLTv)J7(|Fi{C}fI31tlu[neoZ5Yxjya]2ESwqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&@";
-const numLines = 10;
+const numLines = 15;
 const lineLength = 40; // cantidad fija de caracteres
 const container = document.getElementById('container');
 
@@ -29,7 +29,7 @@ let lines = [];
 for (let i = 0; i < numLines; i++) {
     let arr = [];
     for (let j = 0; j < lineLength; j++) {
-        arr.push(chars[Math.floor((j /lineLength) * chars.length)+i*4]);
+        arr.push(chars[Math.floor(((j+i) /lineLength) * chars.length)+i*4]);
     }
     lines.push(arr);
 
