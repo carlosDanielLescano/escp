@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-14T13:38:54-03:00</updated>
+    <updated>2025-10-14T13:43:07-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -214,9 +214,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <div style="filter: grayscale(100%) contrast(100%);">
-<div class="post__iframe"><iframe loading="lazy" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""><a href="https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>
-</div>
+                <div class="post__iframe"><iframe loading="lazy" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""><a href="https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>
             ]]>
         </content>
     </entry>
