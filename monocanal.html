@@ -101,7 +101,7 @@ let lines = [];
 for (let i = 0; i < numLines; i++) {
     let arr = [];
     for (let j = 0; j < lineLength; j++) {
-        arr.push(chars[Math.floor(Math.random() * chars.length)]);
+        arr.push(chars[Math.floor((j /lineLength) * chars.length)]);
     }
     lines.push(arr);
 
