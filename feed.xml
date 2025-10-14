@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-13T21:24:14-03:00</updated>
+    <updated>2025-10-13T22:10:32-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -25,7 +25,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__video"><iframe loading="lazy" width="560" height="314" style="filter: grayscale(100%);" src="https://www.youtube.com/embed/RfoavCVvXGk?si=tMdHRWCgRQ1nTPrO" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+                <figure class="post__video"><iframe loading="lazy" width="560" height="314" style="filter: grayscale(100%) contrast(100%);" src="https://www.youtube.com/embed/RfoavCVvXGk?si=tMdHRWCgRQ1nTPrO" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <pre>@syd4890<br>hace 3 años<br>Best OST to fix jammed printers xD<br>1<br>Responder<br>@RobertKgma<br>hace 4 años<br>classic!<br>2<br>Responder<br>@tentative_flora2690<br>hace 4 años<br>Which SCP # is this?<br>1<br>Responder</pre>
             ]]>
         </content>
@@ -46,7 +46,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="post__iframe"><iframe loading="lazy" width="725" height="408" style="width: 725px; height: 408px;" src="https://www.youtube.com/embed/WH7YTvhVKQQ?si=WtzeLpT8EQ1ubSgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div>
+                <div class="post__iframe"><iframe loading="lazy" width="725" height="408" style="filter: grayscale(100%) contrast(100%);" src="https://www.youtube.com/embed/WH7YTvhVKQQ?si=WtzeLpT8EQ1ubSgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div>
 <blockquote>
 <p data-start="157" data-end="606">Esta obra es un primer intento de acercarme al lenguaje del <strong data-start="217" data-end="226">GCODE</strong>, un sistema de control utilizado en máquinas <strong data-start="272" data-end="279">CNC</strong> que más adelante volvería a emplear en otras experimentaciones y que me conduciría hacia las prácticas con <strong data-start="387" data-end="414">impresoras intervenidas</strong>. Busco en la materialidad del desarrollo del control numérico una forma sensible de habitar la composición espacial, entendiendo el código no solo como instrucción, sino como gesto y trazo.</p>
 <p data-start="608" data-end="903">La pieza se presenta como un cuaderno que reúne una serie de dibujos generativos realizados en <strong data-start="703" data-end="717">Processing</strong> e impresos con un <strong data-start="736" data-end="755">pen-plotter DIY</strong> (de construcción casera). Para su desarrollo investigué el concepto de los <strong data-start="831" data-end="856">campos de variaciones</strong> y los <strong data-start="863" data-end="900">sistemas de programación genética</strong>.</p>
@@ -75,7 +75,9 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p><br/><strong>Text to Speech rítmico.</strong></p><p>Carlos D. Lescano</p><table>
+                <div style="filter: grayscale(100%) contrast(100%);">
+    
+<p><br/><strong>Text to Speech rítmico.</strong></p><p>Carlos D. Lescano</p><table>
 <thead>
 <tr>
 <th>Link al video de presentación</th>
@@ -190,7 +192,7 @@
 <p><strong>Evaluación del proceso, posibles mejoras o desarrollos futuros</strong></p><p>Durante el desarrollo de este proyecto exploré diferentes tecnologías de síntesis de voz a partir de texto, especialmente varias bibliotecas de Python orientadas a ese fin. Estas herramientas ofrecen amplias posibilidades de personalización: distintas voces, idiomas, entonaciones e incluso géneros, lo cual abre un campo fértil para futuras investigaciones. Sin embargo, para esta etapa del proyecto decidí trabajar con <em>Pure Data</em>, priorizando las posibilidades rítmicas que ofrece su motor de audio y la sonoridad particular -más robótica y mecánica- del objeto speech.flite, que encaja conceptualmente con la estética de la performance en desarrollo.</p><p>Hasta ahora, mi trabajo con dispositivos <em>robóticos</em> consistía en utilizar sus movimientos para sugerir qué texto debía ser leído, seleccionando únicamente fragmentos del collage en pantalla. En esta nueva etapa, el robot no solo selecciona y señala el texto, sino que también lo enuncia: cobra voz, asume el rol del lector, lo duplica o incluso lo desplaza. Esta transformación del dispositivo en agente lector añade una dimensión conceptual potente, en línea con mis búsquedas anteriores, y plantea nuevos interrogantes sobre la mediación tecnológica en la experiencia del lenguaje.</p><p>Cabe mencionar que los alcances iniciales del proyecto -especialmente en lo referido a la implementación en <em>Pure Data</em>- fueron modificándose significativamente a lo largo del proceso. En un comienzo, la idea era trabajar con una sola impresora, controlada directamente desde <em>Pure Data</em> mediante el envío de código G (G-code). Sin embargo, el hallazgo fortuito de tres impresoras antiguas adicionales -de las cuales logré poner en funcionamiento dos- me llevó a replantear por completo el enfoque técnico del sistema.</p><p>El control simultáneo de varias impresoras mediante G-code resultó poco viable debido a las demandas técnicas que implica: cada unidad necesita un Arduino, una placa CNC Shield, y un programa específico corriendo en paralelo. Si bien es una solución posible, rápidamente se evidenció una limitación clave: la <strong>cantidad reducida de puertos USB disponibles en la laptop</strong>, que se volvió un cuello de botella para el desarrollo. Este detalle, aunque en apariencia menor, fue determinante en la reconfiguración del proyecto y abre una línea de investigación más profunda sobre arquitecturas más escalables o centralizadas para el control de múltiples dispositivos.</p><p>Una situación similar se presentó con la intención de implementar controladores MIDI físicos para manipular en tiempo real los parámetros de la interfaz gráfica de <em>Pure Data</em>. Si bien este aspecto estaba contemplado desde el inicio como una mejora performática deseada, también tuvo que ser postergado por la misma razón: la <strong>saturación del número de conexiones USB disponibles</strong>. A pesar de haber intentado resolverlo utilizando un <em>hub</em> USB, me encontré con limitaciones importantes: una de las cámaras no funcionaba correctamente al estar conectada al hub, y la placa de sonido directamente dejaba de operar en ese contexto. Si bien los Arduinos sí funcionaban con el hub, la incorporación de un controlador MIDI USB adicional complejizaba aún más la situación. Es posible que un <em>hub</em> de mejor calidad pueda resolver parte de estos problemas, pero requeriría una prueba más sistemática de compatibilidad entre dispositivos.</p><p>Frente a estas dificultades, en la última semana del proceso opté por una solución más sencilla y eficiente: logré controlar dos de las impresoras adicionales utilizando mensajes MIDI a través de una única placa RAMPS 1.4. Esta estrategia no solo permitió una conexión más compacta, sino que también abrió nuevas posibilidades expresivas al evidenciar diferencias sonoras específicas entre cada impresora, lo que enriqueció notablemente la dimensión sonora del dispositivo.</p><p>A partir de esta experiencia, considero valioso seguir profundizando en el uso de secuenciadores no euclidianos como disparadores de estos dispositivos mecánicos. En ese sentido, una de las mejoras posibles para el sistema sería la implementación de un <strong>control global de tempo MIDI</strong>, así como mecanismos para subdividir el pulso en fracciones musicales (por ejemplo, corcheas, tresillos, semicorcheas) que permitan una mayor flexibilidad rítmica. Este tipo de selector también podría aplicarse al módulo divisor de <em>clock</em> del sintetizador de voz, optimizando el control temporal y favoreciendo una integración más precisa entre los distintos componentes del sistema performático.</p><p>Por último, me gustaría revisar algunas de las investigaciones realizadas por mis compañeros, que considero integrables a este proyecto. En particular, me interesa el trabajo sobre samplers que está desarrollando otro grupo, ya que podría aplicarse a una impresora matriz de punto funcional que tengo. Este dispositivo posee una sonoridad muy característica al imprimir, pero su tamaño hace inviable transportarlo junto con el resto del montaje para una performance en vivo. Una posible solución sería grabarla y utilizar esos registros como samples dentro del sistema, manteniendo su presencia sonora sin requerir su despliegue físico.<br><br/></p><ul>
 <li><p>Glebas (2021) : <a href="https://carlosdaniellescano.glitch.me/?obra=glebas">https://carlosdaniellescano.glitch.me/?obra=glebas</a> <a href="#footnote-ref-0">↑</a></p></li>
 <li><p>El libro ayer, hoy y mañana (2023): <a href="https://www.youtube.com/watch?v=1juUM4xd-hg">https://www.youtube.com/watch?v=1juUM4xd-hg</a> <a href="#footnote-ref-1">↑</a></p></li>
-<li><p>Una simple imagen para leer. Un objeto para observar. (2025): <a href="https://youtu.be/7VNMNWl34BU">https://youtu.be/7VNMNWl34BU</a> <a href="#footnote-ref-2">↑</a></p></li>
+<li><p>Una simple imagen para leer. Un objeto para observar. (2025): <a href="https://youtu.be/7VNMNWl34BU">https://youtu.be/7VNMNWl34BU</a> <a href="#footnote-ref-2">↑</a></p>  </div></li>
 </ul>
 
             ]]>
@@ -207,7 +209,7 @@
         <updated>2025-10-13T15:44:51-03:00</updated>
             <summary>
                 <![CDATA[
-                    Kinemancia es un instrumento audiovisual desarrollado para ser activado en sets en vivo, basado en el uso del casete como soporte de imagen y sonido. Compuesta por 5 reproductores de cassette en línea, un carro de impresora de tinta, otro carro de máquina de escribir&hellip;
+                    KINEMANCIA (2021) - CROWE Kinemancia es un instrumento audiovisual desarrollado para ser activado en sets en vivo, basado en el uso del casete como soporte de imagen y sonido. Compuesta por 5 reproductores de cassette en línea, un carro de impresora de tinta, otro carro&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -222,10 +224,9 @@
           combination-animation-none
           individual-animation-none
           individual-text-animation-none
-         align-center" data-test="image-block-inline-outer-wrapper">
-<p> </p>
+         align-center" data-test="image-block-inline-outer-wrapper"><hr>
 <div id="block-yui_3_17_2_1_1713102451252_53578" class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
-<div class="sqs-block-content"><hr><hr><hr><hr><hr></div>
+<div class="sqs-block-content"><hr><hr><hr><hr></div>
 </div>
 <div id="yui_3_17_2_1_1760381477910_116" class="row sqs-row">
 <div id="yui_3_17_2_1_1760381477910_115" class="col sqs-col-4 span-4">
@@ -249,7 +250,7 @@
           
         
               has-aspect-ratio
-            "><figure class="loaded"><img decoding="auto"  src="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" sizes="(max-width: 640px) 100vw, (max-width: 767px) 33.33333333333333vw, 33.33333333333333vw" srcset="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=100w 100w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=300w 300w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=500w 500w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=750w 750w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=2500w 2500w" alt="" width="1280" height="720" loading="lazy" data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" data-image="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" data-image-dimensions="1280x720" data-image-focal-point="0.5,0.5" data-load="false" data-loader="sqs" data-is-external-image="true"></figure></div>
+            "><figure class="loaded"><img decoding="auto"  style="filter: grayscale(100%) contrast(100%);" src="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" sizes="(max-width: 640px) 100vw, (max-width: 767px) 33.33333333333333vw, 33.33333333333333vw" srcset="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=100w 100w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=300w 300w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=500w 500w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=750w 750w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif?format=2500w 2500w" alt="" width="1280" height="720" loading="lazy" data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" data-image="https://images.squarespace-cdn.com/content/v1/57bb1b9fc534a5058e5edf42/1626723092672-ZCKJEXBPAXLG49PNH5GE/Untitled.gif" data-image-dimensions="1280x720" data-image-focal-point="0.5,0.5" data-load="false" data-loader="sqs" data-is-external-image="true"></figure></div>
 </div>
 </figure>
 </div>
@@ -273,7 +274,7 @@
 </div>
 </div>
 </div>
-<p class="align-center"><div class="post__iframe"><iframe loading="lazy" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""><a href="https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>
+<p class="align-center"><div class="post__iframe"><iframe loading="lazy" style="filter: grayscale(100%) contrast(100%); border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""><a href="https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>
 <div class="col sqs-col-8 span-8">
 <div id="block-yui_3_17_2_1_1713102451252_27421" class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text">
 <div class="sqs-block-content">
@@ -306,7 +307,8 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <blockquote>
+                <div style="filter: grayscale(100%) contrast(100%);">
+<blockquote>
 <p>Toda manifestación artística valiosa,<br>es decir eficaz como parte viva de un proceso,<br>es necesariamente original.<br><br>Cuando digo original me estoy refiriendo a origen y raigambre.<br>El tiempo presente no repite el pasado,<br>lo contiene,<br>y la cultura se define por su contenido,<br>no por el origen de sus partes.</p>
 </blockquote>
 <p> </p>
@@ -355,6 +357,7 @@
 </div>
 </div>
 </div>
+</div>
             ]]>
         </content>
     </entry>
@@ -369,14 +372,14 @@
         <updated>2025-10-13T13:06:12-03:00</updated>
             <summary>
                 <![CDATA[
-                    De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación. Texto visible normal.
+                    De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp2/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
+                <figure class="post__image"><img decoding="auto" loading="lazy"  style="filter: grayscale(100%) contrast(100%);" src="https://carlosdaniellescano.github.io/escp2/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
 <p style="display: none !important;">De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.</p>
-<p>Texto visible normal.</p>
+<p> </p>
             ]]>
         </content>
     </entry>
@@ -396,7 +399,8 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="WaaZC">
+                <div style="filter: grayscale(100%) contrast(100%);">
+<div class="WaaZC">
 <div class="RJPOee EIJn2">
 <div data-hveid="CA0QAQ" data-ved="2ahUKEwjv8ZqztaCQAxV0qpUCHRlvHAMQo_EKegQIDRAB"> </div>
 <div data-hveid="CA0QAQ" data-ved="2ahUKEwjv8ZqztaCQAxV0qpUCHRlvHAMQo_EKegQIDRAB">
@@ -519,6 +523,7 @@
 <div class="RJPOee EIJn2"> </div>
 </div>
 <div class="post__iframe"><iframe loading="lazy" width="640" height="480" src="https://drive.google.com/file/d/1j79nl2I0SACwkHSkENRdW4glpICuh3Nc/preview" allow="autoplay"></iframe></div>
+</div>
             ]]>
         </content>
     </entry>
@@ -582,7 +587,8 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <pre class="language-yaml"><code>ACTA Nº 45/25  
+                <div style="filter: grayscale(100%) contrast(100%);">
+<pre class="language-yaml"><code>ACTA Nº 45/25  
 En Ciudadela, siendo las 19:50, se procede a conversar conmigo mismo.  
 Se constata la ausencia de orden.  
 
@@ -1090,6 +1096,7 @@ OBSERVACIONES:
 SELLO OFICIAL: ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 </code></pre>
 <div class="post__iframe"><iframe loading="lazy" width="640" height="480" src="https://drive.google.com/file/d/1PnGs6nE1hPPiuInuB2yEOb979UTvC0gg/preview" allow="autoplay"></iframe></div>
+</div>
             ]]>
         </content>
     </entry>
