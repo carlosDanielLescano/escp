@@ -515,7 +515,7 @@ SELLO OFICIAL: ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒�
   }
   .line {
     line-height: 1em;
-  }</style></head><body><div id="container"></div><script>const chars = "-:_,^=+!rc*zsLv)7(|Fi{}fI31tlu[neoZ5Yxjya]2ESqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&ESCP/2@";
+  }</style></head><body><div id="container"></div><script>const chars = "-:_,^=+!rc*zsLv)7(|Fi{}fI31tlu[neoZ5Yxjya]2ESqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&EESSCCPP//22@";
 const numLines = 15;
 const lineLength = 40; // cantidad fija de caracteres
 const container = document.getElementById('container');
@@ -525,7 +525,7 @@ let lines = [];
 for (let i = 0; i < numLines; i++) {
     let arr = [];
     for (let j = 0; j < lineLength; j++) {
-        arr.push(chars[Math.floor(((j) /lineLength) * chars.length)+i*4]);
+        arr.push(chars[Math.floor(((j+i) /lineLength) * chars.length)+i*4]);
     }
     lines.push(arr);
 
