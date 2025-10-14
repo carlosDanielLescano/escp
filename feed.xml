@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-13T21:06:55-03:00</updated>
+    <updated>2025-10-13T21:09:22-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -367,10 +367,16 @@
         <id>https://carlosdaniellescano.github.io/escp2/feed-back.html</id>
 
         <updated>2025-10-13T13:06:12-03:00</updated>
-            <summary></summary>
+            <summary>
+                <![CDATA[
+                    De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación. Texto visible normal.
+                ]]>
+            </summary>
         <content type="html">
             <![CDATA[
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp2/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
+<p style="display: none !important;">De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.</p>
+<p>Texto visible normal.</p>
             ]]>
         </content>
     </entry>
