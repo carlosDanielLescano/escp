@@ -82,34 +82,85 @@ setInterval(() => {
     lineas[lineaCambiar].textContent = textos[nuevaFila][lineaCambiar];
     lineas[lineaCambiar].style.opacity = 1;
   }, 400);
-}, 200);</script></p><div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1juUM4xd-hg?si=FkDe63Im--G5UEvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div><p> </p><p style="display: none !important;">La máquina se encuentra con su propio pasado. En cada zumbido: imprenta, fax, escáner.El presente vibra, el collage respira mecánicamente. La máquina recuerda ¿sin nostalgia?.</p></div></div><footer class="content__footer"><div class="entry-wrapper"></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-prev"><a href="https://carlosdaniellescano.github.io/escp2/instalado.html" class="content__nav-link" rel="prev"><div><span>Previous</span> Instalado</div></a></div><div class="content__nav-next"><a href="https://carlosdaniellescano.github.io/escp2/duo.html" class="content__nav-link" rel="next"><div><span>Next</span> DUOs</div></a></div></div></div></nav></footer></article><div class="banner banner--after-content"><div class="wrapper"><!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Texto Glitch</title><style>body {
+}, 200);</script></p><div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1juUM4xd-hg?si=FkDe63Im--G5UEvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div><p> </p><p style="display: none !important;">La máquina se encuentra con su propio pasado. En cada zumbido: imprenta, fax, escáner.El presente vibra, el collage respira mecánicamente. La máquina recuerda ¿sin nostalgia?.</p></div></div><footer class="content__footer"><div class="entry-wrapper"></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-prev"><a href="https://carlosdaniellescano.github.io/escp2/instalado.html" class="content__nav-link" rel="prev"><div><span>Previous</span> Instalado</div></a></div><div class="content__nav-next"><a href="https://carlosdaniellescano.github.io/escp2/duo.html" class="content__nav-link" rel="next"><div><span>Next</span> DUOs</div></a></div></div></div></nav></footer></article><div class="banner banner--after-content"><div class="wrapper"><!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Texto Monoespacio Luminiscente</title><style>body {
+    margin: 0;
+    background: black;
+    color: white;
     font-family: monospace;
-    font-size: 16px;
-    white-space: pre-wrap;
-  }</style></head><body><p id="glitchText"></p><script>const chars = 'ß∂ƒ∆˚¬…≈ç√µ≤≥÷æΩ∫˜•◊¶§†‡…œ∑´®¥¨ˆøπäöüÄÖÜñÑåÅéÉçÇøØæÆ£¥€→←↑↓↔↕';
-let textLength = 1000; // longitud aproximada de la línea
-let glitchArray = [];
+    overflow: hidden;
+  }
+  #container {
+    white-space: pre;
+    line-height: 1em;
+  }
+  .line {
+    height: 1em;
+  }</style></head><body><div id="container"></div><script>const chars = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'.";
+const numLines = 10;
+const container = document.getElementById('container');
 
-// Inicializamos el texto
-for (let i = 0; i < textLength; i++) {
-    glitchArray.push(chars[Math.floor(Math.random() * chars.length)]);
+// Obtenemos ancho de pantalla en caracteres
+function charsPerLine() {
+  const span = document.createElement('span');
+  span.style.fontFamily = 'monospace';
+  span.style.visibility = 'hidden';
+  span.textContent = 'A';
+  document.body.appendChild(span);
+  const charWidth = span.offsetWidth;
+  document.body.removeChild(span);
+  return Math.floor(window.innerWidth / charWidth);
 }
 
-// Función para actualizar un porcentaje de caracteres
-function updateGlitch() {
-    let count = Math.floor(glitchArray.length * 0.1); // 10% de los caracteres
-    for (let i = 0; i < count; i++) {
-        let index = Math.floor(Math.random() * glitchArray.length);
-        glitchArray[index] = chars[Math.floor(Math.random() * chars.length)];
+// Inicializamos 10 líneas
+let lines = [];
+let lineLength = charsPerLine();
+for (let i = 0; i < numLines; i++) {
+    let arr = [];
+    for (let j = 0; j < lineLength; j++) {
+        arr.push(chars[Math.floor(Math.random() * chars.length)]);
     }
-    document.getElementById('glitchText').textContent = glitchArray.join('');
+    lines.push(arr);
 }
 
-// Primer render
-updateGlitch();
+// Creamos elementos <div> para cada línea
+lines.forEach(arr => {
+    const div = document.createElement('div');
+    div.className = 'line';
+    div.textContent = arr.join('');
+    container.appendChild(div);
+});
+
+// Función para actualizar líneas
+function updateLines() {
+    lines.forEach((arr, i) => {
+        // Movemos los caracteres en bucle
+        let last = arr.pop();
+        arr.unshift(last);
+        // Actualizamos el div correspondiente
+        container.children[i].textContent = arr.join('');
+    });
+}
 
 // Actualizamos cada 100ms
-setInterval(updateGlitch, 100);</script></body></html></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener">lescano.ar</a></p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://carlosdaniellescano.github.io/escp2/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://carlosdaniellescano.github.io/escp2/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+setInterval(updateLines, 100);
+
+// Ajustamos al resize
+window.addEventListener('resize', () => {
+    lineLength = charsPerLine();
+    lines = [];
+    container.innerHTML = '';
+    for (let i = 0; i < numLines; i++) {
+        let arr = [];
+        for (let j = 0; j < lineLength; j++) {
+            arr.push(chars[Math.floor(Math.random() * chars.length)]);
+        }
+        lines.push(arr);
+        const div = document.createElement('div');
+        div.className = 'line';
+        div.textContent = arr.join('');
+        container.appendChild(div);
+    }
+});</script></body></html></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener">lescano.ar</a></p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://carlosdaniellescano.github.io/escp2/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://carlosdaniellescano.github.io/escp2/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
                 images[i].classList.add('is-loaded');
