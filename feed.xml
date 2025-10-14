@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-14T02:56:43-03:00</updated>
+    <updated>2025-10-14T13:38:54-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -209,20 +209,14 @@
         <updated>2025-10-13T15:44:51-03:00</updated>
             <summary>
                 <![CDATA[
-                    KINEMANCIA (2021) Kinemancia es un instrumento audiovisual desarrollado para ser activado en sets en vivo, basado en el uso del casete como soporte de imagen y sonido. Compuesta por 5 reproductores de cassette en línea, un carro de impresora de tinta, otro carro de máquina&hellip;
+                    Symphony #1 For Dot Matrix Printers by The User
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div style="filter: grayscale(100%) contrast(100%); padding: 10px; margin-bottom: 20px;">
-<h2>KINEMANCIA (2021)</h2>
-<p>Kinemancia es un instrumento audiovisual desarrollado para ser activado en sets en vivo, basado en el uso del casete como soporte de imagen y sonido. Compuesta por 5 reproductores de cassette en línea, un carro de impresora de tinta, otro carro de máquina de escribir eléctrica, viejas bobinas de teléfono y de lavadora entre otras muchas piezas, Kinemancia reúne instrumentos técnicos cotidianos de al menos 4 décadas, formando un artefacto mediático intertemporal con su forma y voz únicas, aportando preguntas sobre la innovación tecnológica y la compulsión por crear y consumir nuevos dispositivos mediáticos sin considerar los elementos materiales (y culturales) que quedan detrás.</p>
+                <div style="filter: grayscale(100%) contrast(100%);">
+<div class="post__iframe"><iframe loading="lazy" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""><a href="https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>
 </div>
-<h2>Symphony #1 For Dot Matrix Printers</h2>
-<p>La <span style="text-decoration: line-through;"><span style="text-decoration: underline;">Sinfonía para impresoras matriciales</span></span> es una obra que transforma la tecnología de oficina obsoleta en un instrumento para la interpretación musical.</p>
-<!-- Contenedor independiente para el iframe -->
-<div style="text-align: center; margin: 20px 0;"><div class="post__iframe"><iframe loading="lazy" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless="">
-  </iframe></div></div>
             ]]>
         </content>
     </entry>
