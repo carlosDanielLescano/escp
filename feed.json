@@ -56,15 +56,14 @@
             "id": "https://carlosdaniellescano.github.io/escp2/refes.html",
             "url": "https://carlosdaniellescano.github.io/escp2/refes.html",
             "title": "Refes",
-            "summary": "Symphony #1 For Dot Matrix Printers by The User gncncn",
-            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" style=\"width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/\" seamless=\"\"><a href=\"https://staalplaatlabel.bandcamp.com/album/symphony-1-for-dot-matrix-printers\">Symphony #1 For Dot Matrix Printers by The User</a></iframe></div>\n<p>gncncn</p>\n<p> </p>",
+            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" style=\"position: relative; width: 350px; height: 470px; border: 0;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=2911535451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/\" seamless=\"\">\n  </iframe></div>",
             "author": {
                 "name": "Carlos Lescano"
             },
             "tags": [
             ],
             "date_published": "2025-10-13T15:44:51-03:00",
-            "date_modified": "2025-10-14T13:51:03-03:00"
+            "date_modified": "2025-10-14T13:54:01-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp2/apropiacion-y-raigambre.html",
