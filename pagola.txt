@@ -1,0 +1,699 @@
+netart latino database
+El mapa invertido1
+
+del net.art latinoamericano
+
+[publicado originalmente en “net art latino database”, 2008, MEIAC, España]
+net.art | latinoamérica | archivo | palabra
+
+Lila Pagola
+Las obras de arte son producto de una coyuntura histórica: un momento,
+unas personas, un contexto que estimula y recepta un mensaje; y con el cual
+el artista busca interactuar. Históricamente, “contexto” era sinónimo de
+espacio-tiempo compartido; pero desde la introducción de diferentes
+dispositivos de mediación tecnológica y reproductibilidad técnica para las
+producciones culturales, éstas se han ido independizando2
+de forma
+exponencial de su “contexto” de origen, para comenzar rápidas derivas de
+circulación y diálogo con distintas comunidades culturales, momentos
+históricos, generaciones de receptores.
+Cuando nos referimos a prácticas artísticas originadas en una región del
+mundo, probablemente la más paradójica de esas tecnologías de mediación
+sea internet: ¿en qué sentido importa, o define algo “específico” (reconocible,
+particular) en las prácticas artísticas en red, el emitirse “desde”
+Latinoamérica? ¿A que respondería el uso de esta “denominación de origen”
+(Busaniche 2007: 29)?3 ¿Es una reivindicación frente a algún estigma que
+marca a los artistas, dentro o fuera de Latinoamérica? ¿Se puede hablar de
+un modo de ser/hacer en red latinoamericano?
+
+arte contemporáneo visto con un GPS socio-histórico-político
+Las obras de arte contemporáneo, en general, disfrutan de un status
+particular en la cultura, heredado de una tradición histórica sobre la cual se
+
+1
+El mapa invertido de América Latina es una creación del artista uruguayo Joaquín Torres García (1941),
+mediante la cual propone un cambio en la geopolítica cultural, a partir de la metáfora del norte (como guía o
+meta a conseguir) y la ubicación geográfica de América Latina. Cito: “He dicho Escuela del Sur; porque en
+realidad, nuestro norte es el Sur. No debe haber norte, para nosotros, sino por oposición a nuestro Sur. Por eso
+ahora ponemos el mapa al revés, y entonces ya tenemos justa idea de nuestra posición, y no como quieren en el
+resto del mundo. La punta de América, desde ahora, prolongándose, señala insistentemente el Sur, nuestro
+norte”.
+2 Todas las producciones culturales recorren itinerarios independientes de su origen, una vez que empiezan a
+circular. Sin embargo, esos procesos se acentúan en velocidad y propagación en los medios digitales, en relación
+directa a su ubicuidad y simultaneidad.
+3 Para una referencia rápida: http://es.wikipedia.org/wiki/Denominaci%C3%B3n_de_Origen
+
+2
+posicionan; continuándola o intentando destruirla, fisurarla, o salteándosela
+como si no existiese: pero en cualquier caso, apelando a aquella tradición
+para definirse y diferenciarse de otras producciones culturales (las
+contemporáneas que no se identifican como “arte” por ejemplo y las
+históricas). Es evidente que la tradición sigue operando a través de sus
+múltiples agentes, aún cuando no haya continuidad clara entre las “obras de
+arte” del pasado (aurático) y las contemporáneas, excepto la de la autocrítica
+sistemática.
+Simplificando podemos decir que en Latinoamérica, la tradición de
+referencia que hace “existir” a las obras de arte como tales, no es un dato
+menor: esa tradición no tiene 500 años ni presencia “real”4
+
+, ni siquiera los
+últimos 200 de independencia; y en muchos contextos, co-existe con
+prácticas artísticas –tradicionales y nuevas– muy extendidas, basadas en
+categorías totalmente diferentes a las occidentales (tales como obra única y
+acabada, artista, belleza, etc.); muchas de ellas incluidas y adjetivadas por
+Occidente a posteriori, como “obras de arte” “popular-folklórico-étnico”.
+Muchas de estas prácticas, actualizadas por artistas contemporáneos, han
+estigmatizado la diversidad cultural de Latinoamérica bajo una
+denominación for-export que engloba como “arte latinoamericano” a todo
+
+aquello que logre algún grado de sincretismo cabalgando entre lo exótico-
+salvaje y lo asimilable desde la experiencia del primer mundo.
+
+Las preguntas por la identidad en el arte latinoamericano –si bien es muy
+arriesgado generalizar los procesos de una región tan amplia y diversa
+culturalmente– coinciden a grandes rasgos con el surgimiento de estados
+nacionales consolidados, desprendiéndose de su pasado decimonónico,
+proceso que situamos alrededor de la década del 40 del siglo XX. Este
+sincretismo que suele denominarse como “arte latinoamericano” es una
+identificación por contraste, forzada ante la heterogeneidad del ser o la
+omisión de una identidad más definida en la cual reconocerse, durante ese
+proceso de paulatina descolonización que transitó Latinoamérica en el siglo
+XX. Para señalar hasta que punto “identidad” es sinónimo de “hibridación”,
+sirva el ejemplo de Argentina: la tradición precolombina es muy exigua en
+4 Un ensayo aparte ameritaría el fenómeno del estudio de la historia del arte occidental que se practica en
+academias y universidades en base a reproducciones de obra, que la mayor parte de los artistas no ha visto en
+persona. Esa condición del estudio de las artes contribuye a discursos mitificadores y escasamente críticos de la
+relación con la palabra como mediadora de una experiencia. La digitalización de algunas colecciones disponibles
+online ha modificado favorablemente esta situación, permitiendo el acceso incluso a materiales que no están
+disponibles en formato libro (por ejemplo los facsímiles de las revistas dada Blindman en
+http://sdrc.lib.uiowa.edu/dada/blindman/index.htm).
+
+3
+experiencias locales y está menos conservada que el también pequeño
+pasado colonial; por lo tanto lo “nativo” es una referencia abstracta, casi tan
+libresca como el renacimiento italiano o el barroco protestante de Europa.
+Excepciones complejas podemos hacer de los casos de México, Perú y
+Bolivia, cuya tradición prehispánica es una práctica viva y multitudinaria,
+aunque invisibilizada para el “arte” en lo esencial.
+Para adelantar la pregunta en el aire: ¿es el net.art una más de estas formas
+exportadas de clasificación operando sobre prácticas locales, las cuales no
+terminan de ajustarse a la propia realidad y visión del mundo? Pues parece
+que el problema no es tan simple para ser reducido a un “ejemplo más” de
+penetración cultural –considerando siempre ésta en términos de
+negociación.
+Internet es un medio global y, salvada la brecha de acceso –un dato
+relevante–, tenemos ya abundantes ejemplos de prácticas de
+empoderamiento locales, que han logrado objetivar las posibilidades de la
+tecnología para potenciar sus redes, intercambios, el alcance de sus
+mensajes. El efecto comunicativo posible sólo está limitado por las
+habilidades de los interlocutores (artistas y público receptor en este caso),
+
+incluidas aquellas que les hacen comprender la propia posición espacio-
+temporal desde la que emiten y el contexto con el que dialogan: una suerte de
+
+GPS5
+cultural.
+
+acerca de... netartlatino database ¿un archivo o una obra?
+Antes de analizar el conjunto de obras cartografiado, revisemos nuestra
+fuente: ¿se trata de un típico archivo o tiene características que lo convierten
+en un mensaje en sí mismo?
+La netart latino database [en adelante, NALD] tiene una forma de acceso
+atípica: el mapa invertido, dibujado en ascii. Sin explicitarlo, el mapa
+invertido es una remake de un dibujo de Joaquín Torres García (1941),
+artista uruguayo referente para el pensamiento sobre el arte
+“latinoamericano”. Pero además y sobre todo, el mapa es un ícono clave y
+autoevidente, para los autores y receptores que intentan dilucidar la
+complejidad de la geopolítica cultural.
+
+5 Global Positioning System: sistema de posicionamiento global.
+
+4
+
+El uso del ascii-art6
+
+es otro guiño, en el campo del arte y la tecnología, que
+refiere a la opción por los mínimos recursos tecnológicos: liviano,
+compatible, limitado, iconografía tecnológicamente retro=estética low-tech.
+Citando al propio Brian Mackern (2003): “¿El 'low tech' trabajado desde
+Europa, es similar al 'low tech' trabajado en Latinoamérica? Parecen ser lo
+mismo, pero creo que unos 'trabajan' a partir de la 'carencia', mientras otros
+'elaboran' a partir de la 'sobresaturación'... ¿Es esto lo mismo?”.
+La NALD además, se ha construido en el tiempo (2000-2005), sin que ello
+esté aclarado (no hay indicios de la fecha en la que los enlaces fueron
+agregados a la base de datos) pero ese proceso es siempre acumulativo, en
+tanto que el autor decide -sin duda- dejar los enlaces muertos (los errores
+404 de las obras offline, mientras que corrige los cambios de URL7
+) como un
+testimonio de la suerte de los proyectos de net.art gestados “desde”
+Latinoamérica. El porcentaje de webs fuera de línea es hoy muy significativo
+sobre el total de los enlaces, y en una primera visita puede tornarla frustrante
+y contradictoria, con más preguntas que respuestas para ofrecer.
+Respecto de su conformación, la NALD tiene un formulario para que los
+visitantes puedan sugerir sitios. En paralelo a las sugerencias –o más bien
+como procedimiento inicial– el autor agregaba los proyectos que le
+interesan, cuando se encontraba con ellos, navegando en internet o en el
+espacio-tiempo “real”.
+Esto último nos habilitaría a comparar la NALD con otros proyectos
+“curatoriales” de arte en internet de la primera época, como los de arteuna8
+,
+
+findelmundo9
+
+, la muestra curada por Rodrigo Alonso en el 200010 para las
+Segundas Jornadas de arte y medios digitales en Córdoba o el proyecto doble
+vínculo11 de 2001, curado por José Luis Brea.
+Pero tal comparación resulta forzada, porque la NALD es una suerte de
+manifiesto del autor que habla a través de las obras y de los errores 404.
+Excede las intenciones del señalamiento temporal de un conjunto de obras
+
+6 Ver Glosario Ludión.
+7 Dos ejemplos: la web http://sentido.ahiros.com.ar/ originalmente estaba en el dominio http://www.sentido.net
+Además, hay un formulario de envío o CORRECCION de URL, lo cual indica la voluntad del autor de mantener
+la base de datos funcional.
+8 http://www.arteuna.com/
+9 http://www.findelmundo.com.ar/
+10 http://liminar.com.ar/Archivo/JOR/00/alonso.htm
+11 http://aleph-arts.org/doble_vinculo/constelacion.html
+
+5
+(una muestra o e-show), o de la promoción y difusión al modo de un “museo”
+ubicuo abierto 24/7.
+Por último, si nos quedan dudas, el “acerca de” sólo nos indica la autoría de
+la recopilación, sin fechas ni explicaciones. Como archivo, se parece mucho a
+una obra conceptual: ¿conceptualismo ideológico12, a la latinoamericana?
+
+arte en internet “situado” en latinoamérica
+El primer problema de este análisis es definir el recorte, apoyado en el mapa
+invertido, tal cual lo ha propuesto la NALD. El origen de una comunicación
+se fija habitualmente en relación a su lugar de emisión (o de realización y
+conservación en el caso de los objetos), que suele coincidir con el de su
+emisor (con notables excepciones para algunos objetos de Latinoamérica,
+mal histórico que nos pese). “Lugar” es un concepto inoperante en el
+ciberespacio, igual que “objeto” o límite geográfico-político. ¿para qué
+
+establecer entonces el lugar de origen de un mensaje que está en un no-
+lugar?
+
+Tratando con obras inmateriales, la pertinencia de una pregunta acerca de
+cuáles marcas podemos encontrar en las obras de net.art realizadas “desde”
+Latinoamérica, ubica como criterio a la identificación de origen del artista;
+ya no a la obra, que es accesible globalmente13
+.
+
+Organizar la clasificación por la “estricta” procedencia del artista, nos refiere
+a otro fenómeno/problema: las obras en muchos casos no han sido
+realizadas en los países de origen14 o algunos artistas han emigrado a los
+centros del arte internacional, en una dinámica que caracteriza la formación
+y las carreras de los artistas latinoamericanos “reconocidos”. Para invalidar
+todavía más el criterio “lugar de emisión”, hay muchos artistas que se
+identifican con una nacionalidad de origen pero que han emigrado y/o
+producido la obra en cuestión fuera de su país. Tampoco el nombre de
+12 Marchán Fiz (1974) introduce esta diferenciación del arte conceptual en su forma de darse en Latinoamérica
+en los años 70, donde el contexto socio-político de efervescencia (“con la revolución a la vuelta de la esquina”)
+aparece en las preocupaciones de los artistas, como “tema” en contraste con el enfoque lingüístico de Europa y
+USA.
+13 Además de la cuestión técnica de la “ubicación” real de la información, en los servidores.
+14 En el mapa de la NALD hay múltiples ejemplos de este problema: Rául Ferrera Balanquet (localizado en Cuba
+en el mapa), nació en La Habana, estudió en USA y vive en México. Otro ejemplo similar es Eduardo Navas,
+ubicado en El Salvador en la NALD: su lugar de nacimiento y educación hasta emigrar a USA, donde vive y
+trabaja. Iván Marino es argentino pero vive y produce en España. Una identificación diferente hace Gerardo
+Suter, argentino de nacimiento pero viviendo en México desde 1970.
+
+6
+dominio15 del proyecto refiere necesariamente a la procedencia, si bien es
+una elección del artista en la que confluyen factores como identificación
+nacional, costo de mantenimiento, prestigio asociado a un dominio, etc. En
+algunos casos, el cambio de dominio es signo de éxito (tener uno propio) o de
+falta de interés (pasar la obra a un subdominio más difícil de recordar, pero
+gratuito).
+El idioma de muchas obras de net.art es el inglés, o bien –algunas pocas–
+tienen versiones bilingües. Este fenómeno que aparece también en otros
+contextos geográficos, no es exactamente coincidente con el que ya viéramos
+suceder en el terreno del videoarte “latinoamericano”: los artistas empezaron
+a optar por hacer del inglés el idioma primero de las piezas (subtitulando al
+español a criterio del autor), en tanto estrategia para competir en certámenes
+extranjeros. Como indica Laura Baigorri (2006) en “artistas latinos making
+global art”, la anglodependencia es una característica de la red, que afecta a
+todos los no-hablantes de ese idioma, artistas o no.
+Sin embargo es preciso señalar un cierto grado de contradicción implícita,
+respecto de la elección del idioma, para el net.art: surgido desde la opción de
+los artistas por un medio que permite propuestas inclusivas, que aspiran a
+encontrarse con un público amplio y trascender la endogamia propia del
+mundo del arte “real”, salteándose como mínimo los intermediarios de la
+difusión del arte: para esa meta, el idioma es una elección primera y
+determinante de cualquier efecto posible en los destinatarios. Es una interfaz
+de acceso -como lo es también el medio internet y su propio lenguaje- para el
+público potencial, e implica un condicionamiento fuerte para toda aspiración
+comunicativa que se apoye en recursos verbales, y pretenda producir efectos
+de sentido desde la palabra. Sin embargo, podemos alegar a favor de la
+preferencia por el inglés, su carácter de “lingua franca” de la red, y el hecho
+de que aún hablando en español, las palabras en inglés se filtrarán de
+cualquier modo para poder comunicar la cultura de internet.
+¿En qué radica la identificación con Latinoamérica? No es la localización de
+la obra, ni del autor, ni su lugar de nacimiento, ni idioma. Es un modo de ser
+cultural, relativamente susceptible de ser traducido. Revisemos algunos
+procesos de conformación de ese “modo de ser” cultural.
+
+15 Para un análisis más detallado de las elecciones en relación al dominio, véase Lila Pagola (2009) “Net.art | arte
+en red. Prácticas artísticas en red en Latinoamérica”. http://www.liminar.com.ar/netart
+
+7
+antes y ahora: la diáspora [déjà vu, hibridación y horizontes
+ampliados]
+En la construcción de las repúblicas recién pacificadas de fines de siglo XIX
+en Latinoamérica, la cultura y la educación fueron uno de los ejes centrales
+de las políticas de los gobiernos locales, de marcado signo liberal en lo
+económico y conservador en lo político.
+Las academias de arte, pocas y llevadas adelante en general por artistas
+extranjeros residiendo en el país, alentaban el “viaje de estudio” a Europa
+(Roma, París) como una instancia de completud necesaria en la formación de
+los artistas. De ese modo, de acuerdo al maestro europeo elegido como tutor
+más las interacciones sociales y preferencias del artista que viajaba, a su
+regreso se introducían nuevas tendencias, en general polémicas para la
+sensibilidad del medio local -cuyo reloj atrasaba 20 a 30 años- y donde
+incluso la tradición europea con la que confrontaban las innovaciones
+presentadas era parcialmente conocida por el público “general”.
+Muchos artistas latinoamericanos viajan a Europa a principios del siglo XX y
+entran en contacto con los artistas de las vanguardias históricas, y de esos
+contactos surgen introducciones “híbridas” del cubismo, futurismoo el
+surrealismo, entre otros. Híbridas en tanto fueron abordadas como
+innovación formal casi exclusivamente, dificultadas de sostener la crítica
+hacia la tradición artística o la función social del arte que animara a sus
+homólogos europeos.
+La práctica académica del viaje de estudio a Europa fue desapareciendo
+lentamente conforme la educación artística dejó de ser un campo de
+pioneros, se amplió y dinamizó con museos, exposiciones, galerías, algunas
+publicaciones especializadas, etc.
+Varias décadas después, el arte digital y telemático (a pesar de su
+reproductibilidad y ubicuidad) reinstaló fuertemente este fenómeno de la
+formación en el exterior, con nuevos y distintivos matices. La aridez del
+campo local (y la propia percepción de esa aridez) para estimular y habilitar
+los conocimientos ahora específicamente técnicos, ya no una tradición a
+conocer en directo16 –una diferencia significativa con sus pares del siglo
+
+16 El viaje a Roma y París como máxima aspiración para los artistas del siglo XIX es el viaje iniciático a “beber
+de la fuente original” del arte de Occidente, a ver en directo aquellas obras a las que no se podía acceder de otro
+modo, en aquella época. Desaparecido el viaje de estudio cuando la enseñanza de las bellas artes se volvió
+masiva, la principal vía de contacto con esta tradición son las reproducciones en libros y recientemente, internet.
+
+8
+XIX–, revitalizó la instancia de la formación (o la residencia de producción)
+en el exterior como una etapa casi ineludible para la mayoría de los artistas17
+de la NALD, para acceder al el know-how o la infraestructura requerida por
+los desarrollos emergentes en arte y tecnología.
+Como la movilidad de los artistas y la comunicación con sus pares de otros
+sitios tiene modos muy diferentes de darse comparados con los de principios
+del XX y antes, la dinámica alrededor de estas experiencias de formación en
+el exterior han sido heterogéneas, pero en todos los casos muy significativas:
+movilizadora de la organización de eventos con determinante cooperación
+internacional, generadora de instancias de formación locales sobre el tema,
+habilitante del intercambio de experiencias y personas. La comunidad
+internacional que se encuentra en los eventos de uno y otro lado del océano,
+muy tímidamente ha esbozado la trama de una red de cooperación
+latinoamericana18, como parte de los efectos “secundarios” de estas
+instancias de formación y producción.
+Sin embargo, la producción de obras y la instalación de temas y dinámicas de
+discusión en su particularidad “local” (esto es, surgidas de auténticas
+preguntas de la comunidad conectada, más allá de las modas que vienen de
+
+acá o allá), o la potente articulación posible con un contexto de diálogo extra-
+artístico (la comunidad hacker, los derechos de autor en los entornos
+
+tecnológicos, los videojuegos, las redes sociales) siguen siendo cuentas
+pendientes, libradas a la atracción que ejercen sobre algunos artistas,
+curadores y/o críticos.
+
+net.art / arte en red / web art
+definiciones para un desconocido local
+Las primeras experiencias artísticas que pensaban la especificidad de la red
+como soporte datan de 1994 (Greene 2000). Desde entonces y paralelamente
+a otras definiciones que designan obras que implican tecnología digital –
+tales como arte digital, arte multimedial, arte interactivo, etc.–, la relación
+
+Dicho de otro modo: la formación en historia del arte, con marcado abordaje formal y estilista se sigue apoyando
+en contactos indirectos y muy incompletos con las obras de los clásicos.
+17 Ejemplos pueden ser: Mariela Yeregui (Hypermedia Studio, UCLA donde realizó Ephitelia); Dina Roisman e
+Iván Marino (Mecad), Gabriela Golder, Anahí Cáceres, Jorge Castro, Marcello Mercado, Mónica Jacobo,
+Gustavo Crembil (Hypermedia Studio, UCLA), Paula Gaetano, Sergio Poblete (IUA, UPF), etc.
+18 El encuentro Plasma (http://www.realidadvisual.org/plasma/) (Perú), la lista RedCatSur
+(http://redcatsur.net/mailman/listinfo/redcatsur), la iniciativa del grupo Modular (http://modular.org.ar/)
+(Argentina), pueden ser indicios de ese desplazamiento local.
+
+9
+arte-internet también propuso algunas alternativas: ha sido llamado arte en
+red, web art, o net.art (Alcalá 2004).
+En Argentina, por ejemplo, la preferencia por una u otra denominación
+basculaba en relación a la formación académica y las lecturas de cada
+enunciador: así, entre los que provenían del mundo audiovisual, arte
+multimedial fue la elegida y sostenida incluso al presente, minimizando la
+especificidad de lo interactivo y con poco interés por el potencial crítico a las
+categorías de autor, obra acabada, etc. Entre los músicos y algunos artistas
+visuales, predominaron los enfoques formalistas o centrados en las
+posibilidades del nuevo soporte tecnológico: entonces adjetivar como
+“digital” a los lenguajes tradicionales era la opción preferida: “mezzotinta
+digital”, “pintura digital”, etc.
+Desde 1996, las discusiones que pretendían dirimir la “naturaleza” y sobre
+todo, la genealogía de este nuevo medio, fueron ubicándose alrededor de dos
+grandes enfoques (Pagola 2009): uno concentrado en las posibilidades
+formales de estas nuevas herramientas para el arte (partiendo de la
+constatación que los artistas no eran los destinatarios de los desarrollos de
+software o hardware); y otros enfoques, bien heterogéneos y algo posteriores,
+observando su apropiación social o proyectando sus potencialidades,
+insinuaban que se trataba de algo nuevo, difícil de asimilar a lo conocido en
+tanto que su lógica habilitaba modos diferentes –cuando no opuestos– a la
+lógica de la materia; y por ello potencialmente capaces de transformar los
+procesos de creación, circulación y recepción a nivel societal. Como
+consecuencia de ello ponían en cuestión las propias prácticas artísticas en su
+modo de darse institucional, e incluso el de las industrias culturales, en una
+renovada tradición autocrítica con resonancia a vanguardias históricas.
+
+net (dot) art [contexto tecnológico]
+Hacia 199519 se instalan los primeros nodos de acceso a internet en algunas
+ciudades latinoamericanas -en las universidades principalmente, así como
+alguno que otro raro y caro cyber-café. Los primeros países de Latinoamérica
+en tener mayor cantidad de ciudadanos conectados fueron Uruguay (el país
+de origen de Brian Mackern y la netartlatino database) y Chile, aunque en la
+evolución posterior, Chile ralentó su crecimiento hasta el 2000, momento en
+que retomó una posición elevada en la región, junto a Argentina y Brasil.
+19 http://www.fedaro.info/mapacone/mapagene.html Mapa de estadísticas de conectividad en Latinoamérica del
+ICA (Instituto para la conectividad en las Américas)
+
+10
+Para ese entonces, el contexto tecnológico local recién se asomaba a las
+posibilidades estéticas que habilitaban las tarjetas de sonido, de video con
+miles de colores y el soporte CD, que incorporaban la “cuestión interactiva”
+bajo la forma de los CD multimedia20.
+Los artistas que lograban saltear las reticencias disciplinares –aquellas que
+les decían, primero: “arte y tecnología no son compatibles” y luego, “eso es
+diseño gráfico”– se interesaban por estos nuevos recursos disponibles:
+sonido, color, capacidad de almacenamiento y procesamiento de datos, y el
+software de autoría (el viejo Toolbook, las primeras versiones de M.
+Director) avanzando hacia formas visuales e “intuitivas” de operación.
+Para el ya pequeño grupo que lograba superar la incompatibilidad aparente
+entre su interés por el arte y la seducción tecnológica, la red se presentaba
+difícil de acceder (poca, cara y lenta), y muy austera en su oferta: un mundo
+textual y laberíntico en inglés, con poca información del campo del arte, y en
+donde lo que se llamaba “arte digital” (para los buscadores o directorios de la
+época) no pasaba de ser una copia digital de la conocida tradición gráfica o
+pictórica de siempre.
+Poco después (1997) se sitúa la fecha del mítico mensaje enviado por Vuk
+Cosic a la red, de cuya “rotura” se extendió la denominación net.art21, para
+distinguir a estas producciones pensadas para tener la red internet como
+soporte y tema.
+Los experimentos del período heroico eran poco conocidos, aún sin nombre
+disciplinar ni autores de referencia: éstos aparecen en la escena local, para
+muchos autores, gracias a sitios como www.aleph-arts.org y su lista ECO, en
+español.
+Probablemente la llegada tardía de la conectividad supuso que muchos de los
+artistas que se interesaban por internet, lo hicieran directamente a través de
+esa concepción (salteando la discusión sobre web-art, arte en/de internet,
+20 En Argentina, las revistas de origen español de divulgación de novedades tecnológicas con CD (como por
+ejemplo CD Classic) supusieron un primer contacto con el medio. Allí se reseñaban las pioneras experiencias de
+los festivales Art Futura o Sonar.
+21 Esta última denominación es la que representa las obras especialmente diseñadas para la red, introduciendo en
+sus contenidos o experimentos formales a la red como fenómeno cultural, lo que ha sido llamado net cultura,
+para especificar este aspecto particular de la cibercultura que tiene su soporte en la red internet, pero que puede
+darse también por fuera de ella.
+
+11
+etc.). Hubo también, quienes experimentaron en paralelo, dentro de esta
+TAZ22 en la que vivíamos esos días. Casi todos esos experimentos, en tanto
+ensayos en la oscuridad que encontraron poca o ninguna contención –
+incluso la que los negara en su status artístico– han desaparecido23 y muchos
+de sus autores están dedicados a otros temas.
+
+arte y tecnología [crónica de una relación anunciada]
+Una característica notable de la introducción de las tecnologías digitales en el
+campo del arte fue su generalizada incorporación apriorística y acrítica.
+Apriorística en tanto, sin obras a la vista sobre las cuales evaluar o discutir,
+muchas instituciones “apostaron” (y lo siguen haciendo) a las promesas
+digitales que las TICs le hacían al arte y a la sociedad toda, y lo hicieron bajo
+la forma de salones de “arte digital”, premios que incluían la categoría muy
+tempranamente24, talleres de formación, becas en instituciones del primer
+mundo para aprender técnicas o recibir asistencia a la producción, eventos
+internacionales de divulgación, muestras y festivales, producciones
+comisionadas, etc.
+Acríticamente, en general, porque las decisiones no constituían “líneas de
+trabajo” sino respondían más a la curiosidad y la adherencia a un territorio
+tan valorado como desconocido socialmente, como era y sigue siendo el de
+las tecnologías digitales emergentes.
+Las causas locales de tal adherencia institucional, tanto en el ámbito de la
+gestión cultural pública como privada, pueden explicarse en la marcada
+debilidad de la institución-arte de la periferia: una academia atrasando
+siempre algunos años en el diálogo con las escenas internacionales, un
+museo inmovilizado por el peso de su propia infraestructura en contextos de
+precariedad, un mercado siempre amenazado de desaparición y movido más
+por las influencias de familia que por la calidad de los objetos en transacción,
+
+22 Zona temporalmente autónoma: concepto introducido por el poeta Hakim Bey en los años 90, y que fuera
+recuperado por J.L.Brea como metáfora de las potencialidades de la red internet en sus primeras épocas, para
+construir espacios alternativos de relaciones e intercambios, fuera del dominio de las instituciones. Ver: José
+
+Luis Brea “net.art: (no)arte, en una zona temporalmente autónoma” publicado en línea en: http://www.aleph-
+arts.org/pens/net.html
+
+23 Ejemplos destacables: la e-zine mearte (http://web.archive.org/web/*/http://www.mearte.com.ar) y la web
+http://www.sentido.net – Más ejemplos en http://liminar.com.ar/Archivo/JOR/00/alonso.htm
+24 El premio Prodaltec de arte digital, por ejemplo, que data de 1997, donde por “arte digital” se entendía
+fundamentalmente infografía. En ese sentido, es notable lo apriorístico de la inclusión, comparado con la
+fotografía por ejemplo, que ha tardado muchos años en ser incluida en concursos de artes visuales, o en concebir
+sus premios específicos en rango de igualdad con los premios de pintura, por ejemplo.
+
+12
+contando con la apatía o la complicidad de la crítica; y los artistas siempre
+convencidos de estar inaugurando “algo nuevo que antes no se ha hecho”.
+Por el otro lado, la tecnología como un área de desarrollo muy dinámica, a
+nivel conocimiento y a nivel mercado, arrastrando tras de sí a los espíritus
+innovadores, pero sospechada de “falta de humanidad”. Allí es donde los
+artistas son llamados a jugar un rol.
+
+primeras visiones o modos de contención autogestiva
+Probablemente este abordaje institucional apriorístico y acrítico que
+predominó en la introducción de las intersecciones del arte y la tecnología no
+facilitó las aproximaciones a los abordajes más críticos. El giro político que
+concentró en sus orígenes el net(dot)art, especialmente en Europa, se
+concentró, por estos lares y en la misma época, en la discusión en torno a la
+interactividad en tanto categoría que afectaba centralmente a la noción de
+obra, y al rol del “espectador” en la recepción.
+Giro político porque quienes insistimos por develar lo específico que el arte
+digital (multimedia o como se lo llamara entonces) podía aportar, lo
+hacíamos, en muchos casos, desilusionados de las posibilidades
+comunicativas del sistema del arte (por su ficcionalidad local y su
+endogamia) y para ese fin, la red internet -poca, cara y lenta (por lo tanto
+escasamente compartida e instalada en la cotidianidad de la mayoría),
+parecía una herramienta poco apropiada para canalizar esa inquietud.
+En ese contexto de extrañeza social en el que aún se hallaba ubicado internet,
+algunos artistas tuvieron la visión de empezar experimentos en la red:
+www.netart.org.uy es uno de ellos, y otros contemporáneos son arteuna25
+(1996) y findelmundo26 (1996), de Argentina y escaner cultural27 (1999) de
+Chile.
+periferia, convicción y sustentabilidad
+Una de las características notables que hacen todavía operativas la nociones
+de centro-periferia, incluso en una red descentralizada como internet cuya
+forma técnica “materializa” la igualdad de acceso de un modo inédito al
+presente, es la verificación de que quienes estamos en las “periferias”
+
+25 http://www.arteuna.com/
+26 http://www.findelmundo.com.ar/
+27 http://www.escaner.cl/
+
+13
+siempre tenemos más información sobre lo que sucede en el centro,
+cualquiera sea éste, que respecto de lo que está sucediendo con nuestros
+vecinos. “Acceso no es poder”, citando nuevamente a Baigorri (2006: 75),
+refiriéndose a la inevitable articulación entre la institución-arte “real” y las
+proyecciones internacionales del net.art (Liberoscaya 2004).
+Brian Mackern, por ejemplo, ha sido definido como “un artista (...)
+fundacional, aunque como es ajeno a los ámbitos europeo y norteamericano,
+dada su nacionalidad uruguaya, no posee el lustre de los siete magníficos, a
+pesar de anticiparse en el uso de la herramienta Flash y los recursos sonoros.
+Su trabajo se basa en la experimentación audiovisual en 'un país no
+desarrollado, donde el low-tech no es un recurso estético sino la única salida
+para continuar trabajando” (Peralta 2005).
+Volviendo sobre la información de lo producido localmente, desde los
+programas educativos hasta las programaciones culturales, pasando por los
+libros, las revistas, los eventos, las webs, etc. es más fácil encontrar
+documentación, análisis, crítica y la producción misma (incluso en los
+soportes tradicionales cuya movilidad es compleja y costosa en recursos) de
+producciones culturales de Europa y USA, que de cualquier país de
+Latinoamérica, o incluso de otras regiones de un mismo país. Los institutos
+de cooperación internacional juegan un rol central en esa posibilidad: las
+bibliotecas de unos, o los eventos de otros, han representado instancias
+determinantes para la formación de los artistas locales: han instalado temas,
+han estimulado co-producciones, han cooperado con iniciativas locales,
+públicas y privadas, siempre que su agenda se los habilitara.
+Para los agentes movilizadores de la escena del arte y la tecnología,
+mayoritariamente los mismos productores, estas organizaciones han sido los
+interlocutores abiertos y receptivos -dentro de sus propios límites y objetivos
+institucionales- de las experiencias y discusiones alrededor del tema. Pero
+del mismo modo que en la gestión pública acusa la ausencia de líneas de
+trabajo claras al respecto, en los organismos de cooperación, esas líneas
+suelen estar orientadas por la misión del organismo y no se corresponden de
+modo adecuado con lo que sucede en la escena local: de esa combinatoria de
+condiciones se desprende otro fantasma conocido de la gestión cultural: las
+experiencias parecen ser siempre “las primeras en su tipo en Latinoamérica”.
+
+14
+
+siempre en fase inaugural
+Este fenómeno que tiene que ver con el reconocimiento del valor de una
+producción, su adecuada documentación, análisis, crítica, e itinerancia, es un
+constante vacío en la gestión cultural local, en lo que respecta a
+manifestaciones contemporáneas. La mayoría de esas tareas están y han
+estado, en muchos casos, en manos de los propios productores, que son
+usualmente también docentes, curadores y críticos, en esta nueva figura del
+artista-etc. que ha propuesto Ricardo Bausbaum (2003).
+Estos mismos productores, actuando como “asesores” de la gestión local,
+somos los que hemos señalado la irrupción de un fenómeno emergente en la
+intersección de arte y tecnología, con el amplio soporte que nos daba la alta
+valoración (y uso) social que las tecnologías tienen en el imaginario colectivo,
+más que producciones y experiencias locales concretas, como analizáramos
+en el apartado anterior.
+La falta de continuidad y recuperación de las experiencias previas, nos
+posiciona siempre haciendo “esfuerzos pioneros” e imposibilita la
+profundización de los debates, que no logran trascender el umbral de la
+información inicial. Si esto es un problema histórico derivado de la falta de
+medios y visión de en las políticas culturales (que deciden sobre los recursos)
+para generar “escena”, hoy resulta relativamente simple generar las
+instancias de documentación (aún caseras) y circulación de lo realizado.
+Estamos en la transición desde una limitación material que determinaba un
+“modo de ser” histórico, hacia el desarrollo de nuevas formas de procesar y
+poner en funcionamiento el material documental que empieza a surgir en la
+red: como potente ejemplo, los blogs de artistas del presente son documentos
+invaluables para los historiadores del futuro. Localmente, el impacto puede
+ser enorme: se desplaza la variable histórico “no pudimos” (documentar,
+analizar, recuperar) hacia la opción “esto puede ser interesante y valioso para
+ser analizado”, frente a la documentación a un click de distancia.
+El caso de la NALD es una respuesta temprana desde la nueva lógica
+(inmaterial, autónoma) de la red, a esa situación conocida: un productor,
+protagonista de esta historia que documenta, conectando puntos en el mapa
+de Latinoamérica, como mínimo gesto frente a la ausencia de representación
+de los experimentos “latinoamericanos” en el mundo de la red. ¿Con qué
+criterio? Uno inclusivo y arqueológico, al punto de no eliminar, como huella
+de una historia de convicción y sustentabilidad, incluso aquellos que hoy son
+
+15
+errores 404. Un ejemplo sui generis del “piensa globalmente, actúa
+localmente”.
+
+sustentabilidad y convicción: alquimia histórica
+Sustentabilidad y convicción son términos que se implican directamente: la
+convicción sostiene algo, aún en condiciones no favorables (por ejemplo, que
+me represente un costo de mantenimiento pero no tenga indicadores de que
+a alguien le importe su desaparición). La sustentabilidad supone las
+posibilidades que tiene una actividad de mantenerse o evolucionar en el
+tiempo, en función del esfuerzo que supone para quienes la realizan. Un
+archivo en línea, aún digital, tiene una mínima “sustentabilidad” (como
+pagar un dominio, un hosting, una transferencia de datos) que requiere de
+una mínima convicción para su continuidad, puesto que la inercia lo llevaría
+a desaparecer (como las múltiples webs errores 404 de la NALD).
+Retomando el momento de redefiniciones que vivimos, esta mínima
+sustentabilidad28 implica al mismo tiempo, su potencial de autonomía frente
+a las instituciones, así como la creación de formas alternativas de relación al
+interior del mundo del arte y hacia afuera de él.
+La convicción sostiene. Sostener implica creer en el gesto y su valor para
+otros, y como algo valioso, cuidarlo. Si reparamos en el proceso constructivo
+de la NALD -como un ejemplo entre muchos otros-, sostener implica separar
+un poco del esfuerzo cotidiano para dedicárselo al incierto futuro en el cual
+alguien querrá saber que tan global era el net.art y como se superponen los
+mapas de la geopolítica cultural, para reconstruir una historia más completa
+y con un poco de suerte y voluntad, evitar tanto el efecto “fase inaugural”
+como el de “neocolonización ingenua”.
+[y entre nosotros ¿por qué importa?]
+El net.art tiene un punto de contacto privilegiado con otras comunidades
+más allá del pequeño mundo del arte: internet es un nuevo espacio público
+donde prácticas alternativas pueden evitar que se reproduzcan lógicas que le
+son ajenas (como limitar el acceso o la distribución) o que simplemente, ya
+no queremos para nosotros, en tanto han demostrado ser injustas,
+excluyentes e insostenibles.
+
+28 La sustentabilidad de algunos proyectos artísticos en la red está atravesada por las mismas variables que otros
+documentos digitales, donde cambios tecnológicos tornan obsoletos e inaccesibles conjuntos de datos. En ese
+punto, es parte de las elecciones de los artistas apostar por sistemas de estándares abiertos, que no queden
+atrapados en cambios de políticas de una empresa, ni obliguen a los usuarios a instalar/acordar con software
+hostil hacia sus libertades electivas básicas.
+
+16
+El arte contemporáneo tiene en internet, un terreno fértil e inexplorado de
+comunicación y experimentación con la comunidad, local y global; sin duda.
+Primero el net.art, y hoy se suman las redes sociales y la web 2.0. Para que
+los recién llegados al internet social no reediten debates y utopías ya vividas
+y abandonadas, son necesarios los intercambios y los datos, las visiones
+globales y los modos de darse particulares.
+Lo sostenido en el tiempo, con ese combustible híbrido de intuición y
+convicción, se convierte en dato, en una base de conocimiento que nos evita
+empezar de cero cada vez, y comprender que lo que hoy somos y pensamos
+es el resultado de miles de aportes iguales al nuestro hechos por otros como
+nosotros, cuyo contexto es necesario comprender: porque la “situación” del
+saber o el hacer aporta tanto o más datos que la propia información, y donde
+sumando las partes –todos, aquí y allá, artistas y no-artistas– podemos ser
+colectivamente más sensibles e inteligentes.
+
+Lila Pagola – marzo 2009/febrero2011
+Este texto está bajo una licencia de Creative Commons Atribución Compartir igual (by sa)
+Argentina 2.5 [http://creativecommons.org/licenses/by-nc-sa/2.5/ar/]
+Usted puede copiarlo y modificarlo siempre que cite la fuente y mantenga esta licencia.
+
+Referencias:
+AAVV. (2007) Instalando. Arte y cultura digital. Santiago de Chile, Edic.
+Colectivo Troyano. 2007. Disponible en línea en
+http://www.autopoietica.net/textos/instalando_book.pdf
+AAVV. (2007) netart.ib Arte en la red desde Latinoamérica. 1996-2006.
+Catálogo de la exhibición del CCEBA. Curador Gustavo Romano. Buenos
+Aires.
+AAVV. (2008) net art latino database. MEIAC, España.
+Aguiar Masuelli, Guadalupe. “¿de qué se habla cuando se habla de
+latinoamérica? Cuatro miradas sobre el net.art en la producción artística
+latinoamericana.” http://aminima.net/wp/?p=453&language=es
+Alcalá, José R. (2004) “Net.Art : Creadores, activistas, pintamonas y otros
+negocios del arte on-line” en Revista a minima #7 Espacio Publicaciones,
+Asturias. http://aminima.net/wp/?p=672&language=es
+
+17
+Baigorri, Laura. (2006) “Artistas latinos making global art” e “Internet y
+otras redes. Conversación entre Arcángel Constantini (Mx)Brian Mackern
+(uy), Belén Gaché, Jorge Haro y Gustavo Romano (ar)”, en Baigorri, Laura
+y Cilleruelo, Lourdes. net.art. Prácticas artísticas en red. Barcelona. Co-
+edición Brumaria y Universidad de Barcelona. 2006.
+Brea, José Luis (2002). La era postmedia. Acción comunicativa, practicas
+postartísticas y dispositivos neomediales. Edición en línea en
+www.laerapostmedia.net/ 2002.
+Busaniche, Beatriz (2007). “Por qué no hablamos de propiedad intelectual”
+en Monopolios artificiales sobre bienes intangibles. Córdoba.
+Ediciones Vía Libre.
+Correbo, María Noel, Bang, Nicolás, Matewecki, Natalia (s/f). “Nuevos
+espectadores para nuevos comportamientos artísticos. el net-art en la
+Argentina” . Editado online en
+http://www.arteuna.com/talleres/tesis/matewecki.pdf
+Di Marco, Gisela. (2008) “Acerca de modular– Arte, tecnología y sociedad en
+Latinoamérica.” Presentación para el encuentro Plasma, publicada online
+en www.realidadvisual.org/plasma
+Greene, Rachel (s/f). “Una historia del arte de internet.” Publicado en línea
+en http://aleph-arts.org/pens/greene_history.html Original publicado
+como “Web work a history of internet art” en ARTFORUM International,
+no 9 May 2000, pág. 162-167, 190. Traducción: Remedios Zafra.
+Liberovskaya, Katerine (2004) “Acceso al net-art : una red organizada de
+manifestación y documentación” (fragmento) . Publicado en línea en
+http://liminar.com.ar/txt/Critica003.htm
+Mackern, Brian (2003). Entrevista de Benjamin Bibas. Cinémas de demain /
+Centre Pompidou :: fluctuat.net / Tour du monde du web 2003
+http://netart.org.uy/interviews/demain.htm
+Marchán Fiz, Simón (1974). Del arte objetual al arte del concepto. Madrid,
+Edic. Comunicación.
+Matewecki, Natalia. (2004) “Problemáticas de una construcción identitaria
+en el arte de internet Latinoamericano”. Editado en CD rom y online
+para las 5tas. Jornadas de arte y medios digitales. Córdoba.
+http://www.liminar.com.ar/jornadas04/ponencias/matewecki.pdf
+Pagola, Lila. (2009) “Net.art | arte en red. Prácticas artísticas en red en
+Latinoamérica” www.liminar.com.ar/netart
+------------ (2004) “Formas de institucionalización textual de las obras de
+net.art en el mundo del arte.” Publicado en línea en
+http://liminar.com.ar/jornadas04/ponencias/pagola.pdf Sextas
+Jornadas de arte y medios digitales. Argentina.
+
+18
+Peralta, Darío (2005). El net.art visto desde Latinoamérica. Publicado en
+línea en http://www.damianperalta.net/netart_en_al/index.html
+Joaquín Torres García (1941). Universalismo Constructivo, Buenos Aires,
+Poseidón. http://www.artemercosur.org.uy/artistas/torres/sur.html
