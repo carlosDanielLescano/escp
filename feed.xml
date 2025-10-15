@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T09:41:37-03:00</updated>
+    <updated>2025-10-15T10:12:03-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -21,8 +21,35 @@
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <div style="position: relative; width: 470px; height: 631px; border: none; filter: invert(100%) grayscale(100%) contrast(110%);"><div class="post__iframe"><iframe loading="lazy" style="width: 719px; height: 631px; border: none;" src="https://netart.org.uy/latino/">
-	</iframe></div></div>
+                <div id="scrollBox" style="position: relative; width: 400px; height: 250px; overflow: hidden; background: black; color: #00ffcc; font-family: monospace; font-size: 14px; line-height: 1.5em; border: 1px solid #00ffcc;">
+<div id="scrollText"></div>
+</div>
+<p>
+<script>
+let velocidad = 0.3; // píxeles por frame — cambiá este valor
+let posY = 0;
+let textoDiv = document.getElementById('scrollText');
+
+fetch('textoplano.txt')
+  .then(res => res.text())
+  .then(texto => {
+    textoDiv.innerText = texto + "\n\n" + texto; // duplicado para loop
+    animateScroll();
+  });
+
+function animateScroll() {
+  posY -= velocidad;
+  textoDiv.style.transform = `translateY(${posY}px)`;
+
+  // si se fue todo hacia arriba, reiniciar
+  if (-posY > textoDiv.scrollHeight / 2) {
+    posY = 0;
+  }
+
+  requestAnimationFrame(animateScroll);
+}
+</script>
+</p>
             ]]>
         </content>
     </entry>
