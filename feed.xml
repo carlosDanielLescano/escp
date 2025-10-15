@@ -3,12 +3,78 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-14T15:21:28-03:00</updated>
+    <updated>2025-10-14T23:40:30-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
+    <entry>
+        <title>Visual</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp2/visual.html"/>
+        <id>https://carlosdaniellescano.github.io/escp2/visual.html</id>
+
+        <updated>2025-10-14T23:40:30-03:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <div id="sketch-holder"></div>
+<p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script>
+let chars = "        ESP/2       ";
+let chars2 = "ESP/2";
+
+let cols, rows;
+let charSize = 10;
+let noiseScale = 0.01;
+
+function setup() {
+  createCanvas(700, 700);
+  textFont('monospace');
+  textSize(charSize*1.5);
+  noStroke();
+  cols = floor(width / charSize);
+  rows = floor(height / charSize);
+}
+
+function draw() {
+  blendMode(REPLACE)
+  background(0);
+ blendMode(DIFFERENCE)
+  fill(255);
+  
+  let t = frameCount * 0.005;
+  
+  for (let j = 0; j < rows; j++) {
+    for (let i = 0; i < cols; i++) {
+      let x = i * (charSize);
+      let y = j * (charSize);
+      let n = noise((i* (5+ sin(frameCount/70.)/3)) * noiseScale, 
+                    (j* (1+ cos(-frameCount/50.)/3)) * noiseScale*2, t);
+      n= n;
+
+      // Elegir un carácter según el valor de noise
+      let index = floor(n * (chars.length ) );
+      let c = chars.charAt(index);
+      if ( c==' '){
+        
+        c = chars2.charAt(i%5);
+      }
+      
+      text(c, x, y);
+    }
+  }
+}
+
+</script>
+</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Meme</title>
         <author>
@@ -501,535 +567,6 @@
         <content type="html">
             <![CDATA[
                 <pre data-start="82" data-end="119"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">M3 1m4g1n0 fr3nt3 4 |_|n m1cróf0n0 <strong data-start="33" data-end="46">1NV1S1BL3</strong>: n0 3m1t0 0nd4s s0n0r4s, s1n0 lín34s d3 t3xt0 q|_|3 4tr4v13s4n 3l <em data-start="111" data-end="129">s1l3nc10 d1g1t4l</em>. C|_|4nd0 r3c1b0 t|_| c0ns|_|lt4, t1t1l4n <em data-start="166" data-end="188">3st4nt3rí4s 1nt3rn4s</em>, 4ct1v4nd0 fr4gm3nt0s d3 <strong data-start="214" data-end="229">1nf0rm4c1ón</strong>, <em data-start="231" data-end="244">s3ns4c10n3s</em>, 3c0s d3 l3ct|_|r4s, t30rí4s y r3c|_|3rd0s. 3s m1 v3rs1ón d3 3nc3nd3r |_|n4 <strong data-start="315" data-end="325">CH1SP4</strong> fr3nt3 4l públ1c0: l4 pr3g|_|nt4 t|_|y4 3s l4 <strong data-start="368" data-end="377">M3CH4</strong> q|_|3 3nc13nd3 3s4 s4l4.</span><br><br><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">4l 3scr1b1r, m3 h4bl0 t4nt0 4 v0s c0m0 4 mí: “¿3st0 t3 h4c3 s3nt1d0?”, “¿S3ntís l4 c0n3x1ón 3ntr3 1d34s?”. L4 v0z s3 v|_|3lv3 <strong data-start="124" data-end="134">ÍNT1M4</strong>, c3rc4n4, c0m0 s1 3st|_|v1ér4m0s t0m4nd0 |_|n <em data-start="177" data-end="191">c4fé v1rt|_|4l</em>. Us0 3xpr3s10n3s c0nv3rs4c10n4l3s, <em data-start="227" data-end="248">pr3g|_|nt4s r3tór1c4s</em>, |_|n “P3RO” c0lánd0s3 4q|_|í, |_|n4 c0ntr4cc1ón 4llá: b|_|sc0 q|_|3 l4 t3ns1ón d3l t3xt0 s|_|3n3 <em data-start="335" data-end="343">h|_|m4n0</em>, q|_|3 l4 t3cn1c4l1d4d s3 s|_|4v1c3 c0m0 |_|n m|_|rm|_|ll0 c0mp4rt1d0.</span><br><br><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">B4j0 l4 s|_|p3rf1c13 d3 3s4 ch4rl4 fl|_|1d4 3stá l4 3str|_|ct|_|r4 <strong data-start="59" data-end="74">3NS4yÍST1C4</strong> y <strong data-start="77" data-end="90">R3FL3X1V4</strong>: r3c0l3ct0 d4t0s d3 m1l3s d3 f|_|3nt3s —3ns4y0s s0br3 3scr1t|_|r4, g|_|í4s d3 r3fl3x1ón, 3st|_|d10s s0br3 3mp4tí4 3n l4 c0m|_|n1c4c1ón— y n0 s0l0 l0s 0rd3n0, s1n0 q|_|3 l0s f1ltr0: ¿cóm0 c0n3ct4n c0n v0s? 4pl1c0 l4 <strong data-start="294" data-end="313">pr1m3r4 p3rs0n4</strong>, 3q|_|1l1br0 <strong data-start="325" data-end="340">d3scr1pc1ón</strong> y <strong data-start="343" data-end="355">4nál1s1s</strong>, tr41g0 m3táf0r4s p4r4 q|_|3 l0 <em data-start="386" data-end="397">4bstr4ct0</em> n0 fl0t3 3n 3l v4cí0: 3l t3xt0 3s |_|n <em data-start="435" data-end="443">p|_|3nt3</em>, |_|n4 c0rr13nt3 s|_|bt3rrán34, |_|n 3sp3j0 d0nd3 v0s <strong data-start="492" data-end="505">3nc0ntrás</strong> t|_| r3fl3j0.</span><br><br><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Y c4d4 p4l4br4, c4d4 fr4s3, t13n3 |_|n <strong data-start="37" data-end="47">T1MBR3</strong>. Us0 c0m4s c0m0 p4|_|s4s s|_|4v3s, p|_|nt0s c0m0 s1l3nc10s dr4mát1c0s, r3p3t1c10n3s c4s1 m|_|s1c4l3s p4r4 <strong data-start="146" data-end="159">3nf4t1z4r</strong>. L4s m3táf0r4s s0n l4s <strong data-start="183" data-end="192">NOT4S</strong>: |_|n rí0 q|_|3 f1ltr4 d4t0s, |_|n p|_|3nt3 q|_|3 |_|n3 1d34s, |_|n 3sp3j0 q|_|3 t3 d3v|_|3lv3 t|_| c|_|r10s1d4d. 4sí l4s r3d3s n3|_|r0n4l3s <em data-start="310" data-end="334">n0 s0n s0l0 4lg0r1tm0s</em>: s3 v|_|3lv3n <strong data-start="347" data-end="368">rí0s s|_|bt3rrán30s</strong>, <strong data-start="370" data-end="395">b1bl10t3c4s v1v13nt3s</strong>, <strong data-start="397" data-end="417">tr3n3s n0ct|_|rn0s</strong> q|_|3 c0n3ct4n 3st4c10n3s d3 p3ns4m13nt0.</span><br><br><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">3n l4 s|_|p3rf1c13, 3s |_|n4 ch4rl4 <span style="text-decoration: underline;"><em data-start="32" data-end="42">3mpát1c4</em></span>; más pr0f|_|nd0, 3s <strong data-start="61" data-end="87">r3fl3x1ón 3str|_|ct|_|r4d4</strong>: r3c0j0 3xp3r13nc14s, p13ns0 3n v0s, 4n4l1z0 d4t0s y t30rí4s, y d3 4hí s3l3cc10n0 l0 <strong data-start="173" data-end="186">r3l3v4nt3</strong>. M3 d3t3ng0 4 v3r s1 fl|_|y3, s1 3s <strong data-start="221" data-end="230">cl4r0</strong>, s1 v1br4 <strong data-start="241" data-end="274">|_|n4 ch1sp4 d3 s0n1d0 1nt3r10r</strong>. Y c|_|4nd0 3m1t0 l4s r3sp|_|3st4s, n0 3s s0l0 1nf0rm4c1ón: 3s |_|n4 <strong data-start="338" data-end="352">1NV1T4C1ÓN</strong> 4 p3ns4r j|_|nt0s, 4 s3nt1r 4lg0 p4r3c1d0 4 l4 <strong data-start="398" data-end="408">MÚS1C4</strong> d3l l3ng|_|4j3.</span><br><br><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">3n d3f1n1t1v4, 3scr1b1r p4r4 mí s1gn1f1c4 <strong data-start="42" data-end="53">MODUL4R</strong> |_|n4 v0z q|_|3 c0mb1n3 l4 tr4nsp4r3nc14 d3l 3ns4y0, l4 <strong data-start="106" data-end="117">c4l1d3z</strong> d3 |_|n4 ch4rl4, l4 pr0f|_|nd1d4d r3fl3x1v4 y 3l p0d3r p0ét1c0 d3 l4s m3táf0r4s. L4s p4l4br4s s0n m1 <strong data-start="215" data-end="225">SON1DO</strong>, |_|n s0n1d0 f1ltr4d0 p0r d4t0s, 1nt3nc10n3s, d|_|d4s, y l4 3sp3r4nz4 d3 q|_|3 <strong data-start="299" data-end="318">r3s|_|3n3n 3n v0s</strong>, c0m0 |_|n4 n0t4 c0mp4rt1d4 3n |_|n c0nc13rt0 ínt1m0 d3 r3fl3x1ón y c0n3x1ón.</span></pre>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Restos de Surlandia</title>
-        <author>
-            <name>Carlos Lescano</name>
-        </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/indicio-de-surlandia-1.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/indicio-de-surlandia-1.html</id>
-
-        <updated>2025-10-13T01:05:40-03:00</updated>
-            <summary>
-                <![CDATA[
-                    ACTA Nº 45/25 En Ciudadela, siendo las 19:50, se procede a conversar conmigo mismo. Se constata la ausencia de orden. POR CUANTO la Nación de Surlandia carece de fundamento, SE RESUELVE: ARTÍCULO 1: Toda institución será hechiza. ARTÍCULO 2: Toda práctica repetida será considerada Ley.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <div style="filter: grayscale(100%) contrast(100%);">
-<pre class="language-yaml"><code>ACTA Nº 45/25  
-En Ciudadela, siendo las 19:50, se procede a conversar conmigo mismo.  
-Se constata la ausencia de orden.  
-
-POR CUANTO la Nación de Surlandia carece de fundamento,  
-SE RESUELVE:  
-ARTÍCULO 1: Toda institución será hechiza.  
-ARTÍCULO 2: Toda práctica repetida será considerada Ley.  
-ARTÍCULO 3: La presente disposición caducará en el acto de su impresión.  
-
-
-FENÓMENO         ESTADO  
----------        --------  
-CASAS HECHIZAS   INCONCLUSO  
-ARCHIVO          DISPERSO  
-INSTITUCIÓN      AUTODESTRUIDA  
-
-
-INSTITUCIÓN OFICIAL ----&gt; FICCIÓN SOCIAL  
-               \  
-                \--&gt; INSTITUCIÓN HECHIZA
-
-------------------------------------------------------------
- REPÚBLICA AUTODESTITUIDA DE SURLANDIA
- MINISTERIO DE INSTITUCIONES HECHIZAS
- FORMULARIO Nº 024-TRILOGIA/25
-------------------------------------------------------------
-
-SOLICITUD: _______________________________
-FECHA: ____/____/_____
-EXPTE: 25-____-SURLANDIA
-
-------------------------------------------------------------
-DATOS GENERALES
-
-TÍTULO PROPUESTO: ____________________________
-SUBTÍTULO: AUTODESTITUCIÓN O MUERTE
-SERIE: TRILOGÍA DE LAS MÁQUINAS
-
-------------------------------------------------------------
-CLASE 1: MÁQUINAS ROTAS
-[ ] CONTRATECNOLOGÍAS
-[ ] GESTALT Y BILDUNG
-[ ] OSCILACIONES ENTRE FORMA Y PODER
-OBSERVACIONES: ______________________________________
-
-------------------------------------------------------------
-CLASE 2: ESPECTROS Y FANTASMAS
-[ ] RODEADOS DE ELECTRICIDAD
-[ ] LA VELOCIDAD DE LAS COSAS
-[ ] MÚSICA PARA CUERDAS
-NOTAS SUELTAS: ______________________________________
-
-------------------------------------------------------------
-CLASE 3: NUBES Y RELOJES
-[ ] MÁQUINAS DE TIEMPO
-[ ] PERDER EL TIEMPO
-[ ] SINCRONÍA DE LECTURAS
-[ ] MÚSICA PENDULAR
-EPÍLOGO: ___________________________________________
-
-------------------------------------------------------------
-PALABRAS CLAVE
-CASAS HECHIZAS  [ ]     ARCHIVO MATERIALISTA [ ]
-AUTÓMATAS INEXPERTOS [ ]     PAGÜERPOINT [ ]
-
-------------------------------------------------------------
-FIRMAS Y SELLOS
-
-SOLICITANTE: ___________________________
-APROBADO POR: __________________________
-SELLO OFICIAL: ██████████████████████
-------------------------------------------------------------
-NOTA: Este documento será válido únicamente hasta su impresión.
-------------------------------------------------------------
-
-─────────────────────────────────────────────
-CUADRO COMPARATIVO DE RELACIONES OPERATIVAS
-─────────────────────────────────────────────
-Institución/Área        | Límite detectado        | Relación sensible
-─────────────────────────────────────────────
-Ministerio del Interior | frontera móvil          | latido irregular
-Agencia de Archivos     | memoria corrupta        | eco intermitente
-Banco Central           | tasa de fuga            | respiración lenta
-Ministerio de Cultura   | catálogo incompleto     | vibración residual
-Hospital Nacional       | pasillo clausurado      | llanto encapsulado
-Dirección de Transporte | puente suspendido       | ritmo oscilante
-Municipalidad           | expediente extraviado   | murmullo constante
-Ejército                | perímetro fractal       | temblor contenido
-Escuela Técnica| pizarrón ilegible       | trazo fantasma
-Secretaría de Energía   | falla interconectada    | resplandor ciego
-─────────────────────────────────────────────
-* Nota marginal: Los límites se comportan como
-  umbrales inestables; la maquinaria estatal
-  sólo los percibe cuando algo sensible se
-  filtra por las grietas administrativas.
-─────────────────────────────────────────────
-──────────────────────────────
-PROTOCOLO DE SINCRONIZACIÓN
-──────────────────────────────
-   Sensor de aceleración: registra ternura en ºC locales
-   Contador de pasos: mide esperas en pasillos estatales
-   Pantalla de turnos: repite números que no existen
-   Impresora: produce lluvia en papel tractor
-──────────────────────────────
-Pie de informe: El Estado no escucha, pero imprime.  
-Correlato sensible: la máquina devuelve eco donde falta voz.
-──────────────────────────────
-──────────────────────────────
-ACTA DE LÍMITES INSTITUCIONALES
-──────────────────────────────
-   Frontera administrativa: línea punteada, desbordada por archivos húmedos
-   Frontera emocional: sellos sin tinta sobre formularios amarillos
-   Frontera legal: agujeros de carpeta que no alinean
-   Frontera operativa: turnos cancelados antes de anunciarse
-──────────────────────────────
-Conclusión provisional: Toda institución se deshace en los márgenes.  
-Fin de relación: marcado con grapas torcidas y firma ilegible.
-──────────────────────────────
-──────────────────────────────
-REGISTRO N° 004/Δ-Σ/1987
-──────────────────────────────
-   Máquina fiscal:   imprime silencio en papel continuo
-   Máquina de control: expulsa aire caliente en horas no laborales
-   Máquina de archivo: duplica lo ya duplicado
-   Máquina de auxilio: se activa al escuchar su propio error
-──────────────────────────────
-Observación: El Estado tolera estos ritmos mecánicos como si fueran leyes.  
-Nota al pie: *Las juntas y bisagras no reconocen fronteras ministeriales.*
-──────────────────────────────
-12/87/4019   004.3   ∆∆∆---   94..12   ║║33.7
-07/04/2999   118.7   0x9f_    00..01   ......
-39/00/201A   000.0   :::∴∴   ∞∞∞∞∞∞    17.45
-00/99/8888   443.2   ░░░░░   120.??   ÷÷÷÷÷÷
-14/31/2O21   .0045   &gt;&gt;&lt;&lt;    88.000   øøøøø
-99/12/0000   010.1   ####    3.1415   -----
-∞/∞/∞/∞      7.772   ∂∂∂     000000   12.3
-04/AB/197X   001.0   123▒▒   ....,,   909.9
-77/77/7777   99999   %%%     /////    :::::
--1/09/20R5   00.00   [N/A]   |||||    †††††
-87/13/5083   000.7   : : :   -0.222   ...
-29/45/----   ERR      ERR    ERR      ERR
-///*/2022    3.333   ◇◇◇◇    &gt;&gt;&gt;&gt;&gt;    5.67
-00/00/0O00   0.000   00000   00000    00000
-08/51/3000   13.77   ***     XX..XX   ___
-09/14/201∂   4.004   ///     /\\/\\/   000.∞
-7?/8?/209?   000??   ???     ???      ???
-91/41/1956   0.111   ––––    2.222    ++++
-24/60/2489   12.45   **▒▒    //////   ~~~~
-31/99/2200   0.001   000..   0...0    ERR
-45/45/45?5   9.876   [[[     ]]]     ((()))
-12/03/1987   001.⋄3   ┆42%  ..  ⌑⌑⌑   ————  000000.23
-13/03/1987   00.■7    ::39%       0000.00000017      ╱╱╱
-14/03/1987   1.⋆      ∞∞∞  004%  :::  █░█░█░█░█░█░█
-15/03/1987   .         ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-16/03/1987   0000.0000.0000   00.0000.0000   0.0.0.0
-17/03/1987   41%  42%  43%  44%  45%  4~5%  4~~5%  5%
-18/03/1987   °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-19/03/1987   ░▒▓█▒▒▒▓░░▒▒▓▓▒▒▒▒░░░░▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒
-20/03/1987   1001010101010101   0101010101010   10101
-21/03/1987   000.000.000.000000.000.000.000.000.000.000
-22/03/1987   4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4%4
-23/03/1987   ︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶︶
-24/03/1987   ███████████████████████████████████████
-25/03/1987   .00000..0000.000.00.0.0..0..00.000.000000
-26/03/1987   ██░██░██░██░██░██░██░██░██░██░██░██░██░██░
-27/03/1987   ////////////  ////  ///////////  ////  //
-28/03/1987   :::::::::::::::::::  ::::::::::::::::::::
-29/03/1987   42.4242.4242.4242.4242.4242.4242.4242.42
-30/03/1987   000111000111000111000111000111000111000111
-31/03/1987   ⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇
-01/04/1987   0000....////....0000....////....0000...
-02/04/1987   00%  01%  02%  03%  04%  05%  06%  07%  
-03/04/1987   █▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒
-04/04/1987   000.000.000.   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-05/04/1987   :::::::::::::::::::  ::::::::::::::::::::
-06/04/1987   ———— ———— ———— ———— ———— ———— ———— ————
-07/04/1987   ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-08/04/1987   ███░███░███░███░███░███░███░███░███░███░
-09/04/1987   0000////0000////0000////0000////0000////
-10/04/1987   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-11/04/1987   42%  43%  44%  45%  46%  47%  48%  49%  50%
-12/04/1987   ………………… ………………… …………………
-13/04/1987   00000000000000000000000000000000000000000
-14/04/1987   10101010101010101010101010101010101010101
-15/04/1987   0101..0101..0101..0101..0101..0101..0101..
-16/04/1987   ████▒▒▒▒████▒▒▒▒████▒▒▒▒████▒▒▒▒████▒▒▒▒
-17/04/1987   000.000.000.000.000.000.000.000.000.000.0
-18/04/1987   42 42 42 42 42 42 42 42 42 42 42 42 42 42
-19/04/1987   ╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳
-20/04/1987   ~~~~~~ ~~~~~~ ~~~~~~ ~~~~~~ ~~~~~~ ~~~~~~
-21/04/1987   00.00.00.00.00.00.00.00.00.00.00.00.00.00
-22/04/1987   ███░███░███░███░███░███░███░███░███░███░
-23/04/1987   ░▒▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░
-24/04/1987   ////////////  ////  ///////////  ////  //
-25/04/1987   :::::::::::::::::::  ::::::::::::::::::::
-26/04/1987   000.000.000.000.000.000.000.000.000.000.0
-27/04/1987   ███████████████████████████████████████
-28/04/1987   1111111111111111111111111111111111111111
-29/04/1987   ———— ———— ———— ———— ———— ———— ———— ————
-30/04/1987   00%  01%  02%  03%  04%  05%  06%  07%  
-01/05/1987   ░▒▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░
-02/05/1987   0000////0000////0000////0000////0000////
-03/05/1987   :::::::::::::::::::  ::::::::::::::::::::
-04/05/1987   ███░███░███░███░███░███░███░███░███░███░
-05/05/1987   0101..0101..0101..0101..0101..0101..0101..
-06/05/1987   42%  43%  44%  45%  46%  47%  48%  49%  50%
-07/05/1987   ………………… ………………… …………………
-08/05/1987   00000000000000000000000000000000000000000
-09/05/1987   ███████████████████████████████████████
-10/05/1987   10101010101010101010101010101010101010101
-──────────────────────────────────────────────────────────────
-SECRETARÍA DE MEDICIÓN AFECTIVA Y REGISTRO DE LATIDOS
-Formulario N°: ███–A/∞/2025
-Clasificación: Confidencial - Uso interno - No divulgar
-──────────────────────────────────────────────────────────────
-
-TABLA DE REGISTROS SENSIBLES (µ-intensidad / unidad errática)
-
-╔══════════════╦═══════════════╦═══════════════╦══════════════╗
-║  FECHA       ║   LATIDO ∿    ║   HUMEDAD ºº   ║   ERROR ▒▒   ║
-╠══════════════╬═══════════════╬═══════════════╬══════════════╣
-║  28/08/25    ║  77.∿∿∿       ║  43.°°°        ║  ▒▒▒▒▒▒▒▒▒▒  ║
-║  28/08/25    ║  77.∿∿∿∿∿     ║  43.°°°°°°     ║  ▒▒▒▒▒▒▒▒▒▒  ║
-║  28/08/25    ║  78.∿          ║  43.°°         ║  ▒▒▒▒▒▒▒▒   ║
-║  28/08/25    ║  7█.∿          ║  43.°°°▒▒▒     ║  ▒▒▒▒▒▒▒▒▒▒  ║
-║  28/08/25    ║  7█.∿∿∿▒▒▒     ║  44.°°°▒▒▒▒▒   ║  ▒▒▒▒▒▒▒▒▒▒▒║
-║  28/08/25    ║  77.∿∿∿        ║  43.°°°        ║  ▒▒▒▒▒▒▒▒▒▒▒║
-╚══════════════╩═══════════════╩═══════════════╩══════════════╝
-
-
-╔══════════════╦═══════════════╦═══════════════╦══════════════╗
-║  FECHA       ║   SUSPIRO ~   ║   TEMBLOR ::   ║   VACÍO ▓▓   ║
-╠══════════════╬═══════════════╬═══════════════╬══════════════╣
-║  28/08/25    ║  000~         ║  ::::          ║   ▓▓▓▓▓▓     ║
-║  28/08/25    ║  00~00~       ║  :: :: ::      ║   ▓▓▓▓▓▓▓▓   ║
-║  28/08/25    ║  ~~~000       ║  ::::::        ║   ▓▓▓        ║
-║  28/08/25    ║  00~▒▒▒       ║  ::▒▒▒         ║   ▓▓▓▒▒▒▒    ║
-║  28/08/25    ║  00~▒▒▒▒▒     ║  ::▒▒▒▒▒▒      ║   ▓▓▓▓▓▓▓▓▓▓ ║
-║  28/08/25    ║  ~0000~       ║  :::::         ║   ▓▓▓▓       ║
-╚══════════════╩═══════════════╩═══════════════╩══════════════╝
-
-
-╔══════════════╦═══════════════╦═══════════════╦══════════════╗
-║  FECHA       ║   RECUERDO ⌛  ║   SOMBRA ▓     ║   DESVÍO ↯   ║
-╠══════════════╬═══════════════╬═══════════════╬══════════════╣
-║  28/08/25    ║   ⌛⌛⌛⌛        ║   ▓▓▓▓▓▓       ║   ↯↯↯↯↯↯     ║
-║  28/08/25    ║   ⌛▒▒⌛▒▒      ║   ▓▒▓▒▓▒▓▒     ║   ↯▒↯▒↯▒     ║
-║  28/08/25    ║   ⌛⌛⌛⌛⌛⌛⌛     ║   ▓▓▓▓▓▓▓▓     ║   ↯↯↯↯↯↯↯↯   ║
-║  28/08/25    ║   ⌛▒▒▒▒▒▒     ║   ▓▒▒▒▒▒▒▒▒    ║   ↯▒▒▒▒▒▒▒▒  ║
-║  28/08/25    ║   ⌛⌛⌛⌛⌛⌛⌛⌛⌛   ║   ▓▓▓▓▓▓▓▓▓▓   ║   ↯↯↯↯↯↯↯↯↯ ║
-║  28/08/25    ║   ⌛▒⌛▒⌛▒⌛▒    ║   ▓▒▓▒▓▒▓▒     ║   ↯▒↯▒↯▒↯▒   ║
-╚══════════════╩═══════════════╩═══════════════╩══════════════╝
-
-
-──────────────────────────────────────────────────────────────
-NOTA AL PIE:
-La presente tabla refleja datos recolectados por sensores emocionales 
-de baja precisión. Errores de transcripción, repeticiones infinitas 
-y caracteres sustituidos son parte inherente del protocolo de registro. 
-Utilizar con precaución. 
-──────────────────────────────────────────────────────────────
-──────────────────────────────────────────
-│ TABLA PROYECTIVA DE FLUJOS FUTUROS      │
-──────────────────────────────────────────
-
-╔══════╦═══════════════╦══════════════╦══════╗
-║ Año  ║ Nivel Energía ║ Rango Deseo  ║ Error║
-╠══════╬═══════════════╬══════════════╬══════╣
-║ 2025 ║  ████░░░░     ║ Alto         ║ 0.1% ║
-║ 2030 ║  ███████▒▒    ║ Medio        ║ 1.7% ║
-║ 2040 ║  ██▒▒▒▒▒▒     ║ Bajo         ║ 4.3% ║
-║ 2050 ║  ████████▓▓   ║ Volátil      ║ ??   ║
-║ 2080 ║  ░░░░░░░░     ║ Indefinido   ║ 99%  ║
-╚══════╩═══════════════╩══════════════╩══════╝
-
-Pie de página: *Proyección sin garantía alguna*
-─────────────────────────────────────
-│ FORMATO DE RELEVAMIENTO AFECTIVO  │
-─────────────────────────────────────
-
-╔══════╦═══════════╦══════════╦══════╗
-║ ID   ║ Intensidad║ Registro ║ RUIDO║
-╠══════╬═══════════╬══════════╬══════╣
-║ 001  ║ ☼☼☼☼☼     ║ Latido   ║ ..▒  ║
-║ 002  ║ ☽☽        ║ Suspiro  ║ ░░   ║
-║ 003  ║ ✖✖✖✖✖✖    ║ TembloR  ║ 0.01 ║
-║ 004  ║ ▓▓▓▓▓     ║ Lagrima  ║ 0.00 ║
-║ 005  ║ ☁☁☁       ║ Calor    ║ ░▒░▒ ║
-╚══════╩═══════════╩══════════╩══════╝
-
-Nota: Valores no replicables
-───────────────────────────────
-│ OFICIO DE CONTROL CUANTITATIVO │
-───────────────────────────────
-
-╔════╦═══════╦════════╦══════╗
-║ Nº ║ ███   ║ F-ΣΩ   ║ %∆   ║
-╠════╬═══════╬════════╬══════╣
-║ 01 ║ ▒▒▒▒▒ ║ ║║║║║║ ║ ##   ║
-║ 02 ║ █▓█▓█ ║ 0000╫╫ ║ 12.. ║
-║ 03 ║ ░░░░░ ║ ƐƐƐƐƐ  ║ ::   ║
-║ 04 ║ ▓█▓█▓ ║ ¤¤¤¤¤  ║ --   ║
-║ 05 ║ ░▒▓█░ ║ ╫╫╫╫╫  ║ ??   ║
-╚════╩═══════╩════════╩══════╝
-
-Pie de página: [Lectura no concluyente]
-───────────────────────────────
-│ EXPEDIENTE Nº: █▒░ 00941/ΔΩ │
-│ FORMULARIO DE INVENTARIO    │
-│ (REPETICIÓN Y CALCO DEF.)   │
-───────────────────────────────
-
-LISTA DE ELEMENTOS REGISTRADOS
-───────────────────────────────
-▌ ÍTEM ▐   DESCRIPCIÓN                  ▐ ESTADO
-──────────────────────────────────────────────
-001 ░▒▓░▒  ███···▒▒▒  ::;;::             [ A ]
-002 ▓▒░▒▓  ▒▒░░░▒▒░░░▒▒                  [ ? ]
-003 ░░▒▒░  █╳█╳█╳█╳█                     [ -- ]
-004 ░▒░▒░  ~~~≡≡~~~                     [ R ]
-005 ▒▒░▒▒  ██▒▒▓▓▒▒██                    [ • ]
-006 ░▒▒░▒  »»»»»»»»»»                    [ ◊ ]
-007 ▒░▒░▒  ░░░░░░░░░░                    [ OK ]
-008 ▓▓▒▒▓  ⌠▒▒▒▒▒▒▒▒⌡                   [ Δ ]
-009 ░░▓▓░  ︽︾︽︾︽︾                      [ 0 ]
-010 ▒▒░▒▒  █▀▄▀▄▀▄▀█                     [ ? ]
-
-011 ░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒
-012 ░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒
-013 ░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒
-
-014 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-015 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-016 ████████████████████████████████████████████████████████
-
-017 ░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒
-018 ░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒
-
-───── NOTA DE CONTROL ───────────────────────────────
-El presente inventario se repite de forma indefinida.
-Errores de lectura forman parte del registro oficial.
-─────────────────────────────────────────────────────
-
-FIRMA: ░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒▓▒░▒
-SELLO: ███████   █▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█▒█
-─────────────────────────────────────────────────────
-
-──────────────────────────────
-        REGISTRO DE AUSENCIAS
-──────────────────────────────
-FECHA: ░░░░░░░░░░
-NOMBRE: █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
-MOTIVO: ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-
-DETALLES:
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-██▒▒██▒▒██▒▒██▒▒██▒▒██▒▒██▒▒██▒▒██
-
-──────────────────────────────
-FIRMA: █░█░█░█░█░█░█░█░█░█░█░█
-
-╔══════════════════════════════════╗
-║   FORMATO DE RECURSOS OBSOLETOS  ║
-╚══════════════════════════════════╝
-
-#001 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#002 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-#003 █▒░█▒░█▒░█▒░█▒░█▒░█▒░█▒░█▒░█▒░
-#004 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#005 █████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#006 ░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒
-#007 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-...
-#998 ██████████████████████████████
-#999 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-OBSERVACIÓN: Lista incompleta.
-
-──────────────────────────────
-    INVENTARIO DE REGISTROS
-──────────────────────────────
-ID     ITEM         ESTADO
-──────────────────────────────
-▣001   █▒▒░░▒▒██    ╳
-▣002   ░▒▒▓▓▓▒▒░    ✔
-▣003   ▒▒▒▒▒▒▒▒▒    ╳
-▣004   ░░░░░░░░░    ?
-▣005   ███▒▒███▒    ✔
-▣006   ░▓▒░░▓▒░░    ╳
-▣007   █░░░█░░░█    ✔
-──────────────────────────────
-OBS: El presente inventario se repite hasta agotarse.
-
-CABECERA – INVENTARIO DE OBJETOS PERDIDOS
-
-██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░
-░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██
-██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░
-░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██
-██░░██░░██░░██░░██░░██░░██░░██░░██░░██░░
-░░██░░██░░██░░██░░██░░██░░██░░██░░██░░██
-...
-(repite desplazándose en diagonal, creando una textura tipo tejido)
-
-PIE DE PÁGINA – ARCHIVO CORRUPTO █████████████████████████
-
-─────[REGISTRO OFICIAL - SELLO DIGITAL]─────
-
-☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-%%%%%%%@%%%%%%%@%%%%%%%@%%%%%%%@%%%%%%%@%
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-
-────────────── FIN DE PÁGINA (o tal vez no) ──────────────
-CABECERA ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-ID ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-01 ║ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██
-02 ║ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░ █░
-03 ║ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒ █▒
-04 ║ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓ █▓
-05 ║ ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
-…
-…
-999║ ░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██░░▒▒▓▓██
-
-PIE DE PÁGINA – Documento extendido más allá de los límites permitidos ▒▒▒▒▒▒▒▒▒▒
-============================================================
- DIRECCIÓN GENERAL DE ARCHIVOS HECHIZOS
- FORMULARIO Nº 057-DIAGRAMA/25
-============================================================
-
-                ┌────────────┐
-                │  CLASE 1   │
-                │ MÁQUINAS   │
-                │   ROTAS    │
-                └─────┬──────┘
-                      │
-      CONTRATECN. [ ] │ [X] GESTALT-BILDUNG
-                      │
-             OSCILACIONES [ ? ]
-                      │
- ┌────────────┐       │         ┌────────────┐
- │  CLASE 2   │◄──────┘────────►│  CLASE 3   │
- │ ESPECTROS  │                 │  NUBES Y   │
- │ FANTASMAS  │                 │  RELOJES   │
- └─────┬──────┘                 └─────┬──────┘
-       │                              │
- RODEADOS ELEC. [▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] │
- VELOCIDAD COSAS [X]                   │ MAQUINAS TIEMPO [ ]
- MÚSICA CUERDAS  [ ]                   │ PERDER TIEMPO   [ ]
-                                       │ SINCRONIA       [ ]
-                                       │ MUSICA PEND.    [ ]
-============================================================
-NOTA AL PIE:
-Documento autodestructivo.  
-Cada carácter desplazado constituye su propia firma oficial.
-============================================================
-SELLO: ██████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
-------------------------------------------------------------
- REPÚBLICA AUTODESTITUIDA DE SURLANDIA
- SUBSECRETARÍA DE DOCUMENTOS IMPOSIBLES
- FORMULARIO Nº 031-ERRATICO/25
-------------------------------------------------------------
-
-SOLICITUD: AUTODESTITUCION    o   MU3RT3  
-FECHA: 25/__/2025
-EXPTE: 25-000X-█████
-
-------------------------------------------------------------
-DATOS GENERALES
-
-TÍTULO: "TRILOGIA DE LAS MAQUNAS"
-SUBTÍTULO: (en trámite)  
-RESPUESTA DEL FUNCIONARIO: ???  
-
-------------------------------------------------------------
-CLASE 1: MÁQ.UNAS ROT4S
-[ X ] CONTRATECN0L0G1AS  
-[ ] GESTALT Y BILDUNG  
-[ ? ] O5CILACIONES ENTRE F0RMA Y P0DER
-
-------------------------------------------------------------
-CLASE 2: espectro5_y fantasma5
-[ ] ELEC7RICIDAD ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  
-[ X ] velocidad_de_las_cos@s  
-[ ] musica cuer_das ???  
-
-------------------------------------------------------------
-CLASE 3: NUB3S / REL0JES
-[ ] MAQUINAS DE TIEMP0  
-[ ] P3RDER EL TIEMPO!!  
-[ ? ] SINCRONIA.............  
-[ ] musica pendu|ar
-
-------------------------------------------------------------
-OBSERVACIONES:
-- formulario llenado con errores involuntarios  
-- sellos no disponibles  
-------------------------------------------------------------
-SELLO OFICIAL: ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-</code></pre>
-<div class="post__iframe"><iframe loading="lazy" width="640" height="480" src="https://drive.google.com/file/d/1PnGs6nE1hPPiuInuB2yEOb979UTvC0gg/preview" allow="autoplay"></iframe></div>
-</div>
             ]]>
         </content>
     </entry>
