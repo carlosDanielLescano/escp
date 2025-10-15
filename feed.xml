@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-14T23:56:42-03:00</updated>
+    <updated>2025-10-14T23:59:27-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -18,7 +18,11 @@
         <id>https://carlosdaniellescano.github.io/escp2/visual.html</id>
 
         <updated>2025-10-14T23:40:30-03:00</updated>
-            <summary></summary>
+            <summary>
+                <![CDATA[
+                    abezal oxidado / luz líquida / gota suspendida en tiempo eléctrico /grafito / memoria húmeda / ruido de papel /óptica del error / loop de agua / pixel cansado /chorro de tinta respiración mecánica /eco blanco / impulso de código /máquina que duda / reflejo&hellip;
+                ]]>
+            </summary>
         <content type="html">
             <![CDATA[
                 <div id="p5-container"></div>
@@ -72,6 +76,7 @@ function draw() {
 }
 </script>
 </p>
+<p style="display: none !important;">abezal oxidado / luz líquida / gota suspendida en tiempo eléctrico /grafito / memoria húmeda / ruido de papel /óptica del error / loop de agua / pixel cansado /chorro de tinta respiración mecánica /eco blanco / impulso de código /máquina que duda / reflejo /luz viscosa / algoritmo empapado /vibración de metal / silencio que imprime /piedra blanda / interferencia /gota que parpadea / ojo sin párpado /circuito tibio / electricidad en reposo /rastros de movimiento / imagen que gotea /materia que escucha.</p>
             ]]>
         </content>
     </entry>
