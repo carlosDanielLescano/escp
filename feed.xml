@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T10:34:17-03:00</updated>
+    <updated>2025-10-15T10:43:10-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -25,60 +25,77 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <div id="textContainer" style="width: 100%; height: 600px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white;"></div>
+                <div id="textContainer" style="width: 100%; height: 350px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white;"></div>
 <p>
 <script>
-const container = document.getElementById('textContainer');
-const velocidad = 40; // menor = más lento, mayor = más rápido
-let lineIndex = 0;
-let yOffset = 0;
-let combinedLines = [];
+const velocidadA = 0.4;  // velocidad del texto A (textoplano)
+const velocidadB = 0.25; // velocidad del texto B (pagola)
+const jitter = 0.05;     // variación aleatoria de velocidad
 
-// Función para cargar texto y dividirlo en líneas
 async function cargarTexto(url) {
   const res = await fetch(url);
   const text = await res.text();
   return text.split(/\r?\n/).filter(l => l.trim() !== '');
 }
 
-// Cargar ambos archivos y preparar la secuencia intercalada
-Promise.all([cargarTexto('textoplano.txt'), cargarTexto('pagola.txt')]).then(([textoA, textoB]) => {
-  const maxLen = Math.max(textoA.length, textoB.length);
-  for (let i = 0; i < maxLen; i++) {
-    if (textoA[i]) combinedLines.push({ text: textoA[i], align: 'right', color: '#fff' });
-    if (textoB[i]) combinedLines.push({ text: textoB[i], align: 'left', color: '#fff' });
-  }
+function crearCapaTexto(lineas, align, color) {
+  const capa = document.createElement('div');
+  capa.style.position = 'absolute';
+  capa.style.width = '100%';
+  capa.style.top = '0';
+  capa.style.left = '0';
+  capa.style.pointerEvents = 'none';
 
-  // Crear los elementos visuales
-  combinedLines.forEach((line, i) => {
+  lineas.forEach((linea, i) => {
     const p = document.createElement('p');
-    p.textContent = line.text;
-    p.style.textAlign = line.align;
+    p.textContent = linea;
+    p.style.textAlign = align;
+    p.style.color = color;
     p.style.margin = '0';
-    p.style.padding = '0 10px';
-    p.style.color = line.color;
+    p.style.padding = '0 15px';
     p.style.position = 'absolute';
     p.style.top = `${i * 24}px`;
     p.style.width = '100%';
-    container.appendChild(p);
+    capa.appendChild(p);
   });
 
-  animate();
-});
-
-// Animación tipo “scroll”
-function animate() {
-  yOffset -= 0.5; // velocidad vertical
-  container.childNodes.forEach((p, i) => {
-    p.style.top = `${i * 24 + yOffset}px`;
-  });
-
-  // reinicio del loop
-  const totalHeight = combinedLines.length * 24;
-  if (yOffset < -totalHeight) yOffset = container.clientHeight;
-
-  requestAnimationFrame(animate);
+  document.getElementById('textContainer').appendChild(capa);
+  return capa;
 }
+
+Promise.all([
+  cargarTexto('textoplano.txt'),
+  cargarTexto('pagola.txt')
+]).then(([textoA, textoB]) => {
+  const capaA = crearCapaTexto(textoA, 'right', '#0ff');
+  const capaB = crearCapaTexto(textoB, 'left', '#f0f');
+
+  let offsetA = 0;
+  let offsetB = 0;
+
+  function animar() {
+    // pequeñas variaciones para evitar sincronía perfecta
+    offsetA -= velocidadA + (Math.random() - 0.5) * jitter;
+    offsetB -= velocidadB + (Math.random() - 0.5) * jitter;
+
+    capaA.childNodes.forEach((p, i) => {
+      p.style.top = `${i * 24 + offsetA}px`;
+    });
+    capaB.childNodes.forEach((p, i) => {
+      p.style.top = `${i * 24 + offsetB}px`;
+    });
+
+    // reinicio de loop para cada capa
+    const totalA = textoA.length * 24;
+    const totalB = textoB.length * 24;
+    if (offsetA < -totalA) offsetA = document.getElementById('textContainer').clientHeight;
+    if (offsetB < -totalB) offsetB = document.getElementById('textContainer').clientHeight;
+
+    requestAnimationFrame(animar);
+  }
+
+  animar();
+});
 </script>
 </p>
 <p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
