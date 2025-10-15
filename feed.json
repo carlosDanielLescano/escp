@@ -14,14 +14,14 @@
             "id": "https://carlosdaniellescano.github.io/escp2/visual.html",
             "url": "https://carlosdaniellescano.github.io/escp2/visual.html",
             "title": "Visual",
-            "content_html": "<div id=\"sketch-holder\"></div>\n<p>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js\"></script>\n<script>\nlet chars = \"        ESP/2       \";\nlet chars2 = \"ESP/2\";\n\nlet cols, rows;\nlet charSize = 10;\nlet noiseScale = 0.01;\n\nfunction setup() {\n  createCanvas(700, 700);\n  textFont('monospace');\n  textSize(charSize*1.5);\n  noStroke();\n  cols = floor(width / charSize);\n  rows = floor(height / charSize);\n}\n\nfunction draw() {\n  blendMode(REPLACE)\n  background(0);\n blendMode(DIFFERENCE)\n  fill(255);\n  \n  let t = frameCount * 0.005;\n  \n  for (let j = 0; j < rows; j++) {\n    for (let i = 0; i < cols; i++) {\n      let x = i * (charSize);\n      let y = j * (charSize);\n      let n = noise((i* (5+ sin(frameCount/70.)/3)) * noiseScale, \n                    (j* (1+ cos(-frameCount/50.)/3)) * noiseScale*2, t);\n      n= n;\n\n      // Elegir un carácter según el valor de noise\n      let index = floor(n * (chars.length ) );\n      let c = chars.charAt(index);\n      if ( c==' '){\n        \n        c = chars2.charAt(i%5);\n      }\n      \n      text(c, x, y);\n    }\n  }\n}\n\n</script>\n</p>",
+            "content_html": "<div id=\"sketch-holder\" style=\"position: relative;\"></div>\n<p>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js\"></script>\n<script>\nlet chars = \"        ESP/2       \";\nlet chars2 = \"ESP/2\";\n\nlet cols, rows;\nlet charSize = 10;\nlet noiseScale = 0.01;\n\nfunction setup() {\n  createCanvas(700, 700);\n  textFont('monospace');\n  textSize(charSize*1.5);\n  noStroke();\n  cols = floor(width / charSize);\n  rows = floor(height / charSize);\n}\n\nfunction draw() {\n  blendMode(REPLACE)\n  background(0);\n blendMode(DIFFERENCE)\n  fill(255);\n  \n  let t = frameCount * 0.005;\n  \n  for (let j = 0; j < rows; j++) {\n    for (let i = 0; i < cols; i++) {\n      let x = i * (charSize);\n      let y = j * (charSize);\n      let n = noise((i* (5+ sin(frameCount/70.)/3)) * noiseScale, \n                    (j* (1+ cos(-frameCount/50.)/3)) * noiseScale*2, t);\n      n= n;\n\n      // Elegir un carácter según el valor de noise\n      let index = floor(n * (chars.length ) );\n      let c = chars.charAt(index);\n      if ( c==' '){\n        \n        c = chars2.charAt(i%5);\n      }\n      \n      text(c, x, y);\n    }\n  }\n}\n\n</script>\n</p>",
             "author": {
                 "name": "Carlos Lescano"
             },
             "tags": [
             ],
             "date_published": "2025-10-14T23:40:30-03:00",
-            "date_modified": "2025-10-14T23:40:30-03:00"
+            "date_modified": "2025-10-14T23:43:40-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp2/meme.html",
