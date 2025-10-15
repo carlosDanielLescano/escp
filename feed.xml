@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T11:34:41-03:00</updated>
+    <updated>2025-10-15T11:42:31-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -20,7 +20,7 @@
         <updated>2025-10-15T09:29:57-03:00</updated>
             <summary>
                 <![CDATA[
-                    Pagola &lt;-------------&gt; Torres García Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas&hellip;
+                    Pagola &lt;-------------&gt; Torres García Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentes dispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -30,7 +30,6 @@
 <script>
 const velocidadA = 0.6;  // velocidad del texto A (textoplano)
 const velocidadB = 0.25; // velocidad del texto B (pagola)
-
 
 async function cargarTexto(url) {
   const res = await fetch(url);
@@ -73,10 +72,17 @@ Promise.all([
 
   let offsetA = 0;
   let offsetB = 0;
+  let t = 0; // tiempo para interpolación
 
-let t = 0; // tiempo para interpolación
+  // agregar emoji del ojo
+  const ojo = document.createElement('div');
+  ojo.textContent = '👁';
+  ojo.style.position = 'absolute';
+  ojo.style.top = '570px'; // al final del contenedor
+  ojo.style.fontSize = '32px';
+  textContainer.appendChild(ojo);
 
-function animar() {
+  function animar() {
     t += 0.01; // velocidad de ciclo de color
     const grisA = 136 + Math.sin(t) * (255 - 136); // #888 = 136, #fff = 255
     const grisB = 255 - Math.sin(t) * (255 - 136); // invertido para B
@@ -89,7 +95,7 @@ function animar() {
         p.style.color = `rgb(${grisB},${grisB},${grisB})`;
     });
 
-    // desplazamiento de líneas (tu código anterior)
+    // desplazamiento de líneas
     offsetA -= velocidadA;
     offsetB -= velocidadB;
 
@@ -102,18 +108,23 @@ function animar() {
 
     const totalA = textoA.length * 24;
     const totalB = textoB.length * 24;
-    if (offsetA < -totalA) offsetA = document.getElementById('textContainer').clientHeight;
-    if (offsetB < -totalB) offsetB = document.getElementById('textContainer').clientHeight;
+    if (offsetA < -totalA) offsetA = textContainer.clientHeight;
+    if (offsetB < -totalB) offsetB = textContainer.clientHeight;
+
+    // calcular posición del ojo según el brillo de los textos
+    const widthMax = textContainer.clientWidth - 32; // ancho máximo para el ojo
+    const ratio = grisA / (grisA + grisB); // más grisA = más a la derecha
+    ojo.style.left = `${ratio * widthMax}px`;
 
     requestAnimationFrame(animar);
-}
+  }
 
   animar();
 });
 </script>
 </p>
 <p style="text-align: center; margin-top: 10px; color: #fff; font-family: monospace;"><a href="https://www.researchgate.net/publication/281347681_netart_latino_database_El_mapa_invertido_del_netart_latinoamericano" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Pagola</a> &lt;-------------&gt; <a href="https://netart.org.uy/latino/" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Torres García</a></p>
-<p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
+<p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentes dispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
             ]]>
         </content>
     </entry>
