@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-14T23:59:27-03:00</updated>
+    <updated>2025-10-15T00:04:53-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -20,7 +20,7 @@
         <updated>2025-10-14T23:40:30-03:00</updated>
             <summary>
                 <![CDATA[
-                    abezal oxidado / luz líquida / gota suspendida en tiempo eléctrico /grafito / memoria húmeda / ruido de papel /óptica del error / loop de agua / pixel cansado /chorro de tinta respiración mecánica /eco blanco / impulso de código /máquina que duda / reflejo&hellip;
+                    el código traduce el ruido en signos, cada carácter nace de una vibración que no suena pero grilla en bucles, x y frame — tres coordenadas del pulso.un paisaje de letras que insisten.de tanto intentar entender el movimiento.
                 ]]>
             </summary>
         <content type="html">
@@ -37,7 +37,7 @@ let charSize = 10;
 let noiseScale = 0.01;
 
 function setup() {
-cnv = createCanvas(700, 700);
+cnv = createCanvas(500, 500);
   cnv.parent('p5-container'); // 👈 coloca el canvas dentro del div
   textFont('monospace');
   textSize(charSize*1.5);
@@ -76,7 +76,7 @@ function draw() {
 }
 </script>
 </p>
-<p style="display: none !important;">abezal oxidado / luz líquida / gota suspendida en tiempo eléctrico /grafito / memoria húmeda / ruido de papel /óptica del error / loop de agua / pixel cansado /chorro de tinta respiración mecánica /eco blanco / impulso de código /máquina que duda / reflejo /luz viscosa / algoritmo empapado /vibración de metal / silencio que imprime /piedra blanda / interferencia /gota que parpadea / ojo sin párpado /circuito tibio / electricidad en reposo /rastros de movimiento / imagen que gotea /materia que escucha.</p>
+<p style="display: none !important;">el código traduce el ruido en signos, cada carácter nace de una vibración que no suena pero grilla en bucles, x y frame — tres coordenadas del pulso.un paisaje de letras que insisten.de tanto intentar entender el movimiento.</p>
             ]]>
         </content>
     </entry>
