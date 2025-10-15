@@ -3,14 +3,14 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T10:12:03-03:00</updated>
+    <updated>2025-10-15T10:22:58-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
     <entry>
-        <title>novedades&lt;&lt;</title>
+        <title>Dialogo tardío&lt;&lt;&lt;&lt;&lt;</title>
         <author>
             <name>Carlos Lescano</name>
         </author>
@@ -18,15 +18,19 @@
         <id>https://carlosdaniellescano.github.io/escp2/novedadeslessless.html</id>
 
         <updated>2025-10-15T09:29:57-03:00</updated>
-            <summary></summary>
+            <summary>
+                <![CDATA[
+                    Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo&hellip;
+                ]]>
+            </summary>
         <content type="html">
             <![CDATA[
-                <div id="scrollBox" style="position: relative; width: 400px; height: 250px; overflow: hidden; background: black; color: #00ffcc; font-family: monospace; font-size: 14px; line-height: 1.5em; border: 1px solid #00ffcc;">
+                <div id="scrollBox" style="position: relative; width: 500px; height: 500px; overflow: hidden; background: black; color: #ffffff; font-family: monospace; font-size: 8px; line-height: 0.75em; border: 1px solid #ffffff;">
 <div id="scrollText"></div>
 </div>
 <p>
 <script>
-let velocidad = 0.3; // píxeles por frame — cambiá este valor
+let velocidad = 0.5; // píxeles por frame — cambiá este valor
 let posY = 0;
 let textoDiv = document.getElementById('scrollText');
 
@@ -50,6 +54,7 @@ function animateScroll() {
 }
 </script>
 </p>
+<p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
             ]]>
         </content>
     </entry>

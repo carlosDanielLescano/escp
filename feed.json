@@ -13,15 +13,16 @@
         {
             "id": "https://carlosdaniellescano.github.io/escp2/novedadeslessless.html",
             "url": "https://carlosdaniellescano.github.io/escp2/novedadeslessless.html",
-            "title": "novedades&lt;&lt;",
-            "content_html": "<div id=\"scrollBox\" style=\"position: relative; width: 400px; height: 250px; overflow: hidden; background: black; color: #00ffcc; font-family: monospace; font-size: 14px; line-height: 1.5em; border: 1px solid #00ffcc;\">\n<div id=\"scrollText\"></div>\n</div>\n<p>\n<script>\nlet velocidad = 0.3; // píxeles por frame — cambiá este valor\nlet posY = 0;\nlet textoDiv = document.getElementById('scrollText');\n\nfetch('textoplano.txt')\n  .then(res => res.text())\n  .then(texto => {\n    textoDiv.innerText = texto + \"\\n\\n\" + texto; // duplicado para loop\n    animateScroll();\n  });\n\nfunction animateScroll() {\n  posY -= velocidad;\n  textoDiv.style.transform = `translateY(${posY}px)`;\n\n  // si se fue todo hacia arriba, reiniciar\n  if (-posY > textoDiv.scrollHeight / 2) {\n    posY = 0;\n  }\n\n  requestAnimationFrame(animateScroll);\n}\n</script>\n</p>",
+            "title": "Dialogo tardío&lt;&lt;&lt;&lt;&lt;",
+            "summary": "Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo&hellip;",
+            "content_html": "<div id=\"scrollBox\" style=\"position: relative; width: 500px; height: 500px; overflow: hidden; background: black; color: #ffffff; font-family: monospace; font-size: 8px; line-height: 0.75em; border: 1px solid #ffffff;\">\n<div id=\"scrollText\"></div>\n</div>\n<p>\n<script>\nlet velocidad = 0.5; // píxeles por frame — cambiá este valor\nlet posY = 0;\nlet textoDiv = document.getElementById('scrollText');\n\nfetch('textoplano.txt')\n  .then(res => res.text())\n  .then(texto => {\n    textoDiv.innerText = texto + \"\\n\\n\" + texto; // duplicado para loop\n    animateScroll();\n  });\n\nfunction animateScroll() {\n  posY -= velocidad;\n  textoDiv.style.transform = `translateY(${posY}px)`;\n\n  // si se fue todo hacia arriba, reiniciar\n  if (-posY > textoDiv.scrollHeight / 2) {\n    posY = 0;\n  }\n\n  requestAnimationFrame(animateScroll);\n}\n</script>\n</p>\n<p style=\"display: none !important;\">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>",
             "author": {
                 "name": "Carlos Lescano"
             },
             "tags": [
             ],
             "date_published": "2025-10-15T09:29:57-03:00",
-            "date_modified": "2025-10-15T10:12:03-03:00"
+            "date_modified": "2025-10-15T10:22:58-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp2/visual.html",
