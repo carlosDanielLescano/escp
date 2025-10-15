@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T00:04:53-03:00</updated>
+    <updated>2025-10-15T08:26:05-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -65,10 +65,10 @@ function draw() {
       // Elegir un carácter según el valor de noise
       let index = floor(n * (chars.length ) );
       let c = chars.charAt(index);
-      if ( c==' '){
+      //if ( c==' '){
         
-        c = chars2.charAt(i%5);
-      }
+     //   c = chars2.charAt(i%5);
+    //  }
       
       text(c, x, y);
     }
