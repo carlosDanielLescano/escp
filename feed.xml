@@ -3,14 +3,14 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T10:52:53-03:00</updated>
+    <updated>2025-10-15T11:17:57-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp2</id>
 
     <entry>
-        <title>Dialogo tardío&lt;&lt;&lt;&lt;&lt;</title>
+        <title>Dialogo Sur Tardio&lt;&lt;&lt;&lt;&lt;</title>
         <author>
             <name>Carlos Lescano</name>
         </author>
@@ -20,7 +20,7 @@
         <updated>2025-10-15T09:29:57-03:00</updated>
             <summary>
                 <![CDATA[
-                    Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo&hellip;
+                    Pagola &lt;-------------&gt; Torres García Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -73,31 +73,45 @@ Promise.all([
   let offsetA = 0;
   let offsetB = 0;
 
-  function animar() {
-    // pequeñas variaciones para evitar sincronía perfecta
-    offsetA -= velocidadA + (Math.random() - 0.5) * jitter;
-    offsetB -= velocidadB + (Math.random() - 0.5) * jitter;
+let t = 0; // tiempo para interpolación
+
+function animar() {
+    t += 0.01; // velocidad de ciclo de color
+    const grisA = 136 + Math.sin(t) * (255 - 136); // #888 = 136, #fff = 255
+    const grisB = 255 - Math.sin(t) * (255 - 136); // invertido para B
+
+    capaA.childNodes.forEach(p => {
+        p.style.color = `rgb(${grisA},${grisA},${grisA})`;
+    });
+
+    capaB.childNodes.forEach(p => {
+        p.style.color = `rgb(${grisB},${grisB},${grisB})`;
+    });
+
+    // desplazamiento de líneas (tu código anterior)
+    offsetA -= velocidadA;
+    offsetB -= velocidadB;
 
     capaA.childNodes.forEach((p, i) => {
-      p.style.top = `${i * 24 + offsetA}px`;
+        p.style.top = `${i * 24 + offsetA}px`;
     });
     capaB.childNodes.forEach((p, i) => {
-      p.style.top = `${i * 24 + offsetB}px`;
+        p.style.top = `${i * 24 + offsetB}px`;
     });
 
-    // reinicio de loop para cada capa
     const totalA = textoA.length * 24;
     const totalB = textoB.length * 24;
     if (offsetA < -totalA) offsetA = document.getElementById('textContainer').clientHeight;
     if (offsetB < -totalB) offsetB = document.getElementById('textContainer').clientHeight;
 
     requestAnimationFrame(animar);
-  }
+}
 
   animar();
 });
 </script>
 </p>
+<p style="text-align: center; margin-top: 10px; color: #fff; font-family: monospace;"><a href="https://www.researchgate.net/publication/281347681_netart_latino_database_El_mapa_invertido_del_netart_latinoamericano" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Pagola</a> &lt;-------------&gt; <a href="https://netart.org.uy/latino/" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Torres García</a></p>
 <p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentesdispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
             ]]>
         </content>
