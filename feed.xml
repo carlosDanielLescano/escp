@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T11:55:14-03:00</updated>
+    <updated>2025-10-15T11:57:46-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -25,8 +25,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <div style="filter: grayscale(100%);">
-<div id="textContainer" style="width: 100%; height: 600px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white; line-height: 0.75;"></div>
+                <div id="textContainer" style="width: 100%; height: 600px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white; line-height: 0.75;"></div>
 <p>
 <script>
 			const velocidadA = 0.6; // velocidad del texto A (textoplano)
@@ -127,7 +126,6 @@
 </p>
 <p style="text-align: center; margin-top: 10px; color: #fff; font-family: monospace;"><a href="https://www.researchgate.net/publication/281347681_netart_latino_database_El_mapa_invertido_del_netart_latinoamericano" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Pagola</a> &lt;-------------&gt; <a href="https://netart.org.uy/latino/" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Torres García</a></p>
 <p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentes dispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
-</div>
             ]]>
         </content>
     </entry>
