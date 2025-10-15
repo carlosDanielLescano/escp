@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T10:46:14-03:00</updated>
+    <updated>2025-10-15T10:48:36-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -68,7 +68,7 @@ Promise.all([
   cargarTexto('pagola.txt')
 ]).then(([textoA, textoB]) => {
   const capaA = crearCapaTexto(textoA, 'right', '#888');
-  const capaB = crearCapaTexto(textoB, 'left', '#f0f');
+  const capaB = crearCapaTexto(textoB, 'left', '#fff');
 
   let offsetA = 0;
   let offsetB = 0;
