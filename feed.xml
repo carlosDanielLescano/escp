@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T11:31:48-03:00</updated>
+    <updated>2025-10-15T11:34:41-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -45,7 +45,6 @@ function crearCapaTexto(lineas, align, color) {
   capa.style.top = '0';
   capa.style.left = '0';
   capa.style.pointerEvents = 'none';
- capa.style.line-height= 0.75;
     
   lineas.forEach((linea, i) => {
     const p = document.createElement('p');
