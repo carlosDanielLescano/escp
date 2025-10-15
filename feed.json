@@ -14,14 +14,14 @@
             "id": "https://carlosdaniellescano.github.io/escp2/novedadeslessless.html",
             "url": "https://carlosdaniellescano.github.io/escp2/novedadeslessless.html",
             "title": "novedades&lt;&lt;",
-            "content_html": "<div style=\"filter: invert(100%) grayscale(100%) contrast(110%) brightness(95%); width: 100%; height: 80vh; overflow: hidden; border: none;\"><div class=\"post__iframe\"><iframe loading=\"lazy\" style=\"width: 719px; height: 631px; border: none; transform: scale(1); transform-origin: 0px 0px;\" src=\"https://netart.org.uy/latino/\">\n  </iframe></div></div>",
+            "content_html": "<div style=\"position: relative; width: 470px; height: 631px; border: none; filter: invert(100%) grayscale(100%) contrast(110%);\"><div class=\"post__iframe\"><iframe loading=\"lazy\" style=\"width: 719px; height: 631px; border: none;\" src=\"https://netart.org.uy/latino/\">\n\t</iframe></div></div>",
             "author": {
                 "name": "Carlos Lescano"
             },
             "tags": [
             ],
             "date_published": "2025-10-15T09:29:57-03:00",
-            "date_modified": "2025-10-15T09:36:32-03:00"
+            "date_modified": "2025-10-15T09:41:37-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp2/visual.html",
