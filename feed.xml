@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T11:17:57-03:00</updated>
+    <updated>2025-10-15T11:22:36-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -30,7 +30,7 @@
 <script>
 const velocidadA = 0.4;  // velocidad del texto A (textoplano)
 const velocidadB = 0.25; // velocidad del texto B (pagola)
-const jitter = 0.05;     // variación aleatoria de velocidad
+const jitter = 0.00;     // variación aleatoria de velocidad
 
 async function cargarTexto(url) {
   const res = await fetch(url);
