@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T11:42:31-03:00</updated>
+    <updated>2025-10-15T11:47:50-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -78,8 +78,9 @@ Promise.all([
   const ojo = document.createElement('div');
   ojo.textContent = '👁';
   ojo.style.position = 'absolute';
-  ojo.style.top = '570px'; // al final del contenedor
-  ojo.style.fontSize = '32px';
+  ojo.style.top = '620px'; // al final del contenedor
+  ojo.style.fontSize = '50px';
+  ojo.style.filter = 'grayscale(100%)'; 
   textContainer.appendChild(ojo);
 
   function animar() {
