@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T12:22:19-03:00</updated>
+    <updated>2025-10-15T12:25:55-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -28,111 +28,96 @@
                 <div id="textContainer" style="width: 100%; height: 600px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white; line-height: 0.75;"></div>
 <p>
 <script>
-		const velocidadA = 0.6; // velocidad del texto A (textoplano)
-		const velocidastyle = "width: 100%;dB = 0.25; // velocidad del texto B (pagola)
+const velocidadA = 0.6; // velocidad del texto A (textoplano)
+const velocidadB = 0.25; // velocidad del texto B (pagola)
 
-		async function cargarTexto(url) {
-			const res = await fetch(url);
-			const text = await res.text();
-			return text.split(/\r?\n/).filter(l => l.trim() !== '');
-		}
+const textContainer = document.getElementById('textContainer');
 
-		function crearCapaTexto(lineas, align, color) {
-			const capa = document.createElement('div');
-			capa.style.position = 'absolute';
-			capa.style.width = '100%';
-			capa.style.top = '0';
-			capa.style.left = '0';
-			capa.style.pointerEvents = 'none';
+async function cargarTexto(url) {
+    const res = await fetch(url);
+    const text = await res.text();
+    return text.split(/\r?\n/).filter(l => l.trim() !== '');
+}
 
-			lineas.forEach((linea, i) => {
-				const p = document.createElement('p');
-				p.textContent = linea;
-				p.style.textAlign = align;
-				p.style.color = color;
-				p.style.margin = '0';
-				p.style.padding = '0 15px';
-				p.style.position = 'absolute';
-				p.style.top = `${i * 24}px`;
-				p.style.width = '100%';
+function crearCapaTexto(lineas, align, color) {
+    const capa = document.createElement('div');
+    capa.style.position = 'absolute';
+    capa.style.width = '100%';
+    capa.style.top = '0';
+    capa.style.left = '0';
+    capa.style.pointerEvents = 'none';
 
-				capa.appendChild(p);
-			});
+    lineas.forEach((linea, i) => {
+        const p = document.createElement('p');
+        p.textContent = linea;
+        p.style.textAlign = align;
+        p.style.color = color;
+        p.style.margin = '0';
+        p.style.padding = '0 15px';
+        p.style.position = 'absolute';
+        p.style.top = `${i * 24}px`;
+        p.style.width = '100%';
+        capa.appendChild(p);
+    });
 
-			document.getElementById('textContainer').appendChild(capa);
-			return capa;
-		}
+    textContainer.appendChild(capa);
+    return capa;
+}
 
-		Promise.all([
-			cargarTexto('textoplano.txt'),
-			cargarTexto('pagola.txt')
-		]).then(([textoA, textoB]) => {
-			const capaA = crearCapaTexto(textoA, 'right', '#888');
-			const capaB = crearCapaTexto(textoB, 'left', '#fff');
+Promise.all([
+    cargarTexto('textoplano.txt'),
+    cargarTexto('pagola.txt')
+]).then(([textoA, textoB]) => {
+    const capaA = crearCapaTexto(textoA, 'right', '#888');
+    const capaB = crearCapaTexto(textoB, 'left', '#fff');
 
-			let offsetA = 0;
-			let offsetB = 0;
-			let t = 0; // tiempo para interpolación
+    let offsetA = 0;
+    let offsetB = 0;
+    let t = 0;
 
-			const ojo = document.createElement('img');
-			ojo.src = 'https://twemoji.maxcdn.com/v/latest/svg/1f441.svg'; // ojo 👁
-			ojo.style.position = 'absolute';
-			ojo.style.top = '620px'; // al final del contenedor
-			ojo.style.width = '50px';
-			ojo.style.height = '50px';
-			ojo.style.filter = 'grayscale(100%) contrast(200%)'; // blanco y negro y más contraste
-			ojo.style.transition = 'left 0.1s linear'; // para moverlo suavemente
+    // Ojo SVG Twemoji
+    const ojo = document.createElement('img');
+    ojo.src = 'https://twemoji.maxcdn.com/v/latest/svg/1f441.svg';
+    ojo.style.position = 'absolute';
+    ojo.style.top = '620px';
+    ojo.style.width = '50px';
+    ojo.style.height = '50px';
+    ojo.style.filter = 'grayscale(100%) contrast(200%)';
+    ojo.style.transition = 'left 0.1s linear';
+    textContainer.appendChild(ojo);
 
-			textContainer.appendChild(ojo);
+    function moverOjo(grisA, grisB) {
+        const ancho = textContainer.clientWidth;
+        ojo.style.left = (grisB > grisA) ? '10px' : `${ancho - 60}px`;
+    }
 
-			// ejemplo de movimiento según luminancia de textos
-			function moverOjo(grisA, grisB) {
-				const ancho = textContainer.clientWidth;
-				// si grisB es mayor que grisA, ojo a la izquierda, sino a la derecha
-				ojo.style.left = (grisB > grisA) ? '10px' : `${ancho - 60}px`;
-			}
+    function animar() {
+        t += 0.01;
+        const grisA = 136 + Math.sin(t) * (255 - 136);
+        const grisB = 255 - Math.sin(t) * (255 - 136);
 
-			function animar() {
-				t += 0.01; // velocidad de ciclo de color
-				const grisA = 136 + Math.sin(t) * (255 - 136); // #888 = 136, #fff = 255
-				const grisB = 255 - Math.sin(t) * (255 - 136); // invertido para B
+        capaA.childNodes.forEach(p => p.style.color = `rgb(${grisA},${grisA},${grisA})`);
+        capaB.childNodes.forEach(p => p.style.color = `rgb(${grisB},${grisB},${grisB})`);
 
-				capaA.childNodes.forEach(p => {
-					p.style.color = `rgb(${grisA},${grisA},${grisA})`;
-				});
+        offsetA -= velocidadA;
+        offsetB -= velocidadB;
 
-				capaB.childNodes.forEach(p => {
-					p.style.color = `rgb(${grisB},${grisB},${grisB})`;
-				});
+        capaA.childNodes.forEach((p, i) => p.style.top = `${i * 24 + offsetA}px`);
+        capaB.childNodes.forEach((p, i) => p.style.top = `${i * 24 + offsetB}px`);
 
-				// desplazamiento de líneas
-				offsetA -= velocidadA;
-				offsetB -= velocidadB;
+        const totalA = textoA.length * 24;
+        const totalB = textoB.length * 24;
+        if (offsetA < -totalA) offsetA = textContainer.clientHeight;
+        if (offsetB < -totalB) offsetB = textContainer.clientHeight;
 
-				capaA.childNodes.forEach((p, i) => {
-					p.style.top = `${i * 24 + offsetA}px`;
-				});
-				capaB.childNodes.forEach((p, i) => {
-					p.style.top = `${i * 24 + offsetB}px`;
-				});
+        moverOjo(grisA, grisB);
 
-				const totalA = textoA.length * 24;
-				const totalB = textoB.length * 24;
-				if (offsetA < -totalA) offsetA = textContainer.clientHeight;
-				if (offsetB < -totalB) offsetB = textContainer.clientHeight;
+        requestAnimationFrame(animar);
+    }
 
-				// calcular posición del ojo según el brillo de los textos
-				const widthMax = textContainer.clientWidth - 32; // ancho máximo para el ojo
-				const ratio = grisA / (grisA + grisB); // más grisA = más a la derecha
-				// mover ojo según luminancia
-				moverOjo(grisA, grisB);
-
-				requestAnimationFrame(animar);
-			}
-
-			animar();
-		});
-	</script>
+    animar();
+});
+</script>
 </p>
 <p style="text-align: center; margin-top: 10px; color: #fff; font-family: monospace;"><a href="https://www.researchgate.net/publication/281347681_netart_latino_database_El_mapa_invertido_del_netart_latinoamericano" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Pagola</a> &lt;-------------&gt; <a href="https://netart.org.uy/latino/" target="_blank" style="color: #fff; text-decoration: none;" rel="noopener">Torres García</a></p>
 <p style="display: none !important;">Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentes dispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y diálogo con distintas comunidades culturales, momentos históricos, generaciones de receptores.</p>
