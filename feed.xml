@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>ESC/P2</title>
-    <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
-    <link href="https://carlosdaniellescano.github.io/escp2" />
+    <title>ESC/P</title>
+    <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
+    <link href="https://carlosdaniellescano.github.io/escp" />
     <updated>2025-10-16T09:32:17-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
-    <id>https://carlosdaniellescano.github.io/escp2</id>
+    <id>https://carlosdaniellescano.github.io/escp</id>
 
     <entry>
         <title>&gt;&gt;Dialogo Sur Tardío&lt;&lt;</title>
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/novedadeslessless.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/novedadeslessless.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/novedadeslessless.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/novedadeslessless.html</id>
 
         <updated>2025-10-15T09:29:57-03:00</updated>
             <summary>
@@ -133,8 +133,8 @@
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/visual.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/visual.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/visual.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/visual.html</id>
 
         <updated>2025-10-14T23:40:30-03:00</updated>
             <summary>
@@ -204,8 +204,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/meme.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/meme.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/meme.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/meme.html</id>
 
         <updated>2025-10-13T20:37:01-03:00</updated>
             <summary>
@@ -225,8 +225,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/gcode-10.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/gcode-10.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/gcode-10.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/gcode-10.html</id>
 
         <updated>2025-10-13T19:32:45-03:00</updated>
             <summary>
@@ -254,8 +254,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/text-to-speech.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/text-to-speech.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/text-to-speech.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/text-to-speech.html</id>
 
         <updated>2025-10-13T16:10:00-03:00</updated>
             <summary>
@@ -393,8 +393,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/refes.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/refes.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/refes.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/refes.html</id>
 
         <updated>2025-10-13T15:44:51-03:00</updated>
             <summary>
@@ -419,8 +419,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/apropiacion-y-raigambre.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/apropiacion-y-raigambre.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/apropiacion-y-raigambre.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/apropiacion-y-raigambre.html</id>
 
         <updated>2025-10-13T13:16:53-03:00</updated>
             <summary>
@@ -489,8 +489,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/feed-back.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/feed-back.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/feed-back.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/feed-back.html</id>
 
         <updated>2025-10-13T13:06:12-03:00</updated>
             <summary>
@@ -500,7 +500,7 @@ function draw() {
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img decoding="auto" loading="lazy"  style="filter: grayscale(100%) contrast(100%);" src="https://carlosdaniellescano.github.io/escp2/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp2/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
+                <figure class="post__image"><img decoding="auto" loading="lazy"  style="filter: grayscale(100%) contrast(100%);" src="https://carlosdaniellescano.github.io/escp/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
 <p style="display: none !important;">De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.</p>
 <p> </p>
             ]]>
@@ -511,8 +511,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/audiovisual.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/audiovisual.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/audiovisual.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/audiovisual.html</id>
 
         <updated>2025-10-13T02:23:07-03:00</updated>
             <summary>
@@ -655,8 +655,8 @@ function draw() {
         <author>
             <name>Carlos Lescano</name>
         </author>
-        <link href="https://carlosdaniellescano.github.io/escp2/whatsapp-video-2025-10-13-at-12655-am.html"/>
-        <id>https://carlosdaniellescano.github.io/escp2/whatsapp-video-2025-10-13-at-12655-am.html</id>
+        <link href="https://carlosdaniellescano.github.io/escp/whatsapp-video-2025-10-13-at-12655-am.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/whatsapp-video-2025-10-13-at-12655-am.html</id>
 
         <updated>2025-10-13T01:51:19-03:00</updated>
             <summary>
