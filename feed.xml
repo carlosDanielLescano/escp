@@ -3,7 +3,7 @@
     <title>ESC/P2</title>
     <link href="https://carlosdaniellescano.github.io/escp2/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp2" />
-    <updated>2025-10-15T13:34:11-03:00</updated>
+    <updated>2025-10-16T09:32:17-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -148,8 +148,8 @@
 <p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 <script>
-let chars = "        ESP/2       ";
-let chars2 = "ESP/2";
+let chars = "        ESC/P       ";
+let chars2 = "ESC/P";
 
 let cols, rows;
 let charSize = 10;
