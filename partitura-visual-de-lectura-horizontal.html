@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Partitura visual de lectura horizontal - ESC/P</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#000000"><meta name="apple-mobile-web-app-status-bar-style" content="#000000"><link rel="canonical" href="https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html"><link rel="alternate" type="application/atom+xml" href="https://carlosdaniellescano.github.io/escp/feed.xml" title="ESC/P - RSS"><link rel="alternate" type="application/json" href="https://carlosdaniellescano.github.io/escp/feed.json" title="ESC/P - JSON"><meta property="og:title" content="Partitura visual de lectura horizontal"><meta property="og:image" content="https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg"><meta property="og:image:width" content="655"><meta property="og:image:height" content="293"><meta property="og:site_name" content="ESC/P"><meta property="og:description" content=""><meta property="og:url" content="https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html"><meta property="og:type" content="article"><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/redhatmono/redhatmono.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/redhatmono/redhatmono-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/sourcecodepro/sourcecodepro.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/sourcecodepro/sourcecodepro-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://carlosdaniellescano.github.io/escp/assets/css/style.css?v=c0a5732eb074304fdf7a703035b95e32"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html"},"headline":"Partitura visual de lectura horizontal","datePublished":"2025-11-18T00:52-03:00","dateModified":"2025-11-18T00:52-03:00","image":{"@type":"ImageObject","url":"https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg","height":293,"width":655},"description":"","author":{"@type":"Person","name":"Carlos Lescano","url":"https://carlosdaniellescano.github.io/escp/authors/carlos-lescano/"},"publisher":{"@type":"Organization","name":"Carlos Lescano","logo":{"@type":"ImageObject","url":"https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg","height":293,"width":655}}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript><p style="line-height: 0.5;"></p></head><body class="post-template"><header class="top js-header"><a class="logo" href="https://carlosdaniellescano.github.io/escp/"><img src="https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg" alt="ESC/P" width="655" height="293"></a></header><main class="post"><article class="content"><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>Partitura visual de lectura horizontal</h1></div></header></div><div class="entry-wrapper content__entry"><figure class="post__image"><img decoding="auto" loading="lazy" src="https://carlosdaniellescano.github.io/escp/media/posts/26/Frame-1.png" alt="" width="752" height="5361" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xs.png 640w, https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-sm.png 768w, https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-md.png 1024w, https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-lg.png 1366w, https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xl.png 1600w, https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-2xl.png 1920w"></figure></div><footer class="content__footer"><div class="entry-wrapper"></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-next"><a href="https://carlosdaniellescano.github.io/escp/improvisacion-transcripto.html" class="content__nav-link" rel="next"><div><span>Next</span> Improvisación  transcripta  </div></a></div></div></div></nav></footer></article><div class="banner banner--after-content"><div class="wrapper"><div id="containersss"></div><script>const chars = "  --__,,==++!!**ssllvv))((||ii[]{}II[//FFAANNZZINNE//DDIIGGIITTAALL//EESSCC//PP//@@";
+const numLines = 15;
+const lineLength = 40; // cantidad fija de caracteres
+const container = document.getElementById('containersss');
+
+// Inicializamos las líneas
+let lines = [];
+for (let i = 0; i < numLines; i++) {
+    let arr = [];
+    for (let j = 0; j < lineLength; j++) {
+        arr.push(chars[Math.floor(((j+i) /lineLength) * chars.length)+i*4]);
+    }
+    lines.push(arr);
+
+    // Creamos el div correspondiente
+    const div = document.createElement('div');
+
+    div.textContent = arr.join('');
+    container.appendChild(div);
+}
+
+// Función para actualizar las líneas (loop de caracteres)
+function updateLines() {
+    lines.forEach((arr, i) => {
+        let last = arr.pop();
+        arr.unshift(last);
+        container.children[i].textContent = arr.join('');
+    });
+}
+
+// Actualizamos cada 100ms
+setInterval(updateLines, 100);</script></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener">lescano.ar</a></p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://carlosdaniellescano.github.io/escp/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://carlosdaniellescano.github.io/escp/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script><div style="filter: grayscale(100%) contrast(100%);"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener noreferrer">lescano.ar</a></p></div></body></html>

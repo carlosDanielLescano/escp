@@ -11,9 +11,22 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html",
+            "url": "https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html",
+            "title": "Partitura visual de lectura horizontal",
+            "content_html": "<figure class=\"post__image\"><img decoding=\"auto\" loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp/media/posts/26/Frame-1.png\" alt=\"\" width=\"752\" height=\"5361\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-2xl.png 1920w\"></figure>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-11-18T00:52:58-03:00",
+            "date_modified": "2025-11-18T00:52:58-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp/improvisacion-transcripto.html",
             "url": "https://carlosdaniellescano.github.io/escp/improvisacion-transcripto.html",
-            "title": "Improvisación  transcripto  ",
+            "title": "Improvisación  transcripta  ",
             "content_html": "<figure class=\"post__image\"><img decoding=\"auto\" loading=\"lazy\"  src=\"https://carlosdaniellescano.github.io/escp/media/posts/25/IMAG0396-1.png\" alt=\"\" width=\"1245\" height=\"4096\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-2xl.png 1920w\"></figure>",
             "author": {
                 "name": "Carlos Lescano"
@@ -21,7 +34,7 @@
             "tags": [
             ],
             "date_published": "2025-11-18T00:42:29-03:00",
-            "date_modified": "2025-11-18T00:46:39-03:00"
+            "date_modified": "2025-11-18T00:52:11-03:00"
         },
         {
             "id": "https://carlosdaniellescano.github.io/escp/principios-marco-para-el-desarrollode-toda-nueva-pieza-tecnopoetica.html",
@@ -134,20 +147,6 @@
             ],
             "date_published": "2025-10-13T13:16:53-03:00",
             "date_modified": "2025-10-13T22:09:23-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp/feed-back.html",
-            "url": "https://carlosdaniellescano.github.io/escp/feed-back.html",
-            "title": "FEED-BACK",
-            "summary": "De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.",
-            "content_html": "<figure class=\"post__image\"><img decoding=\"auto\" loading=\"lazy\"  style=\"filter: grayscale(100%) contrast(100%);\" src=\"https://carlosdaniellescano.github.io/escp/media/posts/16//SKM_C45825012915001_0001.png\" alt=\"\" width=\"1807\" height=\"2289\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w\"></figure>\n<p style=\"display: none !important;\">De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.</p>\n<p> </p>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-13T13:06:12-03:00",
-            "date_modified": "2025-10-13T22:05:05-03:00"
         }
     ]
 }

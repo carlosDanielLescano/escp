@@ -3,14 +3,30 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2025-11-18T00:46:39-03:00</updated>
+    <updated>2025-11-18T00:52:58-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp</id>
 
     <entry>
-        <title>Improvisación  transcripto  </title>
+        <title>Partitura visual de lectura horizontal</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html</id>
+
+        <updated>2025-11-18T00:52:58-03:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/26/Frame-1.png" alt="" width="752" height="5361" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-2xl.png 1920w"></figure>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Improvisación  transcripta  </title>
         <author>
             <name>Carlos Lescano</name>
         </author>
@@ -544,28 +560,6 @@ function draw() {
 </div>
 </div>
 </div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>FEED-BACK</title>
-        <author>
-            <name>Carlos Lescano</name>
-        </author>
-        <link href="https://carlosdaniellescano.github.io/escp/feed-back.html"/>
-        <id>https://carlosdaniellescano.github.io/escp/feed-back.html</id>
-
-        <updated>2025-10-13T13:06:12-03:00</updated>
-            <summary>
-                <![CDATA[
-                    De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <figure class="post__image"><img decoding="auto" loading="lazy"  style="filter: grayscale(100%) contrast(100%);" src="https://carlosdaniellescano.github.io/escp/media/posts/16//SKM_C45825012915001_0001.png" alt="" width="1807" height="2289" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/16//responsive/SKM_C45825012915001_0001-2xl.png 1920w"></figure>
-<p style="display: none !important;">De la expansión a la reducción. Hay memorias de muy distintos tipos. La periodicidad mecesita una comprobación.</p>
-<p> </p>
             ]]>
         </content>
     </entry>
