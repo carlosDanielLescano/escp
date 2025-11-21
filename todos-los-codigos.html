@@ -1,0 +1,519 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Todos los códigos - microcontroladores - ESC/P</title><meta name="description" content="CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA// === CONTROL GENERATIVO DE 2 EJES (X, Y) ===// Cada eje tiene 4 arrays y 4 índices independientes// Cada índice cambia su valor con un ritmo propio, recalculado en cada cambio// El eje X repite cada movimiento 2 veces (ida y vuelta)#define X_STEP_PIN 2#define X_DIR_PIN  5#define Y_STEP_PIN 3#define Y_DIR_PIN  6#define EN_PIN     8  // enable común// === ARRAYS DE VALORES ===// EJE Xint time_between_steps_X[] = {100 , 2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_X[]          = { 800, 1600, 1800, 1200, 600, 1000};bool direction_X[]         = {LOW, HIGH, LOW, HIGH};bool enable_X[]            = {true, true, false, true};// EJE Yint time_between_steps_Y[] = {2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_Y[]          = {200, 400, 800, 1600, 200, 400, 200, 400, 800, 1600, 800, 1600};bool direction_Y[]         = {HIGH, LOW, HIGH, LOW, HIGH, HIGH, LOW, HIGH, LOW, HIGH, HIGH, HIGH};bool enable_Y[]            = {true, true, true, false};// === ÍNDICES INDEPENDIENTES ===int idx_time_X = 0, idx_steps_X = 0, idx_dir_X = 0, idx_enable_X = 0;int idx_time_Y = 0, idx_steps_Y = 0, idx_dir_Y = 0, idx_enable_Y = 0;// === CONTROL DE MOVIMIENTO ===long currentStepX = 0;long currentStepY = 0;unsigned long lastStepTimeX = 0;unsigned long lastStepTimeY = 0;// Nueva variable para repetir movimiento en Xenum { IDLE_X = 0, MOVIENDO_X = 1 };int estadoX = IDLE_X;int faseX = 0; // 0 = primera pasada (ida), 1 = segunda pasada (vuelta)long targetStepsX = 0;bool dirEfectivaX = LOW;// === CONTROL DE CAMBIOS DINÁMICOS ===unsigned long lastChange_time_X = 0;unsigned long lastChange_steps_X = 0;unsigned long lastChange_dir_X = 0;unsigned long lastChange_enable_X = 0;unsigned long lastChange_time_Y = 0;unsigned long lastChange_steps_Y = 0;unsigned long lastChange_dir_Y = 0;unsigned long lastChange_enable_Y = 0;// Intervalos iniciales (en milisegundos)unsigned long interval_time_X = 1000;unsigned long interval_steps_X = 1500;unsigned long interval_dir_X = 2000;unsigned long interval_enable_X = 2500;unsigned long interval_time_Y = 1200;unsigned long interval_steps_Y = 1800;unsigned long interval_dir_Y = 2200;unsigned long interval_enable_Y = 2600;void setup() {  pinMode(X_STEP_PIN, OUTPUT);  pinMode(X_DIR_PIN, OUTPUT);  pinMode(Y_STEP_PIN, OUTPUT);  pinMode(Y_DIR_PIN, OUTPUT);  pinMode(EN_PIN, OUTPUT);  Serial.begin(9600);  randomSeed(analogRead(A0)); // semilla de aleatoriedad  Serial.println('Iniciando sistema generativo con repetición en X...');  applyParameters();}void loop() {  unsigned long now = micros();  // --- EJE X (nueva lógica basada en estado) ---if (enable_X[idx_enable_X]) {  unsigned long nowMicros = micros();  // Si estamos idle, iniciamos un nuevo ciclo (primera pasada)  if (estadoX == IDLE_X) {    // Fijar objetivo y dirección efectiva    targetStepsX = num_steps_X[idx_steps_X];    dirEfectivaX = direction_X[idx_dir_X]; // dirección original para la primera pasada    digitalWrite(X_DIR_PIN, dirEfectivaX);    currentStepX = 0;    faseX = 0;    estadoX = MOVIENDO_X;    // opción: imprimir inicio de ciclo    Serial.print('X: inicio ciclo -&gt; steps=');    Serial.println(targetStepsX);  }  // Si estamos moviendo, generar pasos según time_between_steps  if (estadoX == MOVIENDO_X) {    if (nowMicros - lastStepTimeX &gt;= time_between_steps_X[idx_time_X]) {      lastStepTimeX = nowMicros;      if (currentStepX &lt; targetStepsX) {        digitalWrite(X_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(X_STEP_PIN, LOW);        currentStepX++;      } else {        // completó la pasada actual        if (faseX == 0) {          // pasar a segunda pasada: invertir dirección y repetir          faseX = 1;          dirEfectivaX = !direction_X[idx_dir_X]; // INVERSA respecto a la original          digitalWrite(X_DIR_PIN, dirEfectivaX);          currentStepX = 0;          Serial.println('X: pasada 1 completa -&gt; iniciando vuelta (invertida)');        } else {          // ya hizo ida y vuelta, terminar ciclo          estadoX = IDLE_X;          faseX = 0;          currentStepX = 0;          // opcional: avanzar índices al terminar ciclo          Serial.println('X: pasada 2 completa -&gt; ciclo finalizado');        }      }    }  }} else {  // Si enable está OFF, dejamos todo IDLE  estadoX = IDLE_X;  currentStepX = 0;}  // --- EJE Y ---  if (enable_Y[idx_enable_Y]) {    if (now - lastStepTimeY &gt;= time_between_steps_Y[idx_time_Y]) {      lastStepTimeY = now;      if (currentStepY &lt; num_steps_Y[idx_steps_Y]) {        digitalWrite(Y_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(Y_STEP_PIN, LOW);        currentStepY++;      } else {        currentStepY = 0;      }    }  }  // --- CAMBIOS DE PARÁMETROS ---  unsigned long t = millis();  // EJE X  if (t - lastChange_time_X &gt; interval_time_X)    changeIndex(idx_time_X, lastChange_time_X, interval_time_X, sizeof(time_between_steps_X) / sizeof(time_between_steps_X[0]));  if (t - lastChange_steps_X &gt; interval_steps_X)    changeIndex(idx_steps_X, lastChange_steps_X, interval_steps_X, sizeof(num_steps_X) / sizeof(num_steps_X[0]));  if (t - lastChange_dir_X &gt; interval_dir_X)    changeIndex(idx_dir_X, lastChange_dir_X, interval_dir_X, sizeof(direction_X) / sizeof(direction_X[0]));  if (t - lastChange_enable_X &gt; interval_enable_X)    changeIndex(idx_enable_X, lastChange_enable_X, interval_enable_X, sizeof(enable_X) / sizeof(enable_X[0]));  // EJE Y  if (t - lastChange_time_Y &gt; interval_time_Y)    changeIndex(idx_time_Y, lastChange_time_Y, interval_time_Y, sizeof(time_between_steps_Y) / sizeof(time_between_steps_Y[0]));  if (t - lastChange_steps_Y &gt; interval_steps_Y)    changeIndex(idx_steps_Y, lastChange_steps_Y, interval_steps_Y, sizeof(num_steps_Y) / sizeof(num_steps_Y[0]));  if (t - lastChange_dir_Y &gt; interval_dir_Y)    changeIndex(idx_dir_Y, lastChange_dir_Y, interval_dir_Y, sizeof(direction_Y) / sizeof(direction_Y[0]));  if (t - lastChange_enable_Y &gt; interval_enable_Y)    changeIndex(idx_enable_Y, lastChange_enable_Y, interval_enable_Y, sizeof(enable_Y) / sizeof(enable_Y[0]));  applyParameters();}// ====================================================//        FUNCIONES AUXILIARES// ====================================================void changeIndex(int &amp;index, unsigned long &amp;lastChange, unsigned long &amp;interval, int cantidadDeDatos) {  index = (index + 1) % cantidadDeDatos;  lastChange = millis();  interval = 500UL * pow(2, random(5)); // 500, 1000, 2000, 4000, 8000 ms}void applyParameters() {  // Si el eje X está en reposo (idle), usamos la dirección del índice.  // Si está moviendo, mantenemos la dirección efectiva actual.  if (estadoX == IDLE_X) {    dirEfectivaX = direction_X[idx_dir_X];    digitalWrite(X_DIR_PIN, dirEfectivaX);  } else {    digitalWrite(X_DIR_PIN, dirEfectivaX);  }  // Eje Y: comportamiento normal, independiente  digitalWrite(Y_DIR_PIN, direction_Y[idx_dir_Y]);  // Enable global: activo si cualquiera de los dos ejes está habilitado  bool en = enable_X[idx_enable_X] || enable_Y[idx_enable_Y];  digitalWrite(EN_PIN, en ? LOW : HIGH);}"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#000000"><meta name="apple-mobile-web-app-status-bar-style" content="#000000"><link rel="canonical" href="https://carlosdaniellescano.github.io/escp/todos-los-codigos.html"><link rel="alternate" type="application/atom+xml" href="https://carlosdaniellescano.github.io/escp/feed.xml" title="ESC/P - RSS"><link rel="alternate" type="application/json" href="https://carlosdaniellescano.github.io/escp/feed.json" title="ESC/P - JSON"><meta property="og:title" content="Todos los códigos - microcontroladores"><meta property="og:image" content="https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg"><meta property="og:image:width" content="655"><meta property="og:image:height" content="293"><meta property="og:site_name" content="ESC/P"><meta property="og:description" content="CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA// === CONTROL GENERATIVO DE 2 EJES (X, Y) ===// Cada eje tiene 4 arrays y 4 índices independientes// Cada índice cambia su valor con un ritmo propio, recalculado en cada cambio// El eje X repite cada movimiento 2 veces (ida y vuelta)#define X_STEP_PIN 2#define X_DIR_PIN  5#define Y_STEP_PIN 3#define Y_DIR_PIN  6#define EN_PIN     8  // enable común// === ARRAYS DE VALORES ===// EJE Xint time_between_steps_X[] = {100 , 2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_X[]          = { 800, 1600, 1800, 1200, 600, 1000};bool direction_X[]         = {LOW, HIGH, LOW, HIGH};bool enable_X[]            = {true, true, false, true};// EJE Yint time_between_steps_Y[] = {2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_Y[]          = {200, 400, 800, 1600, 200, 400, 200, 400, 800, 1600, 800, 1600};bool direction_Y[]         = {HIGH, LOW, HIGH, LOW, HIGH, HIGH, LOW, HIGH, LOW, HIGH, HIGH, HIGH};bool enable_Y[]            = {true, true, true, false};// === ÍNDICES INDEPENDIENTES ===int idx_time_X = 0, idx_steps_X = 0, idx_dir_X = 0, idx_enable_X = 0;int idx_time_Y = 0, idx_steps_Y = 0, idx_dir_Y = 0, idx_enable_Y = 0;// === CONTROL DE MOVIMIENTO ===long currentStepX = 0;long currentStepY = 0;unsigned long lastStepTimeX = 0;unsigned long lastStepTimeY = 0;// Nueva variable para repetir movimiento en Xenum { IDLE_X = 0, MOVIENDO_X = 1 };int estadoX = IDLE_X;int faseX = 0; // 0 = primera pasada (ida), 1 = segunda pasada (vuelta)long targetStepsX = 0;bool dirEfectivaX = LOW;// === CONTROL DE CAMBIOS DINÁMICOS ===unsigned long lastChange_time_X = 0;unsigned long lastChange_steps_X = 0;unsigned long lastChange_dir_X = 0;unsigned long lastChange_enable_X = 0;unsigned long lastChange_time_Y = 0;unsigned long lastChange_steps_Y = 0;unsigned long lastChange_dir_Y = 0;unsigned long lastChange_enable_Y = 0;// Intervalos iniciales (en milisegundos)unsigned long interval_time_X = 1000;unsigned long interval_steps_X = 1500;unsigned long interval_dir_X = 2000;unsigned long interval_enable_X = 2500;unsigned long interval_time_Y = 1200;unsigned long interval_steps_Y = 1800;unsigned long interval_dir_Y = 2200;unsigned long interval_enable_Y = 2600;void setup() {  pinMode(X_STEP_PIN, OUTPUT);  pinMode(X_DIR_PIN, OUTPUT);  pinMode(Y_STEP_PIN, OUTPUT);  pinMode(Y_DIR_PIN, OUTPUT);  pinMode(EN_PIN, OUTPUT);  Serial.begin(9600);  randomSeed(analogRead(A0)); // semilla de aleatoriedad  Serial.println('Iniciando sistema generativo con repetición en X...');  applyParameters();}void loop() {  unsigned long now = micros();  // --- EJE X (nueva lógica basada en estado) ---if (enable_X[idx_enable_X]) {  unsigned long nowMicros = micros();  // Si estamos idle, iniciamos un nuevo ciclo (primera pasada)  if (estadoX == IDLE_X) {    // Fijar objetivo y dirección efectiva    targetStepsX = num_steps_X[idx_steps_X];    dirEfectivaX = direction_X[idx_dir_X]; // dirección original para la primera pasada    digitalWrite(X_DIR_PIN, dirEfectivaX);    currentStepX = 0;    faseX = 0;    estadoX = MOVIENDO_X;    // opción: imprimir inicio de ciclo    Serial.print('X: inicio ciclo -&gt; steps=');    Serial.println(targetStepsX);  }  // Si estamos moviendo, generar pasos según time_between_steps  if (estadoX == MOVIENDO_X) {    if (nowMicros - lastStepTimeX &gt;= time_between_steps_X[idx_time_X]) {      lastStepTimeX = nowMicros;      if (currentStepX &lt; targetStepsX) {        digitalWrite(X_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(X_STEP_PIN, LOW);        currentStepX++;      } else {        // completó la pasada actual        if (faseX == 0) {          // pasar a segunda pasada: invertir dirección y repetir          faseX = 1;          dirEfectivaX = !direction_X[idx_dir_X]; // INVERSA respecto a la original          digitalWrite(X_DIR_PIN, dirEfectivaX);          currentStepX = 0;          Serial.println('X: pasada 1 completa -&gt; iniciando vuelta (invertida)');        } else {          // ya hizo ida y vuelta, terminar ciclo          estadoX = IDLE_X;          faseX = 0;          currentStepX = 0;          // opcional: avanzar índices al terminar ciclo          Serial.println('X: pasada 2 completa -&gt; ciclo finalizado');        }      }    }  }} else {  // Si enable está OFF, dejamos todo IDLE  estadoX = IDLE_X;  currentStepX = 0;}  // --- EJE Y ---  if (enable_Y[idx_enable_Y]) {    if (now - lastStepTimeY &gt;= time_between_steps_Y[idx_time_Y]) {      lastStepTimeY = now;      if (currentStepY &lt; num_steps_Y[idx_steps_Y]) {        digitalWrite(Y_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(Y_STEP_PIN, LOW);        currentStepY++;      } else {        currentStepY = 0;      }    }  }  // --- CAMBIOS DE PARÁMETROS ---  unsigned long t = millis();  // EJE X  if (t - lastChange_time_X &gt; interval_time_X)    changeIndex(idx_time_X, lastChange_time_X, interval_time_X, sizeof(time_between_steps_X) / sizeof(time_between_steps_X[0]));  if (t - lastChange_steps_X &gt; interval_steps_X)    changeIndex(idx_steps_X, lastChange_steps_X, interval_steps_X, sizeof(num_steps_X) / sizeof(num_steps_X[0]));  if (t - lastChange_dir_X &gt; interval_dir_X)    changeIndex(idx_dir_X, lastChange_dir_X, interval_dir_X, sizeof(direction_X) / sizeof(direction_X[0]));  if (t - lastChange_enable_X &gt; interval_enable_X)    changeIndex(idx_enable_X, lastChange_enable_X, interval_enable_X, sizeof(enable_X) / sizeof(enable_X[0]));  // EJE Y  if (t - lastChange_time_Y &gt; interval_time_Y)    changeIndex(idx_time_Y, lastChange_time_Y, interval_time_Y, sizeof(time_between_steps_Y) / sizeof(time_between_steps_Y[0]));  if (t - lastChange_steps_Y &gt; interval_steps_Y)    changeIndex(idx_steps_Y, lastChange_steps_Y, interval_steps_Y, sizeof(num_steps_Y) / sizeof(num_steps_Y[0]));  if (t - lastChange_dir_Y &gt; interval_dir_Y)    changeIndex(idx_dir_Y, lastChange_dir_Y, interval_dir_Y, sizeof(direction_Y) / sizeof(direction_Y[0]));  if (t - lastChange_enable_Y &gt; interval_enable_Y)    changeIndex(idx_enable_Y, lastChange_enable_Y, interval_enable_Y, sizeof(enable_Y) / sizeof(enable_Y[0]));  applyParameters();}// ====================================================//        FUNCIONES AUXILIARES// ====================================================void changeIndex(int &amp;index, unsigned long &amp;lastChange, unsigned long &amp;interval, int cantidadDeDatos) {  index = (index + 1) % cantidadDeDatos;  lastChange = millis();  interval = 500UL * pow(2, random(5)); // 500, 1000, 2000, 4000, 8000 ms}void applyParameters() {  // Si el eje X está en reposo (idle), usamos la dirección del índice.  // Si está moviendo, mantenemos la dirección efectiva actual.  if (estadoX == IDLE_X) {    dirEfectivaX = direction_X[idx_dir_X];    digitalWrite(X_DIR_PIN, dirEfectivaX);  } else {    digitalWrite(X_DIR_PIN, dirEfectivaX);  }  // Eje Y: comportamiento normal, independiente  digitalWrite(Y_DIR_PIN, direction_Y[idx_dir_Y]);  // Enable global: activo si cualquiera de los dos ejes está habilitado  bool en = enable_X[idx_enable_X] || enable_Y[idx_enable_Y];  digitalWrite(EN_PIN, en ? LOW : HIGH);}"><meta property="og:url" content="https://carlosdaniellescano.github.io/escp/todos-los-codigos.html"><meta property="og:type" content="article"><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/redhatmono/redhatmono.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/redhatmono/redhatmono-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/sourcecodepro/sourcecodepro.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://carlosdaniellescano.github.io/escp/assets/dynamic/fonts/sourcecodepro/sourcecodepro-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://carlosdaniellescano.github.io/escp/assets/css/style.css?v=c0a5732eb074304fdf7a703035b95e32"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://carlosdaniellescano.github.io/escp/todos-los-codigos.html"},"headline":"Todos los códigos - microcontroladores","datePublished":"2025-11-21T20:33-03:00","dateModified":"2025-11-21T20:48-03:00","image":{"@type":"ImageObject","url":"https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg","height":293,"width":655},"description":"CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA// === CONTROL GENERATIVO DE 2 EJES (X, Y) ===// Cada eje tiene 4 arrays y 4 índices independientes// Cada índice cambia su valor con un ritmo propio, recalculado en cada cambio// El eje X repite cada movimiento 2 veces (ida y vuelta)#define X_STEP_PIN 2#define X_DIR_PIN  5#define Y_STEP_PIN 3#define Y_DIR_PIN  6#define EN_PIN     8  // enable común// === ARRAYS DE VALORES ===// EJE Xint time_between_steps_X[] = {100 , 2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_X[]          = { 800, 1600, 1800, 1200, 600, 1000};bool direction_X[]         = {LOW, HIGH, LOW, HIGH};bool enable_X[]            = {true, true, false, true};// EJE Yint time_between_steps_Y[] = {2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};int num_steps_Y[]          = {200, 400, 800, 1600, 200, 400, 200, 400, 800, 1600, 800, 1600};bool direction_Y[]         = {HIGH, LOW, HIGH, LOW, HIGH, HIGH, LOW, HIGH, LOW, HIGH, HIGH, HIGH};bool enable_Y[]            = {true, true, true, false};// === ÍNDICES INDEPENDIENTES ===int idx_time_X = 0, idx_steps_X = 0, idx_dir_X = 0, idx_enable_X = 0;int idx_time_Y = 0, idx_steps_Y = 0, idx_dir_Y = 0, idx_enable_Y = 0;// === CONTROL DE MOVIMIENTO ===long currentStepX = 0;long currentStepY = 0;unsigned long lastStepTimeX = 0;unsigned long lastStepTimeY = 0;// Nueva variable para repetir movimiento en Xenum { IDLE_X = 0, MOVIENDO_X = 1 };int estadoX = IDLE_X;int faseX = 0; // 0 = primera pasada (ida), 1 = segunda pasada (vuelta)long targetStepsX = 0;bool dirEfectivaX = LOW;// === CONTROL DE CAMBIOS DINÁMICOS ===unsigned long lastChange_time_X = 0;unsigned long lastChange_steps_X = 0;unsigned long lastChange_dir_X = 0;unsigned long lastChange_enable_X = 0;unsigned long lastChange_time_Y = 0;unsigned long lastChange_steps_Y = 0;unsigned long lastChange_dir_Y = 0;unsigned long lastChange_enable_Y = 0;// Intervalos iniciales (en milisegundos)unsigned long interval_time_X = 1000;unsigned long interval_steps_X = 1500;unsigned long interval_dir_X = 2000;unsigned long interval_enable_X = 2500;unsigned long interval_time_Y = 1200;unsigned long interval_steps_Y = 1800;unsigned long interval_dir_Y = 2200;unsigned long interval_enable_Y = 2600;void setup() {  pinMode(X_STEP_PIN, OUTPUT);  pinMode(X_DIR_PIN, OUTPUT);  pinMode(Y_STEP_PIN, OUTPUT);  pinMode(Y_DIR_PIN, OUTPUT);  pinMode(EN_PIN, OUTPUT);  Serial.begin(9600);  randomSeed(analogRead(A0)); // semilla de aleatoriedad  Serial.println('Iniciando sistema generativo con repetición en X...');  applyParameters();}void loop() {  unsigned long now = micros();  // --- EJE X (nueva lógica basada en estado) ---if (enable_X[idx_enable_X]) {  unsigned long nowMicros = micros();  // Si estamos idle, iniciamos un nuevo ciclo (primera pasada)  if (estadoX == IDLE_X) {    // Fijar objetivo y dirección efectiva    targetStepsX = num_steps_X[idx_steps_X];    dirEfectivaX = direction_X[idx_dir_X]; // dirección original para la primera pasada    digitalWrite(X_DIR_PIN, dirEfectivaX);    currentStepX = 0;    faseX = 0;    estadoX = MOVIENDO_X;    // opción: imprimir inicio de ciclo    Serial.print('X: inicio ciclo -&gt; steps=');    Serial.println(targetStepsX);  }  // Si estamos moviendo, generar pasos según time_between_steps  if (estadoX == MOVIENDO_X) {    if (nowMicros - lastStepTimeX &gt;= time_between_steps_X[idx_time_X]) {      lastStepTimeX = nowMicros;      if (currentStepX &lt; targetStepsX) {        digitalWrite(X_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(X_STEP_PIN, LOW);        currentStepX++;      } else {        // completó la pasada actual        if (faseX == 0) {          // pasar a segunda pasada: invertir dirección y repetir          faseX = 1;          dirEfectivaX = !direction_X[idx_dir_X]; // INVERSA respecto a la original          digitalWrite(X_DIR_PIN, dirEfectivaX);          currentStepX = 0;          Serial.println('X: pasada 1 completa -&gt; iniciando vuelta (invertida)');        } else {          // ya hizo ida y vuelta, terminar ciclo          estadoX = IDLE_X;          faseX = 0;          currentStepX = 0;          // opcional: avanzar índices al terminar ciclo          Serial.println('X: pasada 2 completa -&gt; ciclo finalizado');        }      }    }  }} else {  // Si enable está OFF, dejamos todo IDLE  estadoX = IDLE_X;  currentStepX = 0;}  // --- EJE Y ---  if (enable_Y[idx_enable_Y]) {    if (now - lastStepTimeY &gt;= time_between_steps_Y[idx_time_Y]) {      lastStepTimeY = now;      if (currentStepY &lt; num_steps_Y[idx_steps_Y]) {        digitalWrite(Y_STEP_PIN, HIGH);        delayMicroseconds(2);        digitalWrite(Y_STEP_PIN, LOW);        currentStepY++;      } else {        currentStepY = 0;      }    }  }  // --- CAMBIOS DE PARÁMETROS ---  unsigned long t = millis();  // EJE X  if (t - lastChange_time_X &gt; interval_time_X)    changeIndex(idx_time_X, lastChange_time_X, interval_time_X, sizeof(time_between_steps_X) / sizeof(time_between_steps_X[0]));  if (t - lastChange_steps_X &gt; interval_steps_X)    changeIndex(idx_steps_X, lastChange_steps_X, interval_steps_X, sizeof(num_steps_X) / sizeof(num_steps_X[0]));  if (t - lastChange_dir_X &gt; interval_dir_X)    changeIndex(idx_dir_X, lastChange_dir_X, interval_dir_X, sizeof(direction_X) / sizeof(direction_X[0]));  if (t - lastChange_enable_X &gt; interval_enable_X)    changeIndex(idx_enable_X, lastChange_enable_X, interval_enable_X, sizeof(enable_X) / sizeof(enable_X[0]));  // EJE Y  if (t - lastChange_time_Y &gt; interval_time_Y)    changeIndex(idx_time_Y, lastChange_time_Y, interval_time_Y, sizeof(time_between_steps_Y) / sizeof(time_between_steps_Y[0]));  if (t - lastChange_steps_Y &gt; interval_steps_Y)    changeIndex(idx_steps_Y, lastChange_steps_Y, interval_steps_Y, sizeof(num_steps_Y) / sizeof(num_steps_Y[0]));  if (t - lastChange_dir_Y &gt; interval_dir_Y)    changeIndex(idx_dir_Y, lastChange_dir_Y, interval_dir_Y, sizeof(direction_Y) / sizeof(direction_Y[0]));  if (t - lastChange_enable_Y &gt; interval_enable_Y)    changeIndex(idx_enable_Y, lastChange_enable_Y, interval_enable_Y, sizeof(enable_Y) / sizeof(enable_Y[0]));  applyParameters();}// ====================================================//        FUNCIONES AUXILIARES// ====================================================void changeIndex(int &amp;index, unsigned long &amp;lastChange, unsigned long &amp;interval, int cantidadDeDatos) {  index = (index + 1) % cantidadDeDatos;  lastChange = millis();  interval = 500UL * pow(2, random(5)); // 500, 1000, 2000, 4000, 8000 ms}void applyParameters() {  // Si el eje X está en reposo (idle), usamos la dirección del índice.  // Si está moviendo, mantenemos la dirección efectiva actual.  if (estadoX == IDLE_X) {    dirEfectivaX = direction_X[idx_dir_X];    digitalWrite(X_DIR_PIN, dirEfectivaX);  } else {    digitalWrite(X_DIR_PIN, dirEfectivaX);  }  // Eje Y: comportamiento normal, independiente  digitalWrite(Y_DIR_PIN, direction_Y[idx_dir_Y]);  // Enable global: activo si cualquiera de los dos ejes está habilitado  bool en = enable_X[idx_enable_X] || enable_Y[idx_enable_Y];  digitalWrite(EN_PIN, en ? LOW : HIGH);}","author":{"@type":"Person","name":"Carlos Lescano","url":"https://carlosdaniellescano.github.io/escp/authors/carlos-lescano/"},"publisher":{"@type":"Organization","name":"Carlos Lescano","logo":{"@type":"ImageObject","url":"https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg","height":293,"width":655}}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript><p style="line-height: 0.5;"></p></head><body class="post-template"><header class="top js-header"><a class="logo" href="https://carlosdaniellescano.github.io/escp/"><img src="https://carlosdaniellescano.github.io/escp/media/website/ventajita-2.jpg" alt="ESC/P" width="655" height="293"></a></header><main class="post"><article class="content"><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>Todos los códigos - microcontroladores</h1></div></header></div><div class="entry-wrapper content__entry"><div style="filter: grayscale(100%) contrast(100%);"><code>CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA</code></div><div style="filter: grayscale(100%) contrast(100%);"><pre class="language-c"><code>// === CONTROL GENERATIVO DE 2 EJES (X, Y) ===
+// Cada eje tiene 4 arrays y 4 índices independientes
+// Cada índice cambia su valor con un ritmo propio, recalculado en cada cambio
+// El eje X repite cada movimiento 2 veces (ida y vuelta)
+
+#define X_STEP_PIN 2
+#define X_DIR_PIN  5
+#define Y_STEP_PIN 3
+#define Y_DIR_PIN  6
+#define EN_PIN     8  // enable común
+
+// === ARRAYS DE VALORES ===
+
+// EJE X
+int time_between_steps_X[] = {100 , 2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};
+int num_steps_X[]          = { 800, 1600, 1800, 1200, 600, 1000};
+bool direction_X[]         = {LOW, HIGH, LOW, HIGH};
+bool enable_X[]            = {true, true, false, true};
+
+// EJE Y
+int time_between_steps_Y[] = {2000, 1000, 500, 200, 100, 1500, 2000, 150, 1500, 120, 100, 150};
+int num_steps_Y[]          = {200, 400, 800, 1600, 200, 400, 200, 400, 800, 1600, 800, 1600};
+bool direction_Y[]         = {HIGH, LOW, HIGH, LOW, HIGH, HIGH, LOW, HIGH, LOW, HIGH, HIGH, HIGH};
+bool enable_Y[]            = {true, true, true, false};
+
+// === ÍNDICES INDEPENDIENTES ===
+int idx_time_X = 0, idx_steps_X = 0, idx_dir_X = 0, idx_enable_X = 0;
+int idx_time_Y = 0, idx_steps_Y = 0, idx_dir_Y = 0, idx_enable_Y = 0;
+
+// === CONTROL DE MOVIMIENTO ===
+long currentStepX = 0;
+long currentStepY = 0;
+unsigned long lastStepTimeX = 0;
+unsigned long lastStepTimeY = 0;
+
+// Nueva variable para repetir movimiento en X
+enum { IDLE_X = 0, MOVIENDO_X = 1 };
+int estadoX = IDLE_X;
+int faseX = 0; // 0 = primera pasada (ida), 1 = segunda pasada (vuelta)
+long targetStepsX = 0;
+bool dirEfectivaX = LOW;
+// === CONTROL DE CAMBIOS DINÁMICOS ===
+unsigned long lastChange_time_X = 0;
+unsigned long lastChange_steps_X = 0;
+unsigned long lastChange_dir_X = 0;
+unsigned long lastChange_enable_X = 0;
+
+unsigned long lastChange_time_Y = 0;
+unsigned long lastChange_steps_Y = 0;
+unsigned long lastChange_dir_Y = 0;
+unsigned long lastChange_enable_Y = 0;
+
+// Intervalos iniciales (en milisegundos)
+unsigned long interval_time_X = 1000;
+unsigned long interval_steps_X = 1500;
+unsigned long interval_dir_X = 2000;
+unsigned long interval_enable_X = 2500;
+
+unsigned long interval_time_Y = 1200;
+unsigned long interval_steps_Y = 1800;
+unsigned long interval_dir_Y = 2200;
+unsigned long interval_enable_Y = 2600;
+
+void setup() {
+  pinMode(X_STEP_PIN, OUTPUT);
+  pinMode(X_DIR_PIN, OUTPUT);
+  pinMode(Y_STEP_PIN, OUTPUT);
+  pinMode(Y_DIR_PIN, OUTPUT);
+  pinMode(EN_PIN, OUTPUT);
+
+  Serial.begin(9600);
+  randomSeed(analogRead(A0)); // semilla de aleatoriedad
+
+  Serial.println("Iniciando sistema generativo con repetición en X...");
+
+  applyParameters();
+}
+
+void loop() {
+  unsigned long now = micros();
+
+  // --- EJE X (nueva lógica basada en estado) ---
+if (enable_X[idx_enable_X]) {
+  unsigned long nowMicros = micros();
+
+  // Si estamos idle, iniciamos un nuevo ciclo (primera pasada)
+  if (estadoX == IDLE_X) {
+    // Fijar objetivo y dirección efectiva
+    targetStepsX = num_steps_X[idx_steps_X];
+    dirEfectivaX = direction_X[idx_dir_X]; // dirección original para la primera pasada
+    digitalWrite(X_DIR_PIN, dirEfectivaX);
+    currentStepX = 0;
+    faseX = 0;
+    estadoX = MOVIENDO_X;
+    // opción: imprimir inicio de ciclo
+    Serial.print("X: inicio ciclo -&gt; steps=");
+    Serial.println(targetStepsX);
+  }
+
+  // Si estamos moviendo, generar pasos según time_between_steps
+  if (estadoX == MOVIENDO_X) {
+    if (nowMicros - lastStepTimeX &gt;= time_between_steps_X[idx_time_X]) {
+      lastStepTimeX = nowMicros;
+      if (currentStepX &lt; targetStepsX) {
+        digitalWrite(X_STEP_PIN, HIGH);
+        delayMicroseconds(2);
+        digitalWrite(X_STEP_PIN, LOW);
+        currentStepX++;
+      } else {
+        // completó la pasada actual
+        if (faseX == 0) {
+          // pasar a segunda pasada: invertir dirección y repetir
+          faseX = 1;
+          dirEfectivaX = !direction_X[idx_dir_X]; // INVERSA respecto a la original
+          digitalWrite(X_DIR_PIN, dirEfectivaX);
+          currentStepX = 0;
+          Serial.println("X: pasada 1 completa -&gt; iniciando vuelta (invertida)");
+        } else {
+          // ya hizo ida y vuelta, terminar ciclo
+          estadoX = IDLE_X;
+          faseX = 0;
+          currentStepX = 0;
+          // opcional: avanzar índices al terminar ciclo
+          Serial.println("X: pasada 2 completa -&gt; ciclo finalizado");
+        }
+      }
+    }
+  }
+
+} else {
+  // Si enable está OFF, dejamos todo IDLE
+  estadoX = IDLE_X;
+  currentStepX = 0;
+}
+
+  // --- EJE Y ---
+  if (enable_Y[idx_enable_Y]) {
+    if (now - lastStepTimeY &gt;= time_between_steps_Y[idx_time_Y]) {
+      lastStepTimeY = now;
+      if (currentStepY &lt; num_steps_Y[idx_steps_Y]) {
+        digitalWrite(Y_STEP_PIN, HIGH);
+        delayMicroseconds(2);
+        digitalWrite(Y_STEP_PIN, LOW);
+        currentStepY++;
+      } else {
+        currentStepY = 0;
+      }
+    }
+  }
+
+  // --- CAMBIOS DE PARÁMETROS ---
+  unsigned long t = millis();
+
+  // EJE X
+  if (t - lastChange_time_X &gt; interval_time_X)
+    changeIndex(idx_time_X, lastChange_time_X, interval_time_X, sizeof(time_between_steps_X) / sizeof(time_between_steps_X[0]));
+  if (t - lastChange_steps_X &gt; interval_steps_X)
+    changeIndex(idx_steps_X, lastChange_steps_X, interval_steps_X, sizeof(num_steps_X) / sizeof(num_steps_X[0]));
+  if (t - lastChange_dir_X &gt; interval_dir_X)
+    changeIndex(idx_dir_X, lastChange_dir_X, interval_dir_X, sizeof(direction_X) / sizeof(direction_X[0]));
+  if (t - lastChange_enable_X &gt; interval_enable_X)
+    changeIndex(idx_enable_X, lastChange_enable_X, interval_enable_X, sizeof(enable_X) / sizeof(enable_X[0]));
+
+  // EJE Y
+  if (t - lastChange_time_Y &gt; interval_time_Y)
+    changeIndex(idx_time_Y, lastChange_time_Y, interval_time_Y, sizeof(time_between_steps_Y) / sizeof(time_between_steps_Y[0]));
+  if (t - lastChange_steps_Y &gt; interval_steps_Y)
+    changeIndex(idx_steps_Y, lastChange_steps_Y, interval_steps_Y, sizeof(num_steps_Y) / sizeof(num_steps_Y[0]));
+  if (t - lastChange_dir_Y &gt; interval_dir_Y)
+    changeIndex(idx_dir_Y, lastChange_dir_Y, interval_dir_Y, sizeof(direction_Y) / sizeof(direction_Y[0]));
+  if (t - lastChange_enable_Y &gt; interval_enable_Y)
+    changeIndex(idx_enable_Y, lastChange_enable_Y, interval_enable_Y, sizeof(enable_Y) / sizeof(enable_Y[0]));
+
+  applyParameters();
+}
+
+// ====================================================
+//        FUNCIONES AUXILIARES
+// ====================================================
+
+void changeIndex(int &amp;index, unsigned long &amp;lastChange, unsigned long &amp;interval, int cantidadDeDatos) {
+  index = (index + 1) % cantidadDeDatos;
+  lastChange = millis();
+  interval = 500UL * pow(2, random(5)); // 500, 1000, 2000, 4000, 8000 ms
+}
+
+void applyParameters() {
+  // Si el eje X está en reposo (idle), usamos la dirección del índice.
+  // Si está moviendo, mantenemos la dirección efectiva actual.
+  if (estadoX == IDLE_X) {
+    dirEfectivaX = direction_X[idx_dir_X];
+    digitalWrite(X_DIR_PIN, dirEfectivaX);
+  } else {
+    digitalWrite(X_DIR_PIN, dirEfectivaX);
+  }
+
+  // Eje Y: comportamiento normal, independiente
+  digitalWrite(Y_DIR_PIN, direction_Y[idx_dir_Y]);
+
+  // Enable global: activo si cualquiera de los dos ejes está habilitado
+  bool en = enable_X[idx_enable_X] || enable_Y[idx_enable_Y];
+  digitalWrite(EN_PIN, en ? LOW : HIGH);
+}</code></pre><p>El siguiente es otro código que permite el control de 5 paso a pasos con un RAMPS1.4.<br>Estoy usandolos para contrloar 3 impresoras en vivo junto a otros 8 canales: 4 motores, 4 solenoides. Este es el dispositivo que uso en vivo. <br><br><br></p><pre class="language-c"><code>#include &lt;MIDI.h&gt;
+#include "PololuDriver.h"
+#include "Ramps.h"
+
+MIDI_CREATE_DEFAULT_INSTANCE();
+
+Ramps ramps = Ramps();
+
+int microseconds = 25;
+
+unsigned long actual = 0;
+// Pines ENABLE
+#define EN_X_PIN 38
+#define EN_Y_PIN 56
+#define EN_Z_PIN 62
+#define EN_E_PIN 24
+#define EN_Q_PIN 30
+
+// 5 motores: X, Y, Z, E, Q (notas 10 a 14)
+bool notePlayed[5] = {false, false, false, false, false};
+int motorDir[5] = {1, 1, 1, 1, 1};
+int motorDelay[5] = {
+  microseconds * 2,
+  microseconds * 2,
+  microseconds * 16,
+  microseconds * 8,
+  microseconds * 32
+};
+
+int mDm[5] = { 1,  1,  1,  1,  1}; //motor delay multiplicador
+int mDmT = 1; // multiplicador total del motor delay
+
+boolean fijo = false;
+const int NUM_RELAYS = 8;
+
+int relayNotes[NUM_RELAYS] = {17, 23, 25, 27, 29, 31, 33, 35};
+unsigned long ultimoCambio[] = { 0, 0, 0, 0, 0, 0, 0, 0};
+bool isON[] = { false, false, false, false, false, false, false, false};
+
+void handleNoteOn(byte channel, byte pitch, byte velocity) {
+
+  for (int i = 0; i &lt; NUM_RELAYS; i++) {
+    if (pitch == relayNotes[i]) {
+      digitalWrite(pitch, LOW);  // Activar relé
+      if (i &gt;= 4 &amp;&amp; i &lt; 8) {
+        isON[i] = true;
+        ultimoCambio[i] = millis();
+      }
+      break;
+    }
+  }
+  if (pitch == 40) {
+    fijo = true;
+  }
+  if (pitch == 41) {
+    mDmT = 1 + (  (mDmT + 1) % 16   );
+
+  }
+
+  mDm[int(random(5))] =    1 + int(random(8));
+
+  if (pitch == 10) digitalWrite(EN_X_PIN, LOW);
+  if (pitch == 11) digitalWrite(EN_Y_PIN, LOW);
+  if (pitch == 12) digitalWrite(EN_Z_PIN, LOW);
+  if (pitch == 13) digitalWrite(EN_E_PIN, LOW);
+  if (pitch == 14) digitalWrite(EN_Q_PIN, LOW);  // nuevo motor
+
+  if (pitch &gt;= 10 &amp;&amp; pitch &lt;= 14) {
+    int index = pitch - 10;
+    notePlayed[index] = true;
+
+    // Cambiar dirección individual
+    motorDir[index] *= -1;
+
+    ramps.led(true);
+
+    // Setear la dirección del motor correspondiente
+    switch (index) {
+      case 0:
+        ramps.motorX.setDir(motorDir[0]);
+        break;
+      case 1:
+        ramps.motorY.setDir(motorDir[1]);
+        break;
+      case 2:
+        ramps.motorZ.setDir(motorDir[2]);
+        break;
+      case 3:
+        ramps.motorE.setDir(motorDir[3]);
+        break;
+      case 4:
+        ramps.motorQ.setDir(motorDir[4]);
+        break;
+    }
+  }
+}
+
+void handleNoteOff(byte channel, byte pitch, byte velocity) {
+
+  for (int i = 0; i &lt; NUM_RELAYS; i++) {
+    if (pitch == relayNotes[i] || pitch == 37) {
+      digitalWrite(relayNotes[i], HIGH);  // Desactivar relé
+      if (i &gt;= 4 &amp;&amp; i &lt; 8) {
+        isON[i] = false;
+        ultimoCambio[i] = millis();
+      }
+      break;
+    }
+  }
+
+  if (pitch == 40) {
+    fijo = false;
+  }
+
+  if (pitch == 41) {
+    mDmT = 1 + (  (mDmT + 1) % 16   );
+  }
+
+  if (pitch &gt;= 10 &amp;&amp; pitch &lt;= 14) {
+    int index = pitch - 10;
+    notePlayed[index] = false;
+
+    if (!notePlayed[0]) digitalWrite(EN_X_PIN, HIGH);
+    if (!notePlayed[1]) digitalWrite(EN_Y_PIN, HIGH);
+    if (!notePlayed[2]) digitalWrite(EN_Z_PIN, HIGH);
+    if (!notePlayed[3]) digitalWrite(EN_E_PIN, HIGH);
+    if (!notePlayed[4]) digitalWrite(EN_Q_PIN, HIGH);
+
+    if (!notePlayed[0] &amp;&amp; !notePlayed[1] &amp;&amp; !notePlayed[2] &amp;&amp; !notePlayed[3] &amp;&amp; !notePlayed[4]) {
+      ramps.led(false);
+    }
+  }
+}
+
+void setup() {
+  MIDI.setHandleNoteOn(handleNoteOn);
+  MIDI.setHandleNoteOff(handleNoteOff);
+
+  MIDI.begin();
+  Serial.begin(115200);    //descomentar si no se usa mocolufa
+
+  pinMode(EN_X_PIN, OUTPUT);
+  pinMode(EN_Y_PIN, OUTPUT);
+  pinMode(EN_Z_PIN, OUTPUT);
+  pinMode(EN_E_PIN, OUTPUT);
+  pinMode(EN_Q_PIN, OUTPUT);
+
+  digitalWrite(EN_X_PIN, HIGH);
+  digitalWrite(EN_Y_PIN, HIGH);
+  digitalWrite(EN_Z_PIN, HIGH);
+  digitalWrite(EN_E_PIN, HIGH);
+  digitalWrite(EN_Q_PIN, HIGH);
+
+  for (int i = 0; i &lt; NUM_RELAYS; i++) {
+    pinMode(relayNotes[i], OUTPUT);
+    digitalWrite(relayNotes[i], HIGH);  // Desactivado inicialmente
+  }
+}
+
+void loop() {
+  // cambiarMicroSeconds();
+  stepsOnOff();
+
+  MIDI.read();
+
+  if (notePlayed[0] || notePlayed[1] || notePlayed[2] || notePlayed[3] || notePlayed[4]) {
+    ramps.led(true);
+  } else {
+    ramps.led(false);
+  }
+
+
+
+  actual = millis();
+  for (int i = 0; i &lt; 8; i++) {
+    if (isON[i] = true)
+    {
+      if ( (actual - ultimoCambio[i] ) &gt; 100) {
+        ultimoCambio[i] = actual;
+        isON[i] = false;
+        digitalWrite(relayNotes[i], HIGH);
+      }
+    }
+  }
+
+}
+
+
+
+void cambiarMicroSeconds() {
+
+  //  microseconds = 200;
+
+}
+
+void stepsOnOff() {
+  if (fijo) {
+    pasosFijos();
+  }
+  else {
+    pasosCambiantes();
+  }
+}
+
+void ledrefe() {
+  if (millis() % 100 &lt; 50)
+  {
+    ramps.led(true);
+  }
+  else
+  {
+    ramps.led(false);
+  }
+}
+
+
+void pasosCambiantes() {
+  if (notePlayed[0]) { // nota 10 - motor X
+    ramps.motorX.stepOn();
+    delayMicroseconds(motorDelay[0]*mDm[0]);
+    ramps.motorX.stepOff();
+  }
+  if (notePlayed[1]) { // nota 11 - motor Y
+    ramps.motorY.stepOn();
+    delayMicroseconds(motorDelay[1]*mDm[1]);
+    ramps.motorY.stepOff();
+  }
+  if (notePlayed[2]) { // nota 12 - motor Z
+    ramps.motorZ.stepOn();
+    delayMicroseconds(motorDelay[2]*mDm[2]);
+    ramps.motorZ.stepOff();
+  }
+  if (notePlayed[3]) { // nota 13 - motor E
+    ramps.motorE.stepOn();
+    delayMicroseconds(motorDelay[3]*mDm[3]);
+    ramps.motorE.stepOff();
+  }
+  if (notePlayed[4]) { // nota 14 - motor Q
+    ramps.motorQ.stepOn();
+    delayMicroseconds(motorDelay[4]*mDm[4]);
+    ramps.motorQ.stepOff();
+  }
+}
+
+
+
+void pasosFijos() {
+
+  int MDMTfinal =  map(mDmT, 0,16,16,0); 
+  if (notePlayed[0]) { // nota 10 - motor X
+    ramps.motorX.stepOn();
+    delayMicroseconds(motorDelay[0]*MDMTfinal);
+    ramps.motorX.stepOff();
+  }
+  if (notePlayed[1]) { // nota 11 - motor Y
+    ramps.motorY.stepOn();
+    delayMicroseconds(motorDelay[1]*MDMTfinal);
+    ramps.motorY.stepOff();
+  }
+  if (notePlayed[2]) { // nota 12 - motor Z
+    ramps.motorZ.stepOn();
+    delayMicroseconds(motorDelay[2]*MDMTfinal);
+    ramps.motorZ.stepOff();
+  }
+  if (notePlayed[3]) { // nota 13 - motor E
+    ramps.motorE.stepOn();
+    delayMicroseconds(motorDelay[3]*MDMTfinal);
+    ramps.motorE.stepOff();
+  }
+  if (notePlayed[4]) { // nota 14 - motor Q
+    ramps.motorQ.stepOn();
+    delayMicroseconds(motorDelay[4]*MDMTfinal);
+    ramps.motorQ.stepOff();
+  }
+}</code></pre><p> </p></div></div><footer class="content__footer"><div class="entry-wrapper"></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-next"><a href="https://carlosdaniellescano.github.io/escp/objetos-123.html" class="content__nav-link" rel="next"><div><span>Next</span> Objetos 1.2.3</div></a></div></div></div></nav></footer></article><div class="banner banner--after-content"><div class="wrapper"><div id="containersss"></div><script>const chars = "  --__,,==++!!**ssllvv))((||ii[]{}II[//FFAANNZZINNE//DDIIGGIITTAALL//EESSCC//PP//@@";
+const numLines = 15;
+const lineLength = 40; // cantidad fija de caracteres
+const container = document.getElementById('containersss');
+
+// Inicializamos las líneas
+let lines = [];
+for (let i = 0; i < numLines; i++) {
+    let arr = [];
+    for (let j = 0; j < lineLength; j++) {
+        arr.push(chars[Math.floor(((j+i) /lineLength) * chars.length)+i*4]);
+    }
+    lines.push(arr);
+
+    // Creamos el div correspondiente
+    const div = document.createElement('div');
+
+    div.textContent = arr.join('');
+    container.appendChild(div);
+}
+
+// Función para actualizar las líneas (loop de caracteres)
+function updateLines() {
+    lines.forEach((arr, i) => {
+        let last = arr.pop();
+        arr.unshift(last);
+        container.children[i].textContent = arr.join('');
+    });
+}
+
+// Actualizamos cada 100ms
+setInterval(updateLines, 100);</script></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener">lescano.ar</a></p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://carlosdaniellescano.github.io/escp/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://carlosdaniellescano.github.io/escp/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script><div style="filter: grayscale(100%) contrast(100%);"><p>Más data en <a href="https://www.lescano.ar" target="_blank" rel="noopener noreferrer">lescano.ar</a></p></div></body></html>
