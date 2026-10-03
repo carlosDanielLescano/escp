@@ -11,6 +11,20 @@
     },
     "items": [
         {
+            "id": "https://carlosdaniellescano.github.io/escp/campo-de-variaciones-lessgreater-estado-del-arte.html",
+            "url": "https://carlosdaniellescano.github.io/escp/campo-de-variaciones-lessgreater-estado-del-arte.html",
+            "title": "Campo de variaciones &#x3D;&lt;&gt;&#x3D; Estado del arte. ",
+            "summary": "Descargar PDF",
+            "content_html": "<figure class=\"post__image\"><img decoding=\"auto\" loading=\"lazy\"  style=\"filter: grayscale(100%) contrast(100%);\" src=\"https://carlosdaniellescano.github.io/escp/media/posts/30/1000226726.jpg\" alt=\"\" width=\"4080\" height=\"3072\" sizes=\"(max-width: 1920px) 100vw, 1920px\" srcset=\"https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-2xl.jpg 1920w\"></figure>\n<p> </p>\n<p><a class=\"boton\" href=\"Lescano%20-%20Estado%20del%20Arte.pdf\" download=\"\"> Descargar PDF </a></p>",
+            "author": {
+                "name": "Carlos Lescano"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-10-03T20:18:12-03:00",
+            "date_modified": "2026-10-03T20:31:18-03:00"
+        },
+        {
             "id": "https://carlosdaniellescano.github.io/escp/proyecto-proximo.html",
             "url": "https://carlosdaniellescano.github.io/escp/proyecto-proximo.html",
             "title": "Proyecto próximo",
@@ -132,20 +146,6 @@
             ],
             "date_published": "2025-10-13T20:37:01-03:00",
             "date_modified": "2025-10-13T21:59:38-03:00"
-        },
-        {
-            "id": "https://carlosdaniellescano.github.io/escp/gcode-10.html",
-            "url": "https://carlosdaniellescano.github.io/escp/gcode-10.html",
-            "title": "Gcode 1.0",
-            "summary": "Esta obra es un primer intento de acercarme al lenguaje del GCODE, un sistema de control utilizado en máquinas CNC que más adelante volvería a emplear en otras experimentaciones y que me conduciría hacia las prácticas con impresoras intervenidas. Busco en la materialidad del desarrollo&hellip;",
-            "content_html": "<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"725\" height=\"408\" style=\"filter: grayscale(100%) contrast(100%);\" src=\"https://www.youtube.com/embed/WH7YTvhVKQQ?si=WtzeLpT8EQ1ubSgU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div>\n<blockquote>\n<p data-start=\"157\" data-end=\"606\">Esta obra es un primer intento de acercarme al lenguaje del <strong data-start=\"217\" data-end=\"226\">GCODE</strong>, un sistema de control utilizado en máquinas <strong data-start=\"272\" data-end=\"279\">CNC</strong> que más adelante volvería a emplear en otras experimentaciones y que me conduciría hacia las prácticas con <strong data-start=\"387\" data-end=\"414\">impresoras intervenidas</strong>. Busco en la materialidad del desarrollo del control numérico una forma sensible de habitar la composición espacial, entendiendo el código no solo como instrucción, sino como gesto y trazo.</p>\n<p data-start=\"608\" data-end=\"903\">La pieza se presenta como un cuaderno que reúne una serie de dibujos generativos realizados en <strong data-start=\"703\" data-end=\"717\">Processing</strong> e impresos con un <strong data-start=\"736\" data-end=\"755\">pen-plotter DIY</strong> (de construcción casera). Para su desarrollo investigué el concepto de los <strong data-start=\"831\" data-end=\"856\">campos de variaciones</strong> y los <strong data-start=\"863\" data-end=\"900\">sistemas de programación genética</strong>.</p>\n<p data-start=\"905\" data-end=\"1400\"><strong data-start=\"905\" data-end=\"915\">Glebas</strong> significa <em data-start=\"926\" data-end=\"940\">campo arable</em>; utilizo este título para dar cuenta de que no solo me interesa observar las transformaciones de las formas como un terreno en constante mutación, sino también <strong data-start=\"1101\" data-end=\"1113\">cosechar</strong> y <strong data-start=\"1116\" data-end=\"1131\">seleccionar</strong> ciertos elementos particulares. En otras palabras, busco explorar tanto la diversidad de posibles resultados que emergen de cada sistema como los rasgos singulares de los elementos individuales y el diálogo que puede establecerse entre un conjunto reducido de ellos.</p>\n</blockquote>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>",
-            "author": {
-                "name": "Carlos Lescano"
-            },
-            "tags": [
-            ],
-            "date_published": "2025-10-13T19:32:45-03:00",
-            "date_modified": "2025-10-13T22:00:07-03:00"
         }
     ]
 }
