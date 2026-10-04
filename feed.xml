@@ -3,12 +3,33 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-03T20:31:18-03:00</updated>
+    <updated>2026-10-03T21:29:16-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp</id>
 
+    <entry>
+        <title>Un marco para el Feedback</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp/un-marco-para-el-feedback.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/un-marco-para-el-feedback.html</id>
+
+        <updated>2026-10-03T21:29:16-03:00</updated>
+            <summary>
+                <![CDATA[
+                    Comprender una tecnología para desviarla de su función. El carácter integrador de este trabajo se me va de las manos. Cada vez que intento ser específico con las motivaciones que me trajeron hasta acá, termino desplazándome hacia atrás, saltando de un antecedente a otro por&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><span style="font-weight: 400;">Comprender una tecnología para desviarla de su función.</span></p>
+<p><span style="font-weight: 400;">El carácter integrador de este trabajo se me va de las manos. Cada vez que intento ser específico con las motivaciones que me trajeron hasta acá, termino desplazándome hacia atrás, saltando de un antecedente a otro por una cadena de asociaciones que parece no agotarse. Trato de encontrar un orige</span></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Campo de variaciones &#x3D;&lt;&gt;&#x3D; Estado del arte. </title>
         <author>
@@ -839,27 +860,6 @@ function draw() {
 </script>
 </p>
 <p style="display: none !important;">el código traduce el ruido en signos, cada carácter nace de una vibración que no suena pero grilla en bucles, x y frame — tres coordenadas del pulso.un paisaje de letras que insisten.de tanto intentar entender el movimiento.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Meme</title>
-        <author>
-            <name>Carlos Lescano</name>
-        </author>
-        <link href="https://carlosdaniellescano.github.io/escp/meme.html"/>
-        <id>https://carlosdaniellescano.github.io/escp/meme.html</id>
-
-        <updated>2025-10-13T20:37:01-03:00</updated>
-            <summary>
-                <![CDATA[
-                    @syd4890 hace 3 años Best OST to fix jammed printers xD 1 Responder @RobertKgma hace 4 años classic! 2 Responder @tentative_flora2690 hace 4 años Which SCP # is this? 1 Responder
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <figure class="post__video"><iframe loading="lazy" width="560" height="314" style="filter: grayscale(100%) contrast(100%);" src="https://www.youtube.com/embed/RfoavCVvXGk?si=tMdHRWCgRQ1nTPrO" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
-<pre>@syd4890<br>hace 3 años<br>Best OST to fix jammed printers xD<br>1<br>Responder<br>@RobertKgma<br>hace 4 años<br>classic!<br>2<br>Responder<br>@tentative_flora2690<br>hace 4 años<br>Which SCP # is this?<br>1<br>Responder</pre>
             ]]>
         </content>
     </entry>
