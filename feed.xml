@@ -3,7 +3,7 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-06T09:25:23-03:00</updated>
+    <updated>2026-10-06T15:46:59-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -43,6 +43,7 @@
 <li><a href="#8-referencias-teclas-comandos-escp-y-configuraci%C3%B3n">Referencias: teclas, comandos ESC/P y configuración</a></li>
 <li><a href="#9-limitaciones-conocidas-y-puntos-a-verificar">Limitaciones conocidas y puntos a verificar</a></li>
 <li><a href="#10-puesta-en-marcha-y-diagn%C3%B3stico">Puesta en marcha y diagnóstico</a></li>
+<li><a href="#10-puesta-en-marcha-y-diagn%C3%B3stico">Download</a></li>
 </ol>
 <hr>
 <h2>1. Introducción general</h2>
@@ -56,6 +57,10 @@
 <blockquote>
 <p><strong>Spout:</strong> protocolo de transmisión de video en tiempo real entre aplicaciones. Permite enviar y recibir frames de video directamente en memoria, evitando la necesidad de guardar archivos intermedios. En este sistema, se utiliza para recibir en Processing la señal de video generada en OBS.</p>
 </blockquote>
+<blockquote>
+<p><strong>ESC/P:</strong> (Epson Standard Code for Printers) es un lenguaje de comando de bajo nivel orientado a flujo de bytes (stream-based), diseñado originalmente por Epson para el control directo de impresoras matriciales de impacto.<br>A diferencia de los lenguajes de descripción de páginas modernos (como PostScript o PCL), ESC/P opera sin abstracciones complejas ni manejo de capas vectoriales: es un protocolo determinista basado en secuencias de control binarias que se ejecutan secuencialmente conforme los bytes ingresan al buffer de recepción de la impresora.<br>A nivel de hardware, el envío de comandos ESC/P se realiza tradicionalmente a través de una interfaz paralela Centronics (IEEE 1284) con niveles lógicos TTL de 5 V.<br>El protocolo clasifica los bytes entrantes en tres categorías según su valor hexadecimal: <br>Bytes Imprimibles (0x20 a 0xFF),  Caracteres de Control ASCII (0x00 a 0x1F), Secuencias de Escape (0x1B / ESC) propiamentediha que puede contener mensajes con parámetros numéricos.<br>En este proyecto se utilizan todas estas posibilidades. </p>
+</blockquote>
+<p> </p>
 <h3>1.2 Arquitectura</h3>
 <p>Hay tres programas encadenados, cada uno con una responsabilidad distinta:</p>
 <pre class="mermaid">flowchart LR
@@ -75,49 +80,53 @@
 <tr>
 <td><strong>OBS + Spout</strong></td>
 <td>Fuente de imagen: composición de escenas, cámaras, capturas.</td>
-<td>Spout comparte texturas entre programas en Windows sin copiar a disco ni pasar por red.</td>
+<td>OBS me permite corregir composición y color. <br>Spout resulta mas estable que generar una cámara virtual.</td>
 </tr>
 <tr>
 <td><strong>Processing</strong></td>
-<td>Toda la inteligencia: procesar imagen, traducir texto, vista previa, interfaz, control del flujo.</td>
-<td>Es donde es cómodo hacer gráficos y donde se puede iterar rápido.</td>
+<td>Procesa imagen, texto, genera vista previa, interfaz, control del flujo. Genera el código ESC/P.</td>
+<td>Permite visualizar lo que se imprimirá.</td>
 </tr>
 <tr>
 <td><strong>Arduino Mega</strong></td>
-<td>Puente de hardware: recibe paquetes por USB, los valida y los entrega a la impresora por el puerto paralelo respetando su handshake.</td>
-<td>La impresora no tiene USB: habla Centronics (paralelo), que requiere temporización de señales eléctricas.</td>
+<td>Puente con el hardware: recibe paquetes por USB y los entrega a la impresora por el puerto paralelo respetando su handshake.</td>
+<td>La impresora no tiene USB: usa puerto Centronics (paralelo), que requiere temporización de señales eléctricas.</td>
 </tr>
 <tr>
 <td><strong>Impresora</strong></td>
 <td>Interpreta ESC/P y mueve cabezal, papel y agujas.</td>
-<td>—</td>
+<td>Eran el estandar. Y tienen mucho para seguir diciendo.  </td>
 </tr>
 </tbody>
 </table>
-<p>La decisión de diseño central es que <strong>el Arduino es "tonto" a propósito</strong>: casi no interpreta nada (solo distingue gráfico/texto y pasa bytes). Todo lo que cambia con frecuencia (filtros, Markdown, anchos, estilos) vive en Processing, de modo que se modifica sin reprogramar el Arduino.</p>
-<h3>1.3 Flujo de datos de punta a punta</h3>
+<p>La decisión de diseño central es que <strong>el Arduino</strong> casi no interpreta nada (solo distingue gráfico/texto y pasa bytes). Todo lo que cambia con frecuencia (filtros, Markdown, anchos, estilos) se dá en Processing, de modo que se puede modificar, o ampliar sin reprogramar el Arduino.</p>
+<h3>1.3 Flujo de datos: del dato a la aguja</h3>
 <p><strong>Modo gráfico</strong></p>
 <ol>
 <li>OBS publica el cuadro por Spout; Processing lo recibe en <code>draw()</code>.</li>
 <li>Se escala, se rota y se filtra (<code>procesar()</code>), se dibuja en un lienzo de píxeles cuadrados (<code>salida</code>) y se remuestrea a la rejilla real de la impresora (<code>impresion</code>, 1 bit).</li>
-<li>Por cada pasada del cabezal ("banda" de 8 filas) se arma un paquete (<code>enviarLineaGrafica()</code>), se envía por serie y se espera el ACK del Arduino antes de enviar la siguiente.</li>
+<li>Por cada pasada del cabezal ("banda" de 8 filas) se arma un paquete (<code>enviarLineaGrafica()</code>), se envía por serie -al Arduino- y se espera el ACK -del Arduino- antes de enviar la siguiente.</li>
 <li>El Arduino valida el paquete y manda a la impresora <code>ESC K/L/Y/Z</code> + datos + salto de línea.</li>
 </ol>
 <p><strong>Modo texto</strong></p>
 <ol>
 <li>El usuario escribe o pega texto; al terminar cada línea, <code>MarkdownEscp</code> la convierte en una lista de piezas (comandos ESC/P y texto).</li>
 <li>Las piezas se empaquetan (nunca se corta un comando ESC) y pasan por la misma cola serie con ACK.</li>
-<li>La hoja simulada del canvas se actualiza en paralelo con el mismo resultado de la traducción.</li>
+<li>La hoja simulada del canvas se actualiza en paralelo con el resultado esperado de la traducción. Esperado, no es necesariamente conseguido. </li>
 </ol>
 <h3>1.4 Cómo evolucionó el desarrollo</h3>
-<p>El sistema partió de un programa de Processing que mandaba imágenes de símbolos por serie a un Arduino que imprimía con <code>ESC L</code>. Se transformó por etapas:</p>
+<p>El sistema partió del programa de Processing que manda imágenes transdormadas en símbolos por serie a un Arduino que imprimía con modo grafico solamente.  Este sistema es el que se usó en la pieza "Dispositivo de apropiación grafica". Se transformó por etapas:</p>
 <ol>
-<li><strong>Base:</strong> Processing enviaba 960 columnas pero el Arduino leía 400 fijas (desajuste). Se pasó a un encabezado con el ancho de cada línea, de modo que el Arduino se adapta solo.</li>
-<li><strong>Pipeline de imagen:</strong> rotación 90°/270° (impresión apaisada), filtros activables (contraste, invertir, umbral, dither Floyd–Steinberg), y dos algoritmos de ASCII art (fuente monoespaciada y símbolos por subdivisión recursiva).</li>
-<li><strong>Robustez de comunicación:</strong> protocolo v2 con marca de sincronía, checksum, ACK/NAK, reintentos y timeouts en ambos lados, para que un byte perdido no deje todo bloqueado ni se interprete basura como comandos.</li>
+<li><strong>Base:</strong> Se pasó a un encabezado con el ancho de cada línea, de modo que el Arduino se adapta solo.</li>
+<li><strong>Pipeline de imagen:</strong> rotación 90°/270° (impresión apaisada), filtros activables (contraste, invertir, umbral, dither Floyd–Steinberg), y dos algoritmos de ASCII art (fuente monoespaciada y símbolos por subdivisión recursiva como en la obra base).</li>
+<li><strong>Robustez de comunicación:</strong> protocolo  con marca de sincronía, checksum, ACK/NAK, reintentos y timeouts en ambos lados, para que un byte perdido no deje todo bloqueado ni se interprete basura como comandos.</li>
 <li><strong>Densidad y geometría:</strong> soporte de 60/120/240 dpi (hasta 1920 puntos de ancho), corrección de proporción (los puntos no son cuadrados: 240 dpi horizontal contra 72 dpi vertical) y regla de "sin puntos adyacentes" de los modos rápidos.</li>
-<li><strong>Interlineado gráfico:</strong> se reemplazó <code>ESC A</code> por <code>ESC 3</code> (efecto inmediato, configurable en vivo) para eliminar las franjas blancas entre bandas.</li>
-<li><strong>Modo texto y Markdown:</strong> traductor de Markdown a ESC/P con directivas, vista previa de hoja y panel de control en ventana aparte; teclas reasignadas solo a letras y números.</li>
+<li><strong>Interlineado gráfico:</strong> se reemplazó <code>ESC A</code> por <code>ESC 3</code> (interlineado configurable en vivo) para eliminar/crear las franjas blancas entre bandas.</li>
+<li><strong>Modo texto y Markdown:</strong> traductor de Markdown a ESC/P con directivas, vista previa de hoja y panel de control en ventana aparte; teclas para el control de los parametros.<br>
+<blockquote>
+<p><strong><strong class="rQesXe MPyX" data-sfc-cp="" data-sfc-root="ep" data-epip="" data-complete="true">Regla de no puntos adyacentes<!--TgQPHd|||[]--></strong> </strong>(o no-adjacent-dot rule) en impresoras matriciales es una restricción técnica de diseño que prohibe activar una misma aguja del cabezal en dos pasos de avance horizontal consecutivos.<br>Esta regla se implementaba principalmente para proteger los componentes físicos de la impresora y garantizar la calidad de la impresión.</p>
+</blockquote>
+</li>
 </ol>
 <hr>
 <h2>2. Hardware y conexión</h2>
@@ -148,9 +157,9 @@
 </tr>
 </tbody>
 </table>
-<p>Además hace falta unir las masas (GND) del Arduino y de la impresora. El resto de las líneas del conector (ACK, PE, SELECT, etc.) no se usan: el control de flujo se hace solo con BUSY.</p>
-<p>La lógica del Mega es de 5 V, compatible con el nivel TTL de Centronics. ⚠ Conviene verificar el cableado contra el esquema del conector de la LX-810 antes de la primera prueba.</p>
-<h3>2.2 Cómo se envía un byte por Centronics</h3>
+<p>Además hizo falta unir las masas (GND) del Arduino y de la impresora. El resto de las líneas del conector (ACK, PE, SELECT, etc.) no se usan: el control de flujo se hace solo con BUSY.</p>
+<p>La lógica del Mega es de 5 V, compatible con el nivel TTL de Centronics. Lo probé con diferentes Epson de esta época ( Serie FX, LX y ActionPrinter). Lo bueno es que sus manuales enseñan a armar estos cables y dicen que pines se usa para que y los niveles lógicos de cada señal. </p>
+<h3>2.2 Enviar un byte por Centronics</h3>
 <p>Para cada byte (<code>sendByte()</code>):</p>
 <ol>
 <li>Esperar a que BUSY esté en bajo (con tope de tiempo, ver 4.5).</li>
@@ -195,14 +204,13 @@
 </tbody>
 </table>
 <p>La resolución <strong>vertical</strong> es fija: el cabezal tiene 8 agujas útiles en gráficos, separadas 1/72". Por eso cada "banda" de impresión tiene 8 filas y los píxeles reales son rectangulares (más finos en horizontal que en vertical). Todo el código de geometría parte de este hecho.</p>
-<p>⚠ Las densidades <code>Y</code> y <code>Z</code> son parte de ESC/P estándar; no se confirmó en el manual de la LX-810 que las acepte (se espera que sí).</p>
 <hr>
-<h2>3. Protocolo serie v2 (Processing ⇄ Arduino)</h2>
+<h2>3. Protocolo serie (Processing ⇄ Arduino)</h2>
 <h3>3.1 Principios</h3>
 <ul>
 <li><strong>Binario con encuadre:</strong> cada paquete empieza con un byte de sincronía <code>0xA5</code>. El Arduino ignora todo byte que no sea <code>0xA5</code> cuando espera un paquete, lo que permite recuperarse de basura o de cortes.</li>
 <li><strong>Checksum:</strong> los paquetes con datos (línea gráfica, texto) terminan con un byte = suma de los bytes de datos módulo 256. Si no coincide, se responde NAK.</li>
-<li><strong>Un paquete a la vez, con confirmación:</strong> Processing no envía el siguiente hasta recibir ACK del anterior. Esto evita desbordar el buffer de recepción del Arduino (64 bytes) y mantiene el orden entre comandos y datos.</li>
+<li><strong>Un paquete a la vez, con confirmación:</strong> Processing no envía el siguiente hasta recibir ACK del anterior. Esto evita desbordar el buffer de recepción del Arduino y mantiene el orden entre comandos y datos. Permite a la vez un control en tiempo real y cambios en processing que impactan casi automáticamente en lo impreso. </li>
 <li><strong>Respuestas de un byte:</strong> <code>0x06</code> = ACK (recibido y ejecutado), <code>0x15</code> = NAK (error: reintentar).</li>
 </ul>
 <h3>3.2 Paquetes</h3>
@@ -298,12 +306,12 @@
 </table>
 <hr>
 <h2>4. Programa Arduino</h2>
-<p>Archivo: <code>arduino_impresora.ino</code> (~250 líneas). Función: puente serie → paralelo con validación.</p>
+<p>Archivo: <code>arduino_impresora.ino</code>. Función: puente serie → paralelo con validación.</p>
 <h3>4.1 Constantes y buffers</h3>
 <ul>
 <li><code>dataPins[8]</code>, <code>strobePin</code>, <code>busyPin</code>: asignación de pines (sección 2.1).</li>
 <li><code>MAX_COLS = 1920</code>: tamaño máximo de una línea gráfica. Equivale a 8" a 240 dpi.</li>
-<li><code>lineBuffer[MAX_COLS]</code> (1920 bytes) y <code>txtBuffer[255]</code>: buffers de recepción. En el Mega (8 KB de RAM) ocupan aproximadamente una cuarta parte; no entrarían en un Uno.</li>
+<li><code>lineBuffer[MAX_COLS]</code> (1920 bytes) y <code>txtBuffer[255]</code>: buffers de recepción. En el Mega (8 KB de RAM) ocupan aproximadamente una cuarta parte; no entrarían en un Uno, no fue probado.</li>
 <li><code>densidad</code> (letra <code>K/L/Y/Z</code>, por defecto <code>L</code>) e <code>interlineado216</code> (por defecto 24): parámetros del modo gráfico, actualizados por cada paquete <code>0x03</code>.</li>
 <li><code>BUSY_TIMEOUT_MS = 15000</code> y los códigos del protocolo (<code>SYNC</code>, <code>CMD_*</code>, <code>ACK</code>, <code>NAK</code>).</li>
 </ul>
@@ -347,7 +355,7 @@ según el comando:
 </thead>
 <tbody>
 <tr>
-<td>Validar el paquete completo antes de tocar la impresora</td>
+<td>Validar el paquete completo antes de enviar a la impresora</td>
 <td>Si el paquete está dañado no sale basura impresa; se pide reenvío.</td>
 </tr>
 <tr>
@@ -366,7 +374,7 @@ según el comando:
 </table>
 <hr>
 <h2>5. Programa Processing: archivo principal</h2>
-<p>Archivo: <code>spout_impresora.pde</code> (~770 líneas). Contiene la configuración, el pipeline de imagen, la capa serie, el teclado y la vista previa.</p>
+<p>Archivo: <code>spout_impresora.pde</code>. Contiene la configuración, el flujo de imagen, la capa serie, el teclado y la vista previa.</p>
 <h3>5.1 Configuración (variables al inicio del archivo)</h3>
 <table>
 <thead>
@@ -382,7 +390,7 @@ según el comando:
 </tr>
 <tr>
 <td><code>ANCHO_PAPEL</code></td>
-<td>8.0 pulgadas (ancho imprimible, 80 columnas).</td>
+<td>8.0 pulgadas (ancho imprimible, 80 columnas). Es el ancho estándar para resma de papel continuo sin pisar los bordes.</td>
 </tr>
 <tr>
 <td><code>DPI_V</code></td>
@@ -398,7 +406,7 @@ según el comando:
 </tr>
 <tr>
 <td><code>PUERTO_INDEX</code></td>
-<td>Índice en <code>Serial.list()</code> del puerto del Arduino.</td>
+<td>Índice en <code>Serial.list()</code> del puerto del Arduino. </td>
 </tr>
 <tr>
 <td><code>CHARSET_TEXTO</code></td>
@@ -418,13 +426,13 @@ según el comando:
 </tr>
 <tr>
 <td><code>congelado</code></td>
-<td>Congela el cuadro de OBS (ver 5.5).</td>
+<td>Congela el cuadro de OBS (ver 5.5). Muy util par aimprimir una imagen entera mientras se prepara en OBS la siguiente. Luego se des-Congela y se sigue imprimiendo en vivo. </td>
 </tr>
 </tbody>
 </table>
 <h3>5.2 Entrada de video: Spout</h3>
-<p>En <code>setup()</code> se crea el receptor con <code>spout.createReceiver("OBS_Spout")</code>; en OBS hay que publicar con ese nombre (plugin Spout). En cada <code>draw()</code>, <code>cam = spout.receiveImage(cam)</code> obtiene el cuadro actual como <code>PImage</code> (1920×1080 si OBS lo envía así).</p>
-<h3>5.3 Pipeline gráfico</h3>
+<p>En <code>setup()</code> se crea el receptor con <code>spout.createReceiver("OBS_Spout")</code>; en OBS hay que publicar con ese nombre (plugin Spout). En cada ejecución del<code>draw()</code>, <code>cam = spout.receiveImage(cam)</code> obtiene el cuadro actual como <code>PImage</code> (1920×1080 si OBS lo envía así).</p>
+<h3>5.3 Transformaciones de los gráfico</h3>
 <pre class="mermaid">flowchart TD
   A["cam: cuadro de Spout"] --&gt; B["procesar(): escalar y rotar"]
   B --&gt; C["filtrarGris(): gris, contraste, invertir"]
@@ -445,7 +453,7 @@ según el comando:
 <ul>
 <li><strong>0, imagen:</strong> se copia la imagen filtrada.</li>
 <li><strong>1, ASCII monoespaciado (<code>asciiMono</code>):</strong> divide el lienzo en celdas de alto <code>celda</code> y ancho <code>0,6 × celda</code> (proporción típica de una fuente monoespaciada). Toma el brillo del píxel central de cada celda y elige un carácter de la rampa <code>"@%#*+=-:. "</code> (oscuro → denso, claro → vacío).</li>
-<li><strong>2, símbolos (<code>subdividir</code>):</strong> subdivisión recursiva tipo quadtree. Cada región se divide en cuatro mientras <code>depth &lt; localMax</code> y su lado sea mayor que <code>MIN_CELDA</code>; <code>localMax</code> crece con el brillo en el centro de la región (<code>map(brillo, 0, 255, 2, maxDepth)</code>). En cada hoja se dibuja un símbolo elegido de la cadena <code>chars</code> según el brillo (los oscuros toman los primeros, más densos). Los símbolos elegidos se recuerdan en <code>memoria</code> (clave = posición y tamaño), lo que estabiliza la imagen de un cuadro al siguiente; la tecla <code>K</code> borra esa memoria, y se borra sola si cambia el tamaño del lienzo.</li>
+<li><strong>2, símbolos (<code>subdividir</code>):</strong> subdivisión recursiva tipo quadtree. Cada región se divide en cuatro mientras <code>depth &lt; localMax</code> y su lado sea mayor que <code>MIN_CELDA</code>; <code>localMax</code> crece con el brillo en el centro de la región (<code>map(brillo, 0, 255, 2, maxDepth)</code>). En cada hoja se dibuja un símbolo elegido de la cadena <code>chars</code> según el brillo (los oscuros toman los primeros, no necesariamente los más densos ya que no los ordené). Los símbolos elegidos se recuerdan en <code>memoria</code> (clave = posición y tamaño), lo que estabiliza la imagen de un cuadro al siguiente; la tecla <code>K</code> borra esa memoria, y se borra sola si cambia el tamaño del lienzo.</li>
 </ul>
 <p><strong>Por qué se dibuja en píxeles cuadrados:</strong> el texto y los símbolos tienen que tener proporciones normales. Si se dibujaran directamente sobre la rejilla de la impresora (más fina en horizontal que en vertical) saldrían estirados.</p>
 <h4>5.3.4 <code>convertirImpresion()</code> y <code>binarizar()</code>: de píxeles cuadrados a puntos reales</h4>
@@ -468,7 +476,7 @@ según el comando:
 <li><code>enviar(paquete)</code>: guarda el paquete (para poder reenviarlo), marca <code>esperandoACK</code>, registra la hora y escribe al puerto.</li>
 <li><code>serialEvent()</code> corre en otro hilo: solo levanta dos flags <code>volatile</code> (<code>ackRecibido</code>, <code>nakRecibido</code>). <strong>Todo el resto del estado se toca solo desde <code>draw()</code></strong>, lo que evita condiciones de carrera.</li>
 <li><code>procesarSerial()</code> (llamada en cada <code>draw()</code>): maneja el timeout de 8 s, el ACK (libera la espera y limpia el contador) y el NAK (reenvía hasta 3 veces; luego descarta el paquete).</li>
-<li><code>servirCola()</code>: si no se espera un ACK y hay paquetes, envía el siguiente.</li>
+<li><code>servirCola()</code>: si ya no se espera un ACK y hay paquetes, envía el siguiente.</li>
 <li><code>resetComunicacion()</code> (tecla <code>X</code>): vacía la cola, limpia flags y buffer serie.</li>
 </ul>
 <h3>5.7 Arranque</h3>
@@ -476,7 +484,8 @@ según el comando:
 <p><code>draw()</code> ejecuta, en orden: recibir cuadro → <code>procesarSerial()</code> → <code>servirCola()</code> → (modo gráfico) procesar, previsualizar y enviar banda, o (modo texto) dibujar la hoja.</p>
 <h3>5.8 Modo texto (parte del archivo principal)</h3>
 <ul>
-<li><code>cambiarModo(true)</code>: pone en cola <code>A5 04</code>, reinicia el estado del traductor (la impresora hace <code>ESC @</code>), vacía la hoja simulada y pone en cola <code>ESC t 1</code> + <code>ESC R 0</code> (tabla de caracteres gráfica para que salgan ñ, á, ¿, etc.). <code>cambiarModo(false)</code> vuelve a enviar el modo gráfico con la densidad y el interlineado vigentes.</li>
+<li><code>cambiarModo(true)</code>: pone en cola <code>A5 04</code>, reinicia el estado del traductor (la impresora hace <code>ESC @</code>), vacía la hoja simulada y pone en cola <code>ESC t 1</code> + <code>ESC R 0</code> (tabla de caracteres gráfica para que salgan ñ, á, ¿, etc.).( Revisar, en algunos casos no funcionaron los acentos)</li>
+<li><code>cambiarModo(false)</code> vuelve a enviar el modo gráfico con la densidad y el interlineado vigentes.</li>
 <li><strong>Entrada:</strong> <code>teclaTexto()</code> acumula caracteres en <code>lineaTexto</code>. <code>ENTER</code> llama a <code>enviarLineaTexto()</code>; <code>BACKSPACE</code> borra; <code>DEL</code> imprime un salto de página; <code>CTRL+V</code> (o <code>CMD+V</code>) pega el portapapeles; <code>TAB</code> o <code>ESC</code> vuelven al modo gráfico; <code>CTRL+P</code> muestra u oculta el panel.</li>
 <li><strong><code>pegar()</code>:</strong> lee el portapapeles (AWT), normaliza saltos de línea y tabulaciones, elimina caracteres de control y, por cada salto de línea, envía la línea. El último fragmento queda en el buffer hasta apretar <code>ENTER</code>.</li>
 <li><strong><code>enviarLineaTexto()</code>:</strong> convierte con <code>md.convertir(...)</code>, actualiza la hoja simulada (<code>paginaMD</code>: las líneas impresas; una directiva no agrega línea y un salto de página la vacía) y pone en cola las piezas con <code>encolarPiezas()</code>.</li>
@@ -487,7 +496,7 @@ según el comando:
 <p>Ver tabla completa en 8.1. Se usan solo letras y números. <code>ESC</code> está interceptado (<code>key = 0</code>) para que no cierre el programa.</p>
 <hr>
 <h2>6. Programa Processing: <code>MarkdownEscp.pde</code></h2>
-<p>Archivo de clases Java puras (sin API de Processing), lo que permite probarlas fuera de Processing. Convierte líneas de "Markdown para impresora" en bytes ESC/P y en una descripción estructurada para la vista previa.</p>
+<p>Archivo de clases Java puras (sin API de Processing), lo que permitiria probarlas fuera de Processing. Convierte líneas del propio "Markdown para impresora" en bytes ESC/P y en una descripción estructurada para la vista previa.</p>
 <h3>6.1 Estructuras de datos</h3>
 <table>
 <thead>
@@ -573,7 +582,7 @@ según el comando:
 </tr>
 </tbody>
 </table>
-<p>Reglas: <code>**</code> y <code>*</code> se distinguen mirando el carácter siguiente; <code>==</code> y <code>++</code> requieren dos caracteres (un <code>=</code> o <code>+</code> suelto es literal). Superíndice y subíndice son excluyentes (comparten el comando de desactivación). Las etiquetas <code>[x]{...}</code> se procesan recursivamente, así que dentro de un bloque se pueden usar las demás marcas.</p>
+<p>Reglas: <code>**</code> y <code>*</code> se distinguen mirando el carácter siguiente; <code>==</code> y <code>++</code> requieren dos caracteres (un <code>=</code> o <code>+</code> suelto es literal). Superíndice y subíndice son excluyentes (comparten el comando de desactivación). Las etiquetas <code>[x]{...}</code> se procesan recursivamente, así que dentro de un bloque se pueden usar las demás marcas. Esta tabla es mejorable, encontre errores al imprimir codigo por ejemplo en un IF ( A==B) interpreta el == como un codigo ESC. xD</p>
 <h3>6.3 Bloques (a nivel de línea)</h3>
 <table>
 <thead>
@@ -1003,62 +1012,62 @@ según el comando:
 <tr>
 <td>⚠ 1</td>
 <td><strong>Pruebas en hardware</strong></td>
-<td>El código no fue ejecutado contra la impresora durante el desarrollo. Los textos de prueba solo validaron el traductor.</td>
+<td>El código fue ejecutado usando la impresora Epson LX810 y probado por encima en LX310, FX286, durante el desarrollo. Estaría bueno agregar otros modelos de impresoras que usen ESC/P para saber si funcionan bien todos los códigos. </td>
 </tr>
 <tr>
 <td>⚠ 2</td>
 <td><strong>Densidades <code>Y</code> y <code>Z</code></strong></td>
-<td>Son estándar ESC/P; falta confirmar que la LX-810 acepte <code>ESC Z</code> (1920 puntos). Si no, usar <code>L</code> (960).</td>
+<td>Son estándar ESC/P; no llego a entender si realmente hay diferencia. Tengo que hacer mas pruebas. </td>
 </tr>
 <tr>
 <td>⚠ 3</td>
 <td><strong><code>ESC w</code> (doble alto) y <code>ESC p</code> (proporcional)</strong></td>
-<td>Soporte en la LX-810 no confirmado. Etiquetas <code>dh</code> y <code>prop</code>.</td>
+<td>Se confirma que en la LX810 funcionó!</td>
 </tr>
 <tr>
 <td>⚠ 4</td>
 <td><strong><code>ESC $</code> en 1/60"</strong></td>
-<td>Es la unidad estándar en ESC/P de 9 agujas. Si el centrado queda corrido, la unidad es la causa probable.</td>
+<td>Es la unidad estándar en ESC/P de 9 agujas. pro no tengo ninguna impresora con otro tipo de cabezal para probarlo.</td>
 </tr>
 <tr>
 <td>⚠ 5</td>
 <td><strong>Tabla de caracteres</strong></td>
-<td>El texto se codifica en <code>Cp437</code> y se selecciona la tabla gráfica con <code>ESC t 1</code>. La tabla Epson no es idéntica a CP437 en todos los códigos; verificar acentos y ñ. Las mayúsculas acentuadas (Á, Ó…) no existen en CP437 y se reemplazan por <code>?</code>.</td>
+<td>El texto se codifica en <code>Cp437</code> y se selecciona la tabla gráfica con <code>ESC t 1</code>. La tabla Epson no es idéntica a CP437 en todos los códigos; verificando  acentos y ñ vi que fallaba. Las mayúsculas acentuadas (Á, Ó…) no existen en CP437 y se reemplazan por <code>?</code>. Se necesita corregir esto.</td>
 </tr>
 <tr>
 <td>⚠ 6</td>
 <td><strong>Interlineado gráfico</strong></td>
-<td><code>24/216"</code> debería dar bandas continuas; si quedan franjas blancas o se pisan, ajustar con <code>7</code> / <code>8</code>.</td>
+<td><code>24/216"</code> dan bandas continuas en LX810; si quedan franjas blancas o se pisan, ajustar con <code>7</code> / <code>8</code>.</td>
 </tr>
 <tr>
 <td>7</td>
 <td><strong>Vista previa aproximada</strong></td>
-<td>La hoja simulada no reproduce NLQ, proporcional ni doble alto, ni la fuente real de la impresora.</td>
+<td>La hoja simulada no reproduce NLQ, proporcional ni doble alto, ni la fuente real de la impresora. Estaria bueno simular la axion de la impresora, y su cabezal!</td>
 </tr>
 <tr>
 <td>8</td>
 <td><strong>Rendimiento</strong></td>
-<td>A 1920×1080 el procesamiento por cuadro (copiar, redimensionar, rotar, filtrar) es costoso, sobre todo rotado. <code>F</code> (congelar) evita reprocesar.</td>
+<td>A 1920×1080 el procesamiento por cuadro (copiar, redimensionar, rotar, filtrar) es costoso, sobre todo rotado. <code>F</code> (congelar) evita reprocesar. Quizas se podría desactivar el rotado en la visualización. No me fué de gran ayuda. </td>
 </tr>
 <tr>
 <td>9</td>
 <td><strong>Símbolos</strong></td>
-<td>El modo símbolos puede ser lento con <code>MIN_CELDA</code> pequeño (muchas llamadas de texto por cuadro).</td>
+<td>El modo símbolos puede ser lento con <code>MIN_CELDA</code> pequeño (muchas llamadas de texto por cuadro). Este modo quedó bien en la instalación, no se que tan usable es por otra gente. </td>
 </tr>
 <tr>
 <td>10</td>
 <td><strong>Una línea de texto = una línea impresa</strong></td>
-<td>No hay ajuste automático de línea (word-wrap) en el traductor: las líneas largas las corta la impresora en su margen derecho.</td>
+<td>No hay ajuste automático de línea (word-wrap) en el visualizador: las líneas largas las corta; Pero la impresora al llegar a su margen derecho hace un salto de linea.</td>
 </tr>
 <tr>
 <td>11</td>
 <td><strong>Control de flujo serie</strong></td>
-<td>Sin control de hardware: se confía en el ACK por paquete. Un paquete gráfico de 1920 columnas (~1925 bytes) tarda ~170 ms en llegar a 115200 baudios; la impresión suele ser más lenta, por lo que no es el cuello de botella.</td>
+<td>Sin control de hardware: se confía en el ACK por paquete. Un paquete gráfico de 1920 columnas (~1925 bytes) tarda ~170 ms en llegar a 115200 baudios; la impresión suele ser más lenta, por lo que no es el cuello de botella. No me dió problemas pero quizas se podrían implementar todos esos controles. Incluso revisar otros pines del puerto paralelo que no usé. </td>
 </tr>
 <tr>
 <td>12</td>
 <td><strong>Reintentos</strong></td>
-<td>Tras un NAK por BUSY a mitad de línea, el reenvío puede repetir parte de lo ya impreso. Es un caso límite.</td>
+<td>Tras un NAK por BUSY a mitad de línea, el reenvío puede repetir parte de lo ya impreso. Es un caso límite, que no llegué a detectar en la practica. </td>
 </tr>
 </tbody>
 </table>
@@ -1119,8 +1128,12 @@ según el comando:
 </tr>
 </tbody>
 </table>
-<h3>10.3 Textos de prueba incluidos</h3>
-<p>Se entregaron cinco archivos de texto con marcas (<code>texto_marcado_ESCP.txt</code>, <code>texto_instagram_ESCP.txt</code>, <code>texto_instagram2_ESCP.txt</code>, <code>texto_FestivAE_ESCP.txt</code>, <code>texto_curatorial_ESCP.txt</code>) que recorren todos los estilos, bloques y directivas. Se pegan en modo texto y sirven para probar la impresora y ajustar el interlineado, el paso y las tablas de caracteres.</p>
+<p> </p>
+<h2>11. Download</h2>
+<h3>10.1 Bajate los programas acá</h3>
+<p><a class="boton" href=" Programas%20Lescano%20-%20Escp.rar" download=""> Descargar Programas de Processing y Arduino. <br>Todo para la video lectura + impresión performática. </a></p>
+<p> </p>
+<p> </p>
 <!-- Mermaid CDN y script de inicialización -->
 <p>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
