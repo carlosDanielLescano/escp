@@ -3,7 +3,7 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-10T13:29:18-03:00</updated>
+    <updated>2026-10-10T14:15:36-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -258,17 +258,21 @@
 </table>
 <p>El ancho de cada línea gráfica (<code>wLo</code>, <code>wHi</code>) viaja dentro del paquete: el Arduino no necesita saber de antemano cuántas columnas tendrá la imagen. Es lo que permite cambiar el ancho de salida en vivo.</p>
 <h3>3.3 Intercambio y manejo de errores</h3>
-<pre class="mermaid">sequenceDiagram
-  participant P as Processing
-  participant A as Arduino
-  participant I as Impresora
-  P-&gt;&gt;A: A5 + comando + datos + checksum
-  A-&gt;&gt;A: validar longitud y checksum
-  A-&gt;&gt;I: bytes por puerto paralelo (esperando BUSY)
-  A--&gt;&gt;P: ACK 0x06
-  Note over P,A: Si falla algo, el Arduino responde NAK 0x15
-  Note over P,A: Processing reenvía el mismo paquete hasta 3 veces
-</pre>
+<figure class="diagrama"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 470" role="img" aria-labelledby="t3"> 
+<title id="t3">Secuencia de un paquete entre Processing, Arduino e impresora</title>
+<style>
+.s-bg{fill:#000}
+.s-box{fill:#1f1f1f;stroke:#f0f0f0;stroke-width:1.6}
+.s-note{fill:#2b2b2b;stroke:#cfcfcf;stroke-width:1.2}
+.s-line{stroke:#f0f0f0;stroke-width:1.6;fill:none}
+.s-dash{stroke:#f0f0f0;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.s-life{stroke:#8c8c8c;stroke-width:1.2;fill:none;stroke-dasharray:5 6}
+.s-arrow{fill:#f0f0f0}
+.s-t{fill:#ffffff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px}
+.s-tb{fill:#ffffff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;font-weight:700}
+.s-ts{fill:#d9d9d9;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:13.5px}
+</style>
+<defs><marker id="ah3" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="8" markerheight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="s-arrow"></path></marker></defs> <rect class="s-bg" width="800" height="470"></rect> <line class="s-life" x1="110" y1="52" x2="110" y2="418"></line> <line class="s-life" x1="400" y1="52" x2="400" y2="418"></line> <line class="s-life" x1="690" y1="52" x2="690" y2="418"></line> <rect class="s-box" x="30" y="12" width="160" height="40" rx="6"></rect> <text class="s-tb" x="110" y="38" text-anchor="middle">Processing</text> <rect class="s-box" x="30" y="418" width="160" height="40" rx="6"></rect> <text class="s-tb" x="110" y="444" text-anchor="middle">Processing</text> <rect class="s-box" x="320" y="12" width="160" height="40" rx="6"></rect> <text class="s-tb" x="400" y="38" text-anchor="middle">Arduino</text> <rect class="s-box" x="320" y="418" width="160" height="40" rx="6"></rect> <text class="s-tb" x="400" y="444" text-anchor="middle">Arduino</text> <rect class="s-box" x="610" y="12" width="160" height="40" rx="6"></rect> <text class="s-tb" x="690" y="38" text-anchor="middle">Impresora</text> <rect class="s-box" x="610" y="418" width="160" height="40" rx="6"></rect> <text class="s-tb" x="690" y="444" text-anchor="middle">Impresora</text> <line class="s-line" x1="113" y1="102" x2="397" y2="102" marker-end="url(#ah3)"></line> <text class="s-t" x="255.0" y="92" text-anchor="middle">A5 + comando + datos + checksum</text> <path class="s-line" d="M403,140 H448 V168 H406" marker-end="url(#ah3)"></path> <text class="s-t" x="460" y="159" text-anchor="start">validar longitud y checksum</text> <line class="s-line" x1="403" y1="244" x2="687" y2="244" marker-end="url(#ah3)"></line> <text class="s-t" x="545.0" y="214" text-anchor="middle">bytes por puerto paralelo</text> <text class="s-t" x="545.0" y="232" text-anchor="middle">(esperando BUSY)</text> <line class="s-dash" x1="397" y1="296" x2="113" y2="296" marker-end="url(#ah3)"></line> <text class="s-t" x="255.0" y="286" text-anchor="middle">ACK 0x06</text> <rect class="s-note" x="20" y="322" width="470" height="34" rx="4"></rect> <text class="s-t" x="255.0" y="344" text-anchor="middle">Si falla algo, el Arduino responde NAK 0x15</text> <rect class="s-note" x="20" y="366" width="470" height="34" rx="4"></rect> <text class="s-t" x="255.0" y="388" text-anchor="middle">Processing reenvía el mismo paquete hasta 3 veces</text> </svg></figure>
 <table>
 <thead>
 <tr>
