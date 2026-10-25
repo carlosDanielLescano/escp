@@ -3,7 +3,7 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-25T19:01:41-03:00</updated>
+    <updated>2026-10-25T19:15:15-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -1201,15 +1201,18 @@ según el comando:
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/campo-de-variaciones-lessgreater-estado-del-arte.html"/>
         <id>https://carlosdaniellescano.github.io/escp/campo-de-variaciones-lessgreater-estado-del-arte.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/30/1000226726-2.jpg" medium="image" />
 
         <updated>2026-10-03T20:18:12-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/30/1000226726-2.jpg" alt="" />
                     Descargar PDF
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/30/1000226726-2.jpg" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  style="filter: grayscale(100%) contrast(100%);" src="https://carlosdaniellescano.github.io/escp/media/posts/30/1000226726.jpg" alt="" width="4080" height="3072" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/30/responsive/1000226726-2xl.jpg 1920w"></figure>
 <p> </p>
 <p><a class="boton" href="Lescano%20-%20Estado%20del%20Arte.pdf" download=""> Descargar PDF </a></p>
@@ -1223,15 +1226,18 @@ según el comando:
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/proyecto-proximo.html"/>
         <id>https://carlosdaniellescano.github.io/escp/proyecto-proximo.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/29/be39d30d-d739-415a-9cae-94abd29a60ff.png" medium="image" />
 
         <updated>2025-11-25T10:10:42-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/29/be39d30d-d739-415a-9cae-94abd29a60ff.png" alt="" />
                     Descargar PDF
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/29/be39d30d-d739-415a-9cae-94abd29a60ff.png" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/29/Group-1.png" alt="" width="1920" height="1080" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/29/responsive/Group-1-2xl.png 1920w"></figure>
 <p> </p>
 <p><a class="boton" href="ESC_P%20-%20Lescano%20-%202025%20-%20.pdf" download=""> Descargar PDF </a></p>
@@ -1245,15 +1251,18 @@ según el comando:
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/todos-los-codigos.html"/>
         <id>https://carlosdaniellescano.github.io/escp/todos-los-codigos.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/28/interfaz-1-b.bmp" medium="image" />
 
         <updated>2025-11-21T20:33:58-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/28/interfaz-1-b.bmp" alt="" />
                     CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA // === CONTROL GENERATIVO DE 2 EJES (X, Y) === // Cada eje tiene 4 arrays y 4 índices independientes // Cada índice cambia su valor con un ritmo propio, recalculado en cada cambio // El&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/28/interfaz-1-b.bmp" class="type:primaryImage" alt="" /></p>
                 <div style="filter: grayscale(100%) contrast(100%);"><code>CODIGO ARDUINO PARA EL CONTROL GENERATIVO DE LA IMPRESORA</code></div>
 <div style="filter: grayscale(100%) contrast(100%);">
 <pre class="language-c"><code>// === CONTROL GENERATIVO DE 2 EJES (X, Y) ===
@@ -1747,11 +1756,13 @@ void pasosFijos() {
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/objetos-123.html"/>
         <id>https://carlosdaniellescano.github.io/escp/objetos-123.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/27/IMG_20250525_112935168.bmp" medium="image" />
 
         <updated>2025-11-18T10:39:55-03:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/27/IMG_20250525_112935168.bmp" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/27/Slide-16_9-24.png" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Slide-16_9-24-2xl.png 1920w"></figure>
 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/27/Frame.png" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-2xl.png 1920w"></figure>
 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/27/Frame-7.png" alt="" width="1633" height="2579" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/27/responsive/Frame-7-2xl.png 1920w"></figure>
@@ -1765,11 +1776,13 @@ void pasosFijos() {
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html"/>
         <id>https://carlosdaniellescano.github.io/escp/partitura-visual-de-lectura-horizontal.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/26/partitura.bmp" medium="image" />
 
         <updated>2025-11-18T00:52:58-03:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/26/partitura.bmp" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/26/Frame-1.png" alt="" width="752" height="5361" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/26/responsive/Frame-1-2xl.png 1920w"></figure>
             ]]>
         </content>
@@ -1781,11 +1794,13 @@ void pasosFijos() {
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/improvisacion-transcripto.html"/>
         <id>https://carlosdaniellescano.github.io/escp/improvisacion-transcripto.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/25/Capture.PNG" medium="image" />
 
         <updated>2025-11-18T00:42:29-03:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/25/Capture.PNG" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/25/IMAG0396-1.png" alt="" width="1245" height="4096" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-2xl.png 1920w"></figure>
             ]]>
         </content>
@@ -1797,15 +1812,18 @@ void pasosFijos() {
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/principios-marco-para-el-desarrollode-toda-nueva-pieza-tecnopoetica.html"/>
         <id>https://carlosdaniellescano.github.io/escp/principios-marco-para-el-desarrollode-toda-nueva-pieza-tecnopoetica.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" medium="image" />
 
         <updated>2025-11-17T23:54:01-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" alt="" />
                     ...o reglas para construir los nuevos robots lectores 1. Reactivación tecnológica La tecnología no progresa: retorna, se dobla, insiste. Reactivar un dispositivo es leerlo contra su destino industrial. Lo obsoleto funciona como reserva poética: un repertorio de gestos técnicos todavía disponibles para la experimentación. 2.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" class="type:primaryImage" alt="" /></p>
                 <pre data-start="82" data-end="119">...o reglas para construir los nuevos robots lectores</pre>
 <pre data-start="82" data-end="119">1. Reactivación tecnológica
 La tecnología no progresa: retorna, se dobla, insiste. Reactivar un dispositivo es leerlo contra su destino industrial. Lo obsoleto funciona como reserva poética: un repertorio de gestos técnicos todavía disponibles para la experimentación.
@@ -1844,15 +1862,18 @@ El texto pierde su rol de portador de información y gana cuerpo. Letras como ob
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/novedadeslessless.html"/>
         <id>https://carlosdaniellescano.github.io/escp/novedadeslessless.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/23/Capture3.PNG" medium="image" />
 
         <updated>2025-10-15T09:29:57-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/23/Capture3.PNG" alt="" />
                     Pagola: Las obras de arte son producto de una coyuntura históric[...]“contexto” era sinónimo de espacio-tiempo compartido; pero desde la introducción de diferentes dispositivos de mediación éstas se han ido independizando de forma exponencial de su “contexto” de origen, para comenzar rápidas derivas de circulación y&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/23/Capture3.PNG" class="type:primaryImage" alt="" /></p>
                 <div id="textContainer" style="width: 100%; height: 600px; overflow: hidden; position: relative; font-family: monospace; background: black; color: white; line-height: 0.75;"></div>
 <p>
 <script>
