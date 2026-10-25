@@ -3,7 +3,7 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-10T14:15:36-03:00</updated>
+    <updated>2026-10-25T19:01:41-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
@@ -16,15 +16,18 @@
         </author>
         <link href="https://carlosdaniellescano.github.io/escp/documentacion-para-video-lectura.html"/>
         <id>https://carlosdaniellescano.github.io/escp/documentacion-para-video-lectura.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/32/1000228795-2.jpg" medium="image" />
 
         <updated>2026-10-06T09:13:51-03:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/32/1000228795-2.jpg" alt="" />
                     ESC/P — Documentación funcional y técnica Sistema de impresión continua -pensado para video lectura performática- sobre impresora matricial Epson LX-810 Programas: arduino_impresora.ino (Arduino Mega) y spout_impresora (Processing: spout_impresora.pde, MarkdownEscp.pde, PanelControl.pde). Video lectura performática: proceso de lectura en tiempo real mediante capturas de pantalla y video&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/32/1000228795-2.jpg" class="type:primaryImage" alt="" /></p>
                 <h1>ESC/P — Documentación funcional y técnica</h1>
 <p><strong>Sistema de impresión continua -pensado para video lectura performática- sobre impresora matricial Epson LX-810</strong> <br>Programas: <br><code>arduino_impresora.ino</code> (Arduino Mega) y <br><code>spout_impresora</code> (Processing: <code>spout_impresora.pde</code>, <code>MarkdownEscp.pde</code>, <code>PanelControl.pde</code>).</p>
 <blockquote>
