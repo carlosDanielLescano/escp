@@ -3,12 +3,32 @@
     <title>ESC/P</title>
     <link href="https://carlosdaniellescano.github.io/escp/feed.xml" rel="self" />
     <link href="https://carlosdaniellescano.github.io/escp" />
-    <updated>2026-10-27T14:24:45-03:00</updated>
+    <updated>2026-10-27T15:21:57-03:00</updated>
     <author>
         <name>Carlos Lescano</name>
     </author>
     <id>https://carlosdaniellescano.github.io/escp</id>
 
+    <entry>
+        <title>ESC/P en Diferido</title>
+        <author>
+            <name>Carlos Lescano</name>
+        </author>
+        <link href="https://carlosdaniellescano.github.io/escp/escp-en-diferido.html"/>
+        <id>https://carlosdaniellescano.github.io/escp/escp-en-diferido.html</id>
+        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/34/marco024-3.jpg" medium="image" />
+
+        <updated>2026-10-27T15:21:57-03:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/34/marco024-3.jpg" class="type:primaryImage" alt="" /></p>
+                <figure class="post__image"><img decoding="auto"  src="https://carlosdaniellescano.github.io/escp/media/posts/34/marco024-2.jpg" alt="" width="1340" height="1272" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco024-2-2xl.jpg 1920w"></figure><div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/boRGnbP-_5k?si=pRHWrX_HcyXAb_2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div>
+<figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/34/marco025.jpg" alt="" width="3505" height="2545" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-xs.jpg 640w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-sm.jpg 768w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-md.jpg 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-lg.jpg 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-xl.jpg 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/34/responsive/marco025-2xl.jpg 1920w"></figure>
+<p class="align-center"> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Prototipo instalado en lugares</title>
         <author>
@@ -1825,56 +1845,6 @@ void pasosFijos() {
             <![CDATA[
                     <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/25/Capture.PNG" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img decoding="auto" loading="lazy"  src="https://carlosdaniellescano.github.io/escp/media/posts/25/IMAG0396-1.png" alt="" width="1245" height="4096" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xs.png 640w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-sm.png 768w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-md.png 1024w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-lg.png 1366w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-xl.png 1600w ,https://carlosdaniellescano.github.io/escp/media/posts/25/responsive/IMAG0396-1-2xl.png 1920w"></figure>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Principios-marco para el desarrollo de toda nueva pieza tecnopoética...</title>
-        <author>
-            <name>Carlos Lescano</name>
-        </author>
-        <link href="https://carlosdaniellescano.github.io/escp/principios-marco-para-el-desarrollode-toda-nueva-pieza-tecnopoetica.html"/>
-        <id>https://carlosdaniellescano.github.io/escp/principios-marco-para-el-desarrollode-toda-nueva-pieza-tecnopoetica.html</id>
-        <media:content url="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" medium="image" />
-
-        <updated>2025-11-17T23:54:01-03:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" alt="" />
-                    ...o reglas para construir los nuevos robots lectores 1. Reactivación tecnológica La tecnología no progresa: retorna, se dobla, insiste. Reactivar un dispositivo es leerlo contra su destino industrial. Lo obsoleto funciona como reserva poética: un repertorio de gestos técnicos todavía disponibles para la experimentación. 2.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://carlosdaniellescano.github.io/escp/media/posts/24/Capture2.bmp" class="type:primaryImage" alt="" /></p>
-                <pre data-start="82" data-end="119">...o reglas para construir los nuevos robots lectores</pre>
-<pre data-start="82" data-end="119">1. Reactivación tecnológica
-La tecnología no progresa: retorna, se dobla, insiste. Reactivar un dispositivo es leerlo contra su destino industrial. Lo obsoleto funciona como reserva poética: un repertorio de gestos técnicos todavía disponibles para la experimentación.
-
-2. Lectura expandida
-Leer es intervenir un dispositivo, no descifrarlo. La lectura deviene operación distribuida entre máquina, cuerpo y error. Allí donde antes había interpretación, ahora hay activación: una lectura que performa.
-
-3. Control numérico poético
-El control numérico sale de la fábrica y entra en el terreno del desvío. La precisión algorítmica se deja contaminar por la variación, el accidente, la manipulación situada. El código opera como gesto material y no como garantía de eficiencia.
-
-4. Superposición y ruido semántico
-El sentido ya no se organiza por ordenamiento lineal sino por acumulaciones, fricciones y densidades. El ruido es productivo: no interfiere la obra, la constituye. La claridad deja lugar a un espesor donde múltiples capas coexisten.
-
-5. Feedback como forma de pensamiento
-La obra se configura como un circuito cognitivo. La cámara lee, la IA malinterpreta, la impresora reacciona; el performer interviene como modulador de esos desvíos. Pensar es iterar: un bucle que se retroalimenta y muta.
-
-6. Tecnologías situadas
-Toda tecnología es contexto. Trae consigo economías, disponibilidades, discontinuidades. La tecnopoética se construye desde allí: desde la materialidad concreta, local, precaria o residual del dispositivo. Técnica como cartografía geopolítica.
-
-7. Arqueología crítica del presente
-Las temporalidades tecnológicas no se suceden, coexisten. El presente funciona como estrato: capas superpuestas de técnicas que dialogan, se contradicen y se reactivan. La obra lee ese espesor temporal como archivo vivo.
-
-8. Agencia distribuida
-La autoría se dispersa. Máquina, error, público, texto, performer, algoritmo: todos producen. La obra emerge como una ecología de operaciones donde ningún agente monopoliza el sentido.
-
-9. Texto como materia
-El texto pierde su rol de portador de información y gana cuerpo. Letras como objetos manipulables, como ruido visual, como vibración. Lo textual funciona como materialidad a intervenir, no como mensaje a decodificar.
-</pre>
             ]]>
         </content>
     </entry>
